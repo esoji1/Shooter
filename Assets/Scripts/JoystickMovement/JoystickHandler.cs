@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Zenject;
 
 public class JoystickHandler : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private Image _joystickBackground;
-    [SerializeField] private Image _joystick;
-    [SerializeField] private Image _joystickArea;
+    private Image _joystickBackground;
+    private Image _joystick;
+    private Image _joystickArea;
 
     private Vector2 __joystickBackgroundStartPosition;
 
@@ -15,6 +16,14 @@ public class JoystickHandler : MonoBehaviour, IDragHandler, IPointerDownHandler,
     private void Start()
     {
         __joystickBackgroundStartPosition = _joystickBackground.rectTransform.anchoredPosition;
+    }
+
+    [Inject]
+    private void Construct(JoystickInfo joystickInfo)
+    {
+        _joystickBackground = joystickInfo.JoystickBackground;
+        _joystick = joystickInfo.Joystick;
+        _joystickArea = joystickInfo.JoystickArea;
     }
 
     public void OnDrag(PointerEventData eventData)

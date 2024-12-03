@@ -1,28 +1,37 @@
+using Assets.Scripts.JoystickMovement.Player.StateMachine;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
+using Zenject;
 
 public class JoysickForMovement : JoystickHandler
 {
-    [SerializeField] private PlayerMovement _playerMovement;
-    [SerializeField] private SpriteRenderer _player;
+    private PlayerMovement _playerMovement;
+    private PlayerView _playerView;
+
+    private PlayerStateMachine _playerStateMachine;
+
+    public Vector2 InputVector => _inputVector;
+    public PlayerMovement PlayerMovement => _playerMovement;
+    public PlayerView PlayerView => _playerView;
+
+    private void Awake()
+    {
+        _playerView.Initialize();
+        _playerStateMachine = new PlayerStateMachine(this);
+    }
 
     private void Update()
     {
         if (_inputVector.x != 0 || _inputVector.y != 0)
             _playerMovement.MovePlayer(new Vector2(_inputVector.x, _inputVector.y));
 
-        Flipplayer();
+        _playerStateMachine.Update();
+        _playerStateMachine.Enter();
     }
 
-    private void Flipplayer()
+    [Inject]
+    private void Construct(PlayerMovement playerMovement, PlayerView playerView)
     {
-        float dotProduct = Vector3.Dot(_inputVector, transform.right);
-
-        if (dotProduct < 0f)
-            _player.flipX = true;
-     
-        else if (dotProduct > 0f)
-            _player.flipX = false;
+        _playerMovement = playerMovement;
+        _playerView = playerView;
     }
 }
