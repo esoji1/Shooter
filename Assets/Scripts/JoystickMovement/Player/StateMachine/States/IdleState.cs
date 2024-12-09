@@ -6,13 +6,24 @@ public class IdleState : MovementState
     {
 
     }
+
+    public override void Enter()
+    {
+        base.Enter();
+
+        PlayerView.StartIdle();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        PlayerView.StopIdle();
+    }
+
     public override void Update()
     {
         base.Update();
-
-        PlayerView.StopAllAnimations();
-
-        StartIdleAnimation();
 
         if (IsHorizontalInputZero() == false)
             StateSwitcher.SwitcherState<RuningState>();

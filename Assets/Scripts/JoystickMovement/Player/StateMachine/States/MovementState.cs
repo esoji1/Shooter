@@ -19,61 +19,33 @@ public abstract class MovementState : IState
     public Vector2 InputVector => JoysickForMovement.InputVector;
     public PlayerView PlayerView => _player.PlayerView;
 
+    public virtual void Enter()
+    {
+    }
+
+    public virtual void Exit()
+    {
+    }
+
     public virtual void Update()
     {
         if (InputVector.x != 0 || InputVector.y != 0)
             JoysickForMovement.PlayerMovement.MovePlayer(new Vector2(InputVector.x, InputVector.y));
+
+        FlipSpritePlayer();
     }
 
     protected bool IsHorizontalInputZero() => InputVector == Vector2.zero;
 
-    protected void StartIdleAnimation()
+    private void FlipSpritePlayer()
     {
-        if (LastDirection == Vector2.up)
+        if(InputVector.x < 0f)
         {
-            PlayerView.StartIdleUp();
+            PlayerView.GetSpriteRenderer.flipX = true;
         }
-        else if (LastDirection == Vector2.down)
+        else if (InputVector.x > 0f)
         {
-            PlayerView.StartIdleDown();
-        }
-        else if (LastDirection == Vector2.left)
-        {
-            PlayerView.StartIdleLeft();
-        }
-        else if (LastDirection == Vector2.right)
-        {
-            PlayerView.StartIdleRight();
-        }
-    }
-
-    protected void StartRunAnimation()
-    {
-        if (Mathf.Abs(InputVector.y) > Mathf.Abs(InputVector.x))
-        {
-            if (InputVector.y > 0f)
-            {
-                PlayerView.StartRunUp();
-                LastDirection = Vector2.up;
-            }
-            else if (InputVector.y < 0f)
-            {
-                PlayerView.StartRunDown();
-                LastDirection = Vector2.down;
-            }
-        }
-        else
-        {
-            if (InputVector.x > 0f)
-            {
-                PlayerView.StartRunRigth();
-                LastDirection = Vector2.right;
-            }
-            else if (InputVector.x < 0f)
-            {
-                PlayerView.StartRunLeft();
-                LastDirection = Vector2.left;
-            }
+            PlayerView.GetSpriteRenderer.flipX = false;
         }
     }
 }

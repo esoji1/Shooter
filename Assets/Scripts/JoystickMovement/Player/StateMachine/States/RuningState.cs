@@ -6,13 +6,23 @@ public class RuningState : MovementState
     {
     }
 
+    public override void Enter()
+    {
+        base.Enter();
+
+        PlayerView.StartRuning();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        PlayerView.StopRuning();
+    }
+
     public override void Update()
     {
         base.Update();
-
-        PlayerView.StopAllAnimations();
-
-        StartRunAnimation();
 
         if (IsHorizontalInputZero())
             StateSwitcher.SwitcherState<IdleState>();
