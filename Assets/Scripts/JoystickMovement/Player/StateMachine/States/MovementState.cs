@@ -1,87 +1,78 @@
 ﻿using UnityEngine;
+using Zenject.SpaceFighter;
 
-namespace Assets.Scripts.JoystickMovement.Player.StateMachine.States
+public abstract class MovementState : IState
 {
-    public abstract class MovementState : IState
+    protected readonly IStateSwitcher StateSwitcher;
+    protected readonly JoysickForMovement JoysickForMovement;
+    private Player _player;
+
+    protected Vector2 LastDirection = Vector2.down;
+
+    protected MovementState(IStateSwitcher stateSwitcher, Player player)
     {
-        protected readonly IStateSwitcher StateSwitcher;
-        protected readonly JoysickForMovement JoysickForMovement;
+        StateSwitcher = stateSwitcher;
+        JoysickForMovement = player.JoysickForMovement;
+        _player = player;
+    }
 
-        private Vector2 _lastDirection = Vector2.down;
+    public Vector2 InputVector => JoysickForMovement.InputVector;
+    public PlayerView PlayerView => _player.PlayerView;
 
-        protected MovementState(IStateSwitcher stateSwitcher, JoysickForMovement joysickForMovement)
+    public virtual void Update()
+    {
+        if (InputVector.x != 0 || InputVector.y != 0)
+            JoysickForMovement.PlayerMovement.MovePlayer(new Vector2(InputVector.x, InputVector.y));
+    }
+
+    protected bool IsHorizontalInputZero() => InputVector == Vector2.zero;
+
+    protected void StartIdleAnimation()
+    {
+        if (LastDirection == Vector2.up)
         {
-            StateSwitcher = stateSwitcher;
-            JoysickForMovement = joysickForMovement;
+            PlayerView.StartIdleUp();
         }
-
-        public Vector2 InputVector => JoysickForMovement.InputVector;
-        public PlayerView PlayerView => JoysickForMovement.PlayerView;
-
-        public virtual void Enter()
+        else if (LastDirection == Vector2.down)
         {
-            PlayerView.StopAllAnimations();
+            PlayerView.StartIdleDown();
         }
-
-        public virtual void Exit()
+        else if (LastDirection == Vector2.left)
         {
+            PlayerView.StartIdleLeft();
         }
-
-        public virtual void Update()
+        else if (LastDirection == Vector2.right)
         {
-            if (InputVector.x != 0 || InputVector.y != 0)
-                JoysickForMovement.PlayerMovement.MovePlayer(new Vector2(InputVector.x, InputVector.y));
+            PlayerView.StartIdleRight();
         }
+    }
 
-        protected bool IsHorizontalInputZero() => InputVector == Vector2.zero;
-
-        protected void StartIdleAnimation()
+    protected void StartRunAnimation()
+    {
+        if (Mathf.Abs(InputVector.y) > Mathf.Abs(InputVector.x))
         {
-            if (_lastDirection == Vector2.up)
+            if (InputVector.y > 0f)
             {
-                PlayerView.StartIdleUp();
+                PlayerView.StartRunUp();
+                LastDirection = Vector2.up;
             }
-            else if (_lastDirection == Vector2.down)
+            else if (InputVector.y < 0f)
             {
-                PlayerView.StartIdleDown();
-            }
-            else if (_lastDirection == Vector2.left)
-            {
-                PlayerView.StartIdleLeft();
-            }
-            else if (_lastDirection == Vector2.right)
-            {
-                PlayerView.StartIdleRight();
+                PlayerView.StartRunDown();
+                LastDirection = Vector2.down;
             }
         }
-
-        protected void StartRunAnimation(Vector2 input)
+        else
         {
-            if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
+            if (InputVector.x > 0f)
             {
-                if (input.y > 0f)
-                {
-                    PlayerView.StartRunUp();
-                    _lastDirection = Vector2.up;
-                }
-                else if (input.y < 0f)
-                {
-                    PlayerView.StartRunDown();
-                    _lastDirection = Vector2.down;
-                }
+                PlayerView.StartRunRigth();
+                LastDirection = Vector2.right;
             }
-            else
+            else if (InputVector.x < 0f)
             {
-                if (input.x > 0f)
-                {
-                    PlayerView.StartRunRigth();
-                    _lastDirection = Vector2.right;
-                }
-                else if (input.x < 0f)
-                {
-                    PlayerView.StartRunLeft();
-                    _lastDirection = Vector2.left;
-                }
+                PlayerView.StartRunLeft();
+                LastDirection = Vector2.left;
             }
         }
     }

@@ -1,25 +1,20 @@
-﻿namespace Assets.Scripts.JoystickMovement.Player.StateMachine.States
+﻿
+public class IdleState : MovementState
 {
-    public class IdleState : MovementState
+    public IdleState(IStateSwitcher stateSwitcher, Player player)
+        : base(stateSwitcher, player)
     {
-        public IdleState(IStateSwitcher stateSwitcher, JoysickForMovement joysickForMovement) : base(stateSwitcher, joysickForMovement)
-        {
 
-        }
+    }
+    public override void Update()
+    {
+        base.Update();
 
-        public override void Enter()
-        {
-            base.Enter();
+        PlayerView.StopAllAnimations();
 
-            StartIdleAnimation();
-        }
+        StartIdleAnimation();
 
-        public override void Update()
-        {
-            base.Update();
-
-            if (IsHorizontalInputZero() == false)
-                StateSwitcher.SwitcherState<RuningState>();
-        }
+        if (IsHorizontalInputZero() == false)
+            StateSwitcher.SwitcherState<RuningState>();
     }
 }

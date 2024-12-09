@@ -1,26 +1,20 @@
-﻿using UnityEngine;
-
-namespace Assets.Scripts.JoystickMovement.Player.StateMachine.States
+﻿
+public class RuningState : MovementState
 {
-    public class RuningState : MovementState
+    public RuningState(IStateSwitcher stateSwitcher, Player player)
+        : base(stateSwitcher, player)
     {
-        public RuningState(IStateSwitcher stateSwitcher, JoysickForMovement joysickForMovement) : base(stateSwitcher, joysickForMovement)
-        {
-        }
+    }
 
-        public override void Enter()
-        {
-            base.Enter();
+    public override void Update()
+    {
+        base.Update();
 
-            StartRunAnimation(InputVector);
-        }
+        PlayerView.StopAllAnimations();
 
-        public override void Update()
-        {
-            base.Update();
+        StartRunAnimation();
 
-            if (IsHorizontalInputZero())
-                StateSwitcher.SwitcherState<IdleState>();
-        }
+        if (IsHorizontalInputZero())
+            StateSwitcher.SwitcherState<IdleState>();
     }
 }
