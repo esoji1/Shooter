@@ -3,7 +3,7 @@ using Zenject;
 
 public class JoystickHandlerInstaller : MonoInstaller
 {
-    [SerializeField] private JoystickInfo _joystickInfo;
+    [SerializeField] private JoystickInfoMovement _joystickInfoMovement;
 
     public override void InstallBindings()
     {
@@ -13,8 +13,8 @@ public class JoystickHandlerInstaller : MonoInstaller
     private void BindJoystickInfo()
     {
         Container
-             .Bind<JoystickInfo>()
-             .FromInstance(_joystickInfo)
-             .AsSingle();
+            .Bind<BaseJoystickInfo>()
+            .FromInstance(_joystickInfoMovement)
+            .WhenInjectedInto<JoystickHandler>();
     }
 }
