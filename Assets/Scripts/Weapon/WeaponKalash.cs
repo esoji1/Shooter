@@ -8,6 +8,7 @@ public class WeaponKalash : MonoBehaviour
     [SerializeField] private Transform _point;
     [SerializeField] private WeaponView _weaponView;
     [SerializeField] private ParticleSystem _collisionEffect;
+    [SerializeField] private ParticleSystem _bloodEffect;
 
     private Coroutine _shootCoroutine;
     private float _delay = 0.1f;
@@ -30,7 +31,7 @@ public class WeaponKalash : MonoBehaviour
         {
             GameObject bulletObject = BulletSpawnPoint();
             Bullet bullet = bulletObject.GetComponent<Bullet>();
-            bullet.Initialize(_point.right, bulletObject, _collisionEffect);
+            bullet.Initialize(_point.right, bulletObject, _collisionEffect, _bloodEffect);
             yield return new WaitForSeconds(_delay);
         }
     }

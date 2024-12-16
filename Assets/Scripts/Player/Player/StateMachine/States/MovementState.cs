@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Zenject.SpaceFighter;
 
 public abstract class MovementState : IState
 {
@@ -20,7 +19,7 @@ public abstract class MovementState : IState
     public PlayerView PlayerView => _player.PlayerView;
 
     public virtual void Enter()
-    {
+    { 
     }
 
     public virtual void Exit()
@@ -39,13 +38,13 @@ public abstract class MovementState : IState
 
     private void FlipSpritePlayer()
     {
-        if(InputVector.x < 0f)
+        if (InputVector.x < 0f)
         {
-            PlayerView.GetSpriteRenderer.flipX = true;
+            PlayerView.SpriteRenderer.flipX = true;
         }
         else if (InputVector.x > 0f)
         {
-            PlayerView.GetSpriteRenderer.flipX = false;
+            PlayerView.SpriteRenderer.flipX = false;
         }
     }
 }

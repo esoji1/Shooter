@@ -6,12 +6,13 @@ public class PlayerView : MonoBehaviour
 {
     private const string IsRun = "IsRun";
     private const string IsIdle = "IsIdle";
+    private const string Hit = "Hit";
 
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
     
-    public SpriteRenderer GetSpriteRenderer => _spriteRenderer;
-    public Animator GetAnimator => _animator;
+    public SpriteRenderer SpriteRenderer => _spriteRenderer;
+    public Animator Animator => _animator;
 
     private void Start()
     {
@@ -26,7 +27,5 @@ public class PlayerView : MonoBehaviour
     public void StartIdle() => _animator.SetBool(IsIdle, true);
     public void StopIdle() => _animator.SetBool(IsIdle, false);
 
-    public void StopAllAnimations()
-    {
-    }
+    public void PlayHit() => _animator.Play(Hit);
 }
