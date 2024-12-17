@@ -1,3 +1,4 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]

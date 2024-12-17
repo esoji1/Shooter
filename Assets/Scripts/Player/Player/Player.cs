@@ -1,6 +1,5 @@
 using Assets.Scripts.Enemy;
 using System;
-using System.Collections;
 using UnityEngine;
 using Zenject;
 
@@ -10,13 +9,18 @@ public class Player : MonoBehaviour, IDamage
     private JoysickForMovement _joystickForMovement;
     private PlayerStateMachine _playerStateMachine;
     private Health _health;
+    private Flip _flip;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
+    public Flip Flip => _flip;
+
+    public event Action OnHit;
 
     private void Awake()
     {
         _playerView.Initialize();
+        _flip = new Flip();
         _playerStateMachine = new PlayerStateMachine(this);
         _health = new Health(100);
     }
@@ -25,7 +29,6 @@ public class Player : MonoBehaviour, IDamage
     {
         _playerStateMachine.Update();
     }
-
 
     [Inject]
     private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement)
@@ -36,23 +39,9 @@ public class Player : MonoBehaviour, IDamage
 
     public void Damage(int damage)
     {
-        _playerView.PlayHit();
+        OnHit?.Invoke();
 
         _health.TakeDamage(damage);
         Debug.Log(_health.HealthValue);
-
-        StartCoroutine(ReturnToPreviousStateAfterHit());
-    }
-
-    private IEnumerator ReturnToPreviousStateAfterHit()
-    {
-        AnimatorStateInfo stateInfo = _playerView.Animator.GetCurrentAnimatorStateInfo(0);
-
-        yield return new WaitForSeconds(stateInfo.length);
-
-        if (JoysickForMovement.InputVector == Vector2.zero)
-            _playerStateMachine.SwitcherState<IdleState>();
-        else
-            _playerStateMachine.SwitcherState<RuningState>();
     }
 }

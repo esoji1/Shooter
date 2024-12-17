@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class PlayerStateMachine : IStateSwitcher
 {
@@ -10,8 +11,9 @@ public class PlayerStateMachine : IStateSwitcher
     {
         _states = new Dictionary<Type, MovementState>()
         {
-            {typeof(IdleState), new IdleState(this, player)},
-            {typeof(RuningState), new RuningState(this, player)},
+            { typeof(IdleState), new IdleState(this, player) },
+            { typeof(RuningState), new RuningState(this, player) },
+            { typeof(HitState), new HitState(this, player) },
         };
 
         _currentState = _states[typeof(RuningState)];

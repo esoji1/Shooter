@@ -5,6 +5,7 @@ public abstract class MovementState : IState
     protected readonly IStateSwitcher StateSwitcher;
     protected readonly JoysickForMovement JoysickForMovement;
     private Player _player;
+    private Flip _flip;
 
     protected Vector2 LastDirection = Vector2.down;
 
@@ -13,38 +14,33 @@ public abstract class MovementState : IState
         StateSwitcher = stateSwitcher;
         JoysickForMovement = player.JoysickForMovement;
         _player = player;
+        _flip = player.Flip;
     }
 
     public Vector2 InputVector => JoysickForMovement.InputVector;
     public PlayerView PlayerView => _player.PlayerView;
+    public Player Player => _player;
 
     public virtual void Enter()
-    { 
+    {
+        _player.OnHit += GoHitState;
     }
 
     public virtual void Exit()
     {
+        _player.OnHit -= GoHitState;
     }
 
     public virtual void Update()
     {
         if (InputVector.x != 0 || InputVector.y != 0)
             JoysickForMovement.PlayerMovement.MovePlayer(new Vector2(InputVector.x, InputVector.y));
-
-        FlipSpritePlayer();
+        
+        if(IsHorizontalInputZero() == false)
+            _flip.FlipSpriteY(InputVector, _player.PlayerView.SpriteRenderer);
     }
 
     protected bool IsHorizontalInputZero() => InputVector == Vector2.zero;
 
-    private void FlipSpritePlayer()
-    {
-        if (InputVector.x < 0f)
-        {
-            PlayerView.SpriteRenderer.flipX = true;
-        }
-        else if (InputVector.x > 0f)
-        {
-            PlayerView.SpriteRenderer.flipX = false;
-        }
-    }
+    private void GoHitState() => StateSwitcher.SwitcherState<HitState>();
 }

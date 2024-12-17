@@ -5,7 +5,7 @@ public class SkeletonView : MonoBehaviour
 {
     private const string IsWalk = "IsWalk";
     private const string IsAttack = "IsAttack";
-    private const string Die = "Die"; 
+    private const string Die = "Die";
 
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;

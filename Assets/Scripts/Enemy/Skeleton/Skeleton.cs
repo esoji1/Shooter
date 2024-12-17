@@ -4,71 +4,40 @@ using UnityEngine;
 
 public class Skeleton : MonoBehaviour, IDamage
 {
-    [SerializeField] private Player _target;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _attackRadius = 2f;
-    [SerializeField] private SkeletonView _skeletonView;
+    private EnemyMeleeConfig _config;
+    private Player _target;
+    private SkeletonView _skeletonView;
 
-    private int _damage = 10;
-    private Coroutine _coroutine;
     private bool _isDie = false;
+
+    private Coroutine _coroutine;
     private BoxCollider2D _boxCollider2D;
-    private float _distanceFromEnemy = 2.2f;
 
     private Health _health;
     private ChangeEnemyPosition _changeEnemyPosition;
+    private Flip _flip;
 
     private void Awake()
     {
         _health = new Health(100);
-        _skeletonView.Initialize();
         _changeEnemyPosition = new ChangeEnemyPosition();
+        _flip = new Flip();
     }
 
     private void Start()
     {
+        _skeletonView.Initialize();
         _boxCollider2D = GetComponent<BoxCollider2D>();
-        StartCoroutine(_changeEnemyPosition.SetRandomPosition(_distanceFromEnemy));
+
+        StartCoroutine(_changeEnemyPosition.SetRandomPosition(_config.AttackRadius));
     }
 
     private void Update()
     {
-        if (_target == null)
+        if (_target == null || _isDie)
             return;
 
-        if (_isDie && _coroutine != null)
-        {
-            StopCoroutine(_coroutine);
-            _coroutine = null;
-        }
-
-        if (_isDie == false)
-        {
-            float distance = Vector2.Distance(transform.position, _target.transform.position);
-            Vector2 direction = (_target.transform.position - transform.position).normalized;
-
-            FlipSprite(direction);
-
-            if (distance > _attackRadius)
-            {
-                MoveTowardsTarget(direction);
-
-                if (_coroutine != null)
-                {
-                    _skeletonView.StopAttack();
-                    StopCoroutine(_coroutine);
-                    _coroutine = null;
-                }
-            }
-            else
-            {
-                if (_coroutine == null)
-                {
-                    _skeletonView.StopWalk();
-                    _coroutine = StartCoroutine(DelayBeforeAttack());
-                }
-            }
-        }
+        HandleMovementAndAttack();
     }
 
     private void OnEnable()
@@ -81,23 +50,67 @@ public class Skeleton : MonoBehaviour, IDamage
         _health.OnDie -= Die;
     }
 
+    public void Initialize(EnemyMeleeConfig config, Player target)
+    {
+        _config = config;
+        _target = target;
+
+        _skeletonView = transform.GetComponentInChildren<SkeletonView>();
+    }
+
     public void Damage(int damage)
     {
         _health.TakeDamage(damage);
     }
 
-    private void MoveTowardsTarget(Vector2 direction)
+    private void HandleMovementAndAttack()
+    {
+        float distance = Vector2.Distance(transform.position, _target.transform.position);
+        Vector2 direction = (_target.transform.position - transform.position).normalized;
+
+        _flip.FlipSpriteY(direction, _skeletonView.SpriteRenderer);
+
+        if (distance > _config.AttackRadius)
+        {
+            MoveTowardsTarget();
+            StopAttackIfNeeded();
+        }
+        else
+        {
+            StartAttackIfNeeded();
+        }
+    }
+
+    private void MoveTowardsTarget()
     {
         _skeletonView.StopAttack();
         _skeletonView.StartWalk();
 
-        transform.position = Vector2.MoveTowards(transform.position,
-            _target.transform.position + _changeEnemyPosition.AddRandomPositionToGo, _speed * Time.deltaTime);
+        Vector3 targetPosition = _target.transform.position + _changeEnemyPosition.AddRandomPositionToGo;
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, _config.Speed * Time.deltaTime);
+    }
+
+    private void StopAttackIfNeeded()
+    {
+        if (_coroutine != null)
+        {
+            _skeletonView.StopAttack();
+            StopCoroutine(_coroutine);
+            _coroutine = null;
+        }
+    }
+
+    private void StartAttackIfNeeded()
+    {
+        if (_coroutine == null)
+        {
+            _skeletonView.StopWalk();
+            _coroutine = StartCoroutine(DelayBeforeAttack());
+        }
     }
 
     private IEnumerator DelayBeforeAttack()
     {
-
         while (true)
         {
             _skeletonView.StartAttack();
@@ -105,28 +118,23 @@ public class Skeleton : MonoBehaviour, IDamage
             float attackAnimationTime = _skeletonView.Animator.GetCurrentAnimatorStateInfo(0).length;
             yield return new WaitForSeconds(attackAnimationTime);
 
-            if (_target.TryGetComponent(out IDamage damage))
-            {
-                _skeletonView.StartAttack();
-                damage.Damage(_damage);
-            }
+            TryDealDamageToTarget();
         }
     }
 
-    private void FlipSprite(Vector2 direction)
+    private void TryDealDamageToTarget()
     {
-        if (direction.x < 0)
+        if (_target.TryGetComponent(out IDamage damage))
         {
-            _skeletonView.SpriteRenderer.flipX = false;
-        }
-        else if (direction.x > 0)
-        {
-            _skeletonView.SpriteRenderer.flipX = true;
+            _skeletonView.StartAttack();
+            damage.Damage(_config.Damage);
         }
     }
 
     private void Die()
     {
+        StopAttackIfNeeded();
+
         float removingnemy = 5f;
 
         _isDie = true;
