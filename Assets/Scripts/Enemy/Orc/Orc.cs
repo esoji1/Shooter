@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Orc : MonoBehaviour, IDamage
 {
-    private EnemyMeleeConfig _config;
+    private EnemyConfig _config;
     private Player _target;
     private OrcView _orcView;
 
@@ -50,7 +50,7 @@ public class Orc : MonoBehaviour, IDamage
         _health.OnDie -= Die;
     }
 
-    public void Initialize(EnemyMeleeConfig config, Player target)
+    public void Initialize(EnemyConfig config, Player target)
     {
         _config = config;
         _target = target;
@@ -126,7 +126,6 @@ public class Orc : MonoBehaviour, IDamage
     {
         if (_target.TryGetComponent(out IDamage damage))
         {
-            _orcView.StartAttack();
             damage.Damage(_config.Damage);
         }
     }
