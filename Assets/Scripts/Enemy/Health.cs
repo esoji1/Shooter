@@ -1,37 +1,34 @@
 ﻿using System;
 
-namespace Assets.Scripts.Enemy
+public class Health
 {
-    public class Health
+    public event Action OnDie;
+
+    private int _health;
+
+    public Health(int health)
     {
-        public event Action OnDie;
+        if (health < 0)
+            throw new ArgumentException(nameof(health));
 
-        private int _health;
+        _health = health;
+    }
 
-        public Health(int health)
-        {
-            if (health < 0)
-                throw new ArgumentException(nameof(health));
+    public int HealthValue => _health;
 
-            _health = health;
-        }
+    public void TakeDamage(int damage)
+    {
+        _health -= damage;
 
-        public int HealthValue => _health;
+        if (_health <= 0)
+            OnDie?.Invoke();
+    }
 
-        public void TakeDamage(int damage)
-        {
-            _health -= damage;
+    public void AddHealth(int value)
+    {
+        if (value < 0)
+            throw new ArgumentException(nameof(value));
 
-            if (_health <= 0)
-                OnDie?.Invoke();
-        }
-
-        public void AddHealth(int value)
-        {
-            if (value < 0)
-                throw new ArgumentException(nameof(value));
-
-            _health += value;
-        }
+        _health += value;
     }
 }

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stomping5_0: -1436275185828107937
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

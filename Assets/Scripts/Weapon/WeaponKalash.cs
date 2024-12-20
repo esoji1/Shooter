@@ -4,20 +4,24 @@ using UnityEngine;
 public class WeaponKalash : MonoBehaviour
 {
     [SerializeField] private RotateWeapon _rotateWeapon;
-    [SerializeField] private GameObject _prefabBullet;
+    [SerializeField] private Bullet _bullet;
     [SerializeField] private Transform _point;
     [SerializeField] private WeaponView _weaponView;
     [SerializeField] private ParticleSystem _collisionEffect;
     [SerializeField] private ParticleSystem _bloodEffect;
+    [SerializeField] private ProjectileConfig _bulletConfig;
 
     private Coroutine _shootCoroutine;
     private float _delay = 0.1f;
+
+    private SpawnProjectile _spawnProjectile;
 
     public Transform Point => _point;
 
     private void Awake()
     {
         _weaponView.Initialize();
+        _spawnProjectile = new SpawnProjectile();
     }
 
     private void Update()
@@ -29,23 +33,11 @@ public class WeaponKalash : MonoBehaviour
     {
         while (true)
         {
-            GameObject bulletObject = BulletSpawnPoint();
-            Bullet bullet = bulletObject.GetComponent<Bullet>();
-            bullet.Initialize(_point.right, bulletObject, _collisionEffect, _bloodEffect);
+            GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_bullet.gameObject, _point);
+            Bullet bullet = bulletGameObject.GetComponent<Bullet>();
+            bullet.GetComponent<Bullet>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect, _bulletConfig);
             yield return new WaitForSeconds(_delay);
         }
-    }
-
-    private GameObject BulletSpawnPoint()
-    {
-        GameObject bullet = Instantiate(_prefabBullet, _point.position, Quaternion.identity, null);
-
-        Vector3 direction = _point.right;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        bullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        return bullet;
     }
 
     private void StartSterling()

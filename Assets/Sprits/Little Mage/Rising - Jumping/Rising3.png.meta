@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rising3_0: 4958123054085100044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

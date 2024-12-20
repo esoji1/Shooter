@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fireball_high_speed_side_small_0: 7012309504911230496
+      fireball_high_speed_side_small_1: -7031675796628056778
+      fireball_high_speed_side_small_2: -9026750862624792826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

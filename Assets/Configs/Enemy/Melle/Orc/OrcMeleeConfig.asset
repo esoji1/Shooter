@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1998daf67e10844b668f7df7293708, type: 3}
   m_Name: OrcMeleeConfig
   m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 5672110577725478972, guid: 8d6f19e0c5504994c988f913342d5c5f, type: 3}
   <Speed>k__BackingField: 2
   <AttackRadius>k__BackingField: 1
-  <Damage>k__BackingField: 10
-  <DistanceFromEnemy>k__BackingField: 2
+  <Damage>k__BackingField: 15
+  <Health>k__BackingField: 50

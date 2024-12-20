@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fire_ball_blue_side_small_0: 8842626294080912923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

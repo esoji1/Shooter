@@ -1,8 +1,6 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
 public class PlayerView : MonoBehaviour
 {
     private const string IsRun = "IsRun";

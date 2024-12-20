@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1998daf67e10844b668f7df7293708, type: 3}
   m_Name: SkeletonMeleeConfig
   m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 8238665337049643906, guid: 028ed91c7fcbec042aa4c535f28ec377, type: 3}
   <Speed>k__BackingField: 1
   <AttackRadius>k__BackingField: 1
   <Damage>k__BackingField: 40
-  <DistanceFromEnemy>k__BackingField: 2
+  <Health>k__BackingField: 100

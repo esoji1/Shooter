@@ -3,12 +3,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float _speed = 10f;
-    private Vector2 _direction;
-    private GameObject _bullet;
+    private ProjectileConfig _fireballConfig;
+    private Bullet _bullet;
     private ParticleSystem _collisionEffect;
     private ParticleSystem _bloodEffect;
-    private int _damage = 5;
+    private Vector2 _direction;
 
     private RemoveBullet _removeBullet;
     private DealDamage _dealDamage;
@@ -21,36 +20,33 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        _removeBullet.RemoveTimePasses(_bullet);
+        _removeBullet.RemoveTimePasses(_bullet.gameObject, _fireballConfig.NumberSecondsBeforeRemoval);
 
         GiveBulletAcceleration();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _removeBullet.RemovalUponCollisionWall(collision, _bullet, _collisionEffect);
+        _removeBullet.RemovalUponCollisionWall(collision, _bullet.gameObject, _collisionEffect);
 
-        _dealDamage.Damage(collision, _damage, _bullet, _bloodEffect);
+        _dealDamage.Damage(collision, _fireballConfig.Damage, _bullet.gameObject, _bloodEffect);
     }
 
-    public void Initialize(Vector2 direction, GameObject bullet, ParticleSystem collisionEffect, ParticleSystem bloodEffect)
+    public void Initialize(Vector2 direction, Bullet bullet, ParticleSystem collisionEffect,
+        ParticleSystem bloodEffect, ProjectileConfig fireballConfig)
     {
         _direction = direction.normalized;
         _bullet = bullet;
         _collisionEffect = collisionEffect;
         _bloodEffect = bloodEffect;
-    }
-
-    private void TranslateBullet()
-    {
-        transform.Translate(_direction * _speed * Time.deltaTime, Space.World);
+        _fireballConfig = fireballConfig;
     }
 
     private void GiveBulletAcceleration()
     {
         if (_direction != Vector2.zero)
-        {
             TranslateBullet();
-        }
     }
+
+    private void TranslateBullet() => transform.Translate(_direction * _fireballConfig.Speed * Time.deltaTime, Space.World);
 }

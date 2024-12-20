@@ -5,7 +5,6 @@ namespace Assets.Scripts.Weapon.Bullet
     public class RemoveBullet
     {
         private float _time;
-        private float _numberSecondsBeforeRemoval = 2f;
 
         public void RemovalUponCollisionWall(Collider2D collision, GameObject bullet, ParticleSystem collisionEffect)
         {
@@ -21,11 +20,11 @@ namespace Assets.Scripts.Weapon.Bullet
             }
         }
 
-        public void RemoveTimePasses(GameObject bullet)
+        public void RemoveTimePasses(GameObject bullet, float numberSecondsBeforeRemoval)
         {
             _time += Time.deltaTime;
 
-            if (_time >= _numberSecondsBeforeRemoval)
+            if (_time >= numberSecondsBeforeRemoval)
             {
                 if (bullet != null)
                     Object.Destroy(bullet);
