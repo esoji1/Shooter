@@ -3,6 +3,7 @@
 public class Health
 {
     public event Action OnDie;
+    public event Action OnDamage;
 
     private int _health;
 
@@ -18,6 +19,8 @@ public class Health
 
     public void TakeDamage(int damage)
     {
+        OnDamage?.Invoke();
+
         _health -= damage;
 
         if (_health <= 0)
