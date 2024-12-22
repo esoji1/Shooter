@@ -3,12 +3,14 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public abstract class BaseEnemy : MonoBehaviour, IDamage
+public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 {
     protected EnemyConfig Config;
     protected BaseViewEnemy BaseView;
     protected Player Target;
     protected Health Health;
+
+    private Canvas _healthUi;
 
     private bool _isDie = false;
     private Vector2 _direction;
@@ -18,10 +20,16 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage
 
     private ChangeEnemyPosition _changeEnemyPosition;
     private Flip _flip;
+    private HealthInfo _healthInfo;
+    private HealthView _healthView;
+
+    protected abstract PointHealth Point { get; }
 
     protected Vector2 Direction => _direction;
+    public PointHealth PointHealth => Point;
 
     public event Action<BaseEnemy> OnEnemyDie;
+    public event Action<int> OnDamage;
 
     private void Awake()
     {
@@ -43,12 +51,21 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage
             return;
 
         HandleMovementAndAttack();
+
+        _healthView.FollowTargetHealth();
     }
 
-    public virtual void Initialize(EnemyConfig config, Player target)
+    public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi)
     {
         Target = target;
         Config = config;
+
+        _healthUi = healthUi;
+
+        _healthInfo = Instantiate(healthInfo);
+        _healthInfo.Initialize(_healthUi);
+
+        _healthView = new HealthView(this, config.Health, _healthInfo);
 
         BaseView = transform.GetComponentInChildren<BaseViewEnemy>();
 
@@ -59,6 +76,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage
 
     public void Damage(int damage)
     {
+        OnDamage?.Invoke(damage);
+
         Health.TakeDamage(damage);
     }
 
@@ -77,6 +96,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage
 
         Health.OnDie -= Die;
 
+        Destroy(_healthInfo.InstantiatedHealthBar, removingnemy);
         Destroy(gameObject, removingnemy);
     }
 

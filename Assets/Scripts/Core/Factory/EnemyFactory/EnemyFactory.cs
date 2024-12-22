@@ -9,10 +9,12 @@ public class EnemyFactory
     private ParticleSystem _bloodEffect;
     private ParticleSystem _collisionEffect;
     private Fireball _fireball;
+    private HealthInfo _healthInfo;
+    private Canvas _healthUi;
 
     public EnemyFactory(EnemyConfig skeletonConfig, EnemyConfig orcConfig, EnemyConfig magicianConfig,
         ProjectileConfig fireballConfig, Player player, ParticleSystem bloodEffect, ParticleSystem collisionEffect,
-        Fireball fireball)
+        Fireball fireball, HealthInfo healthInfo, Canvas healthUi)
     {
         _skeletonConfig = skeletonConfig;
         _orcConfig = orcConfig;
@@ -22,6 +24,8 @@ public class EnemyFactory
         _bloodEffect = bloodEffect;
         _collisionEffect = collisionEffect;
         _fireball = fireball;
+        _healthInfo = healthInfo;
+        _healthUi = healthUi;
     }
 
     public BaseEnemy Get(EnemyTypes enemyType, Vector3 position)
@@ -54,14 +58,15 @@ public class EnemyFactory
     {
         if (instance is Orc || instance is Skeleton)
         {
-            instance.Initialize(config, _player);
+            instance.Initialize(config, _player, _healthInfo, _healthUi);
 
             return instance;
         }
         else if(instance is Magician)
         {
             Magician magician = instance.GetComponent<Magician>();
-            magician.Initialize(config, _player, _bloodEffect, _fireball, _collisionEffect, _fireballConfig);
+            magician.Initialize(config, _player, _bloodEffect, _fireball,
+                _collisionEffect, _fireballConfig, _healthInfo, _healthUi);
 
             return magician;
         }

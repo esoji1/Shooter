@@ -10,6 +10,8 @@ public class BootstrapEnemyFactory : MonoBehaviour
     [SerializeField] private ParticleSystem _collisionEffect;
     [SerializeField] private Fireball _fireball;
     [SerializeField] private List<Transform> _point = new();
+    [SerializeField] private Canvas _healthUi;
+    [SerializeField] private HealthInfo _healthInfoPrefab;
 
     private EnemyFactory _enemyFactory;
 
@@ -19,6 +21,6 @@ public class BootstrapEnemyFactory : MonoBehaviour
     private void Awake()
     {
         _enemyFactory = new EnemyFactory(_skeletonConfig, _orcConfig, _magicianConfig,
-            _fireballConfig, _player, _bloodEffect, _collisionEffect, _fireball);
+            _fireballConfig, _player, _bloodEffect, _collisionEffect, _fireball, _healthInfoPrefab, _healthUi);
     }
 }

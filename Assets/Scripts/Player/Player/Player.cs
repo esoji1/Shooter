@@ -5,7 +5,6 @@ using Zenject;
 
 public class Player : MonoBehaviour, IDamage, IOnDamage
 {
-    [SerializeField] private HealthView _healthView;
 
     private PlayerView _playerView;
     private JoysickForMovement _joystickForMovement;
@@ -13,6 +12,10 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     private Health _health;
     private Flip _flip;
     private PointHealth _pointHealth;
+    private Canvas _healthUi;
+    private HealthView _healthView;
+    private HealthInfo _healthInfo;
+    private HealthInfo _healthInfoPrefab;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
@@ -28,7 +31,11 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _flip = new Flip();
         _playerStateMachine = new PlayerStateMachine(this);
         _health = new Health(100);
-        _healthView.Initialize(this, 100);
+
+        _healthInfo = Instantiate(_healthInfoPrefab);
+        _healthInfo.Initialize(_healthUi);
+
+        _healthView = new HealthView(this, 100, _healthInfo);
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
@@ -41,10 +48,13 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     }
 
     [Inject]
-    private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement)
+    private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement,
+        Canvas healthUi, HealthInfo healthInfoPrefab)
     {
         _playerView = playerView;
         _joystickForMovement = joystickForMovement;
+        _healthUi = healthUi;
+        _healthInfoPrefab = healthInfoPrefab;
     }
 
     public void Damage(int damage)

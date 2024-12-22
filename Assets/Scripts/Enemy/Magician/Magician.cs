@@ -9,7 +9,10 @@ public class Magician : BaseEnemy
     private Fireball _fireball;
 
     private PointAttack _pointAttack;
+    private PointHealth _pointHealth;
     private SpawnProjectile _spawnProjectile;
+
+    protected override PointHealth Point => _pointHealth;
 
     protected override void Update()
     {
@@ -19,9 +22,10 @@ public class Magician : BaseEnemy
     }
 
     public void Initialize(EnemyConfig config, Player target, ParticleSystem bloodEffect,
-        Fireball fireball, ParticleSystem collisionEffect, ProjectileConfig fireballConfig)
+        Fireball fireball, ParticleSystem collisionEffect, ProjectileConfig fireballConfig, HealthInfo healthInfo,
+        Canvas healthUi)
     {
-        base.Initialize(config, target);
+        base.Initialize(config, target, healthInfo, healthUi);
 
         _fireballConfig = fireballConfig;
         _bloodEffect = bloodEffect;
@@ -30,6 +34,7 @@ public class Magician : BaseEnemy
         _spawnProjectile = new SpawnProjectile();
 
         _pointAttack = transform.GetComponentInChildren<PointAttack>();
+        _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
     protected override void TryDealDamageToTarget()

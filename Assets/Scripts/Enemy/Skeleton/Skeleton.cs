@@ -1,10 +1,17 @@
 using Assets.Scripts.Enemy;
+using UnityEngine;
 
 public class Skeleton : BaseEnemy
 {
-    public override void Initialize(EnemyConfig config, Player target)
+    private PointHealth _pointHealth;
+
+    protected override PointHealth Point => _pointHealth;
+
+    public override void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi)
     {
-        base.Initialize(config, target);
+        base.Initialize(config, target, healthInfo, healthUi);
+
+        _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
     protected override void TryDealDamageToTarget()

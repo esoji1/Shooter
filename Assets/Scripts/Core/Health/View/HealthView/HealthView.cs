@@ -1,28 +1,28 @@
 using UnityEngine;
 
-public class HealthView : MonoBehaviour
+public class HealthView
 {
-    [SerializeField] private HealthInfo _healthInfo;
-
+    private HealthInfo _healthInfo;
     private IOnDamage _onDamage;
 
     private int _currentHp;
     private int _maxHp;
 
-    public void Initialize(IOnDamage onDamage, int maxHealth)
+    public HealthView(IOnDamage onDamage, int maxHealth, HealthInfo healthInfo)
     {
         _maxHp = maxHealth;
         _currentHp = maxHealth;
         _onDamage = onDamage;
+        _healthInfo = healthInfo;
 
         UpdateHealthBar();
 
         _onDamage.OnDamage += Damage;
     }
 
-    public void FollowTargetHealth() 
+    public void FollowTargetHealth()
         => _healthInfo.SetPositon(_onDamage.PointHealth.transform);
-    
+
     private void Damage(int damage)
     {
         _currentHp -= damage;
