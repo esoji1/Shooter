@@ -12,12 +12,6 @@ public class Fireball : MonoBehaviour
     private RemoveBullet _removeBullet;
     private DealDamage _dealDamage;
 
-    private void Awake()
-    {
-        _removeBullet = new RemoveBullet();
-        _dealDamage = new DealDamage();
-    }
-
     private void Update()
     {
         _removeBullet.RemoveTimePasses(_fireball.gameObject, _fireballConfig.NumberSecondsBeforeRemoval);
@@ -41,6 +35,9 @@ public class Fireball : MonoBehaviour
         _bloodEffect = bloodEffect;
         _collisionEffect = collisionEffect;
         _fireballConfig = fireballConfig;
+
+        _removeBullet = new RemoveBullet();
+        _dealDamage = new DealDamage();
     }
 
     private void GiveBulletAcceleration()

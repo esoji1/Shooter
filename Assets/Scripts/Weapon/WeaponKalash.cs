@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class WeaponKalash : MonoBehaviour
 {
-    [SerializeField] private RotateWeapon _rotateWeapon;
-    [SerializeField] private Bullet _bullet;
-    [SerializeField] private Transform _point;
-    [SerializeField] private WeaponView _weaponView;
-    [SerializeField] private ParticleSystem _collisionEffect;
-    [SerializeField] private ParticleSystem _bloodEffect;
-    [SerializeField] private ProjectileConfig _bulletConfig;
+    private RotateWeapon _rotateWeapon;
+    private Bullet _bullet;
+    private Transform _point;
+    private WeaponView _weaponView;
+    private ParticleSystem _collisionEffect;
+    private ParticleSystem _bloodEffect;
+    private ProjectileConfig _bulletConfig;
 
     private Coroutine _shootCoroutine;
     private float _delay = 0.1f;
@@ -18,15 +18,24 @@ public class WeaponKalash : MonoBehaviour
 
     public Transform Point => _point;
 
-    private void Awake()
-    {
-        _weaponView.Initialize();
-        _spawnProjectile = new SpawnProjectile();
-    }
-
     private void Update()
     {
         StartSterling();
+    }
+
+    public void Initialize(RotateWeapon rotateWeapon, Bullet bullet, Transform point, WeaponView weaponView,
+        ParticleSystem collisionEffect, ParticleSystem bloodEffect, ProjectileConfig bulletConfig)
+    {
+        _rotateWeapon = rotateWeapon;
+        _bullet = bullet;
+        _point = point;
+        _weaponView = weaponView;
+        _collisionEffect = collisionEffect;
+        _bloodEffect = bloodEffect;
+        _bulletConfig = bulletConfig;
+
+        _weaponView.Initialize();
+        _spawnProjectile = new SpawnProjectile();
     }
 
     private IEnumerator Shoot()

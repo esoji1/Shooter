@@ -5,7 +5,6 @@ using Zenject;
 
 public class Player : MonoBehaviour, IDamage, IOnDamage
 {
-
     private PlayerView _playerView;
     private JoysickForMovement _joystickForMovement;
     private PlayerStateMachine _playerStateMachine;
@@ -25,7 +24,14 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     public event Action OnHit;
     public event Action<int> OnDamage;
 
-    private void Awake()
+    private void Update()
+    {
+        _playerStateMachine.Update();
+
+        _healthView.FollowTargetHealth();
+    }
+
+    public void Initialize()
     {
         _playerView.Initialize();
         _flip = new Flip();
@@ -38,13 +44,6 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _healthView = new HealthView(this, 100, _healthInfo);
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
-    }
-
-    private void Update()
-    {
-        _playerStateMachine.Update();
-
-        _healthView.FollowTargetHealth();
     }
 
     [Inject]

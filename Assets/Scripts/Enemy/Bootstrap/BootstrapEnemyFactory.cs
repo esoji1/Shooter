@@ -18,7 +18,7 @@ public class BootstrapEnemyFactory : MonoBehaviour
     public EnemyFactory EnemyFactory => _enemyFactory;
     public List<Transform> Point => _point;
 
-    private void Awake()
+    public void Initialize()
     {
         _enemyFactory = new EnemyFactory(_skeletonConfig, _orcConfig, _magicianConfig,
             _fireballConfig, _player, _bloodEffect, _collisionEffect, _fireball, _healthInfoPrefab, _healthUi);

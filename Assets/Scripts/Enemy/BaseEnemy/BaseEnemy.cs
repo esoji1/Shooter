@@ -33,16 +33,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
     private void Awake()
     {
-        _changeEnemyPosition = new ChangeEnemyPosition();
-        _flip = new Flip();
-    }
-
-    private void Start()
-    {
-        BaseView.Initialize();
         _boxCollider2D = GetComponent<BoxCollider2D>();
-
-        StartCoroutine(_changeEnemyPosition.SetRandomPosition(Config.AttackRadius));
     }
 
     protected virtual void Update()
@@ -59,15 +50,19 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     {
         Target = target;
         Config = config;
-
         _healthUi = healthUi;
 
         _healthInfo = Instantiate(healthInfo);
         _healthInfo.Initialize(_healthUi);
 
         _healthView = new HealthView(this, config.Health, _healthInfo);
+        _changeEnemyPosition = new ChangeEnemyPosition();
+        _flip = new Flip();
 
         BaseView = transform.GetComponentInChildren<BaseViewEnemy>();
+        BaseView.Initialize();
+
+        StartCoroutine(_changeEnemyPosition.SetRandomPosition(Config.AttackRadius));
 
         Health = new Health(Config.Health);
 
@@ -97,6 +92,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Health.OnDie -= Die;
 
         Destroy(_healthInfo.InstantiatedHealthBar, removingnemy);
+        Destroy(_healthInfo.GetHealthInfo.gameObject, removingnemy);
         Destroy(gameObject, removingnemy);
     }
 

@@ -8,15 +8,18 @@ public class HealthInfo : MonoBehaviour
     private Canvas _healthUi;
 
     private GameObject _instantiatedHealthBar;
+    private HealthInfo _healthInfo;
     private Image _barBackground;
     private Image _barForeground;
 
     public Image BarBackground => _barBackground;
     public Image BarForeground => _barForeground;
     public GameObject InstantiatedHealthBar => _instantiatedHealthBar;
+    public HealthInfo GetHealthInfo => _healthInfo;
 
     public void Initialize(Canvas healthUi)
     {
+        _healthInfo = this;
         _healthUi = healthUi;
 
         _instantiatedHealthBar = Instantiate(_healthBarPrefab, _healthUi.transform);

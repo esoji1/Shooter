@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    [SerializeField] private List<Wave> _waves = new List<Wave>();
-    [SerializeField] private BootstrapEnemyFactory _bootstrapEnemy;
-    [SerializeField] private float _timeBetweenWaves = 5f;
-    [SerializeField] private TimerBetweenWavesView _timerBetweenWavesView;
+    private List<Wave> _waves;
+    private BootstrapEnemyFactory _bootstrapEnemy;
+    private float _timeBetweenWaves = 5f;
+    private TimerBetweenWavesView _timerBetweenWavesView;
 
     private List<BaseEnemy> _activeEnemies = new();
     private int _currentWaveIndex = 0;
     private bool _isSpawning = false;
 
-    private void Start()
+    public void Initialize(List<Wave> waves, BootstrapEnemyFactory bootstrapEnemy,
+        float timeBetweenWaves, TimerBetweenWavesView timerBetweenWavesView)
     {
-        StartCoroutine(SpawnWaves());
+        _waves = waves;
+        _bootstrapEnemy = bootstrapEnemy;
+        _timeBetweenWaves = timeBetweenWaves;
+        _timerBetweenWavesView = timerBetweenWavesView;
     }
+
+    public void StartEnemyWaveSpawner()
+        => StartCoroutine(SpawnWaves());
 
     private IEnumerator SpawnWaves()
     {

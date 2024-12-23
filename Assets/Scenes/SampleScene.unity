@@ -2499,6 +2499,58 @@ Transform:
   - {fileID: 2078161104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &509830255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509830257}
+  - component: {fileID: 509830256}
+  m_Layer: 0
+  m_Name: BootstrapWeaponKalash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &509830256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509830255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cffbf9d186f8b498c28b63daec85e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotateWeapon: {fileID: 860462837}
+  _bullet: {fileID: 3284175937708600988, guid: a25b56d4c93de1642a56f7349587e4b1, type: 3}
+  _point: {fileID: 1062046150}
+  _weaponView: {fileID: 755424798}
+  _collisionEffect: {fileID: 2861712105189598100, guid: 81e44cc8d9a0c344dba9681b8532a311, type: 3}
+  _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}
+  _bulletConfig: {fileID: 11400000, guid: 7a1b9a748e05dce48b16a4c728c13226, type: 2}
+  _weaponKalash: {fileID: 860462838}
+--- !u!4 &509830257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509830255}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.7263355, y: -3.3462515, z: -0.107813075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,6 +3719,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &759860490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759860492}
+  - component: {fileID: 759860491}
+  m_Layer: 0
+  m_Name: BootstrapEnemyWaveSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &759860491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759860490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a77a33f9f29e7041ba8eec7bb3c364e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _waves:
+  - {fileID: 11400000, guid: 88748e6eaa253604c89f913fac9e6d33, type: 2}
+  - {fileID: 11400000, guid: fb6cbc4673ac9f64680842c73328f764, type: 2}
+  - {fileID: 11400000, guid: c6d6cdf4fc4793d43ae410d4d235fc1a, type: 2}
+  _bootstrapEnemy: {fileID: 758998196}
+  _timeBetweenWaves: 5
+  _timerBetweenWavesView: {fileID: 675028965}
+  _enemyWaveSpawner: {fileID: 1605971034}
+--- !u!4 &759860492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759860490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.7263355, y: -3.3462515, z: -0.107813075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791392342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +4019,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &849272944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849272946}
+  - component: {fileID: 849272945}
+  m_Layer: 0
+  m_Name: BootstrapGameInitialize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &849272945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849272944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792bd71301aca754a944d59b4b70f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1235892790}
+  _bootstrapEnemyFactory: {fileID: 758998196}
+  _bootstrapEnemyWaveSpawner: {fileID: 759860491}
+  _bootstrapWeaponKalash: {fileID: 509830256}
+--- !u!4 &849272946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849272944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.7263355, y: -3.3462515, z: -0.107813075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &860462835
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,13 +4127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3303e0d626eacca4db91bedbb7700318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotateWeapon: {fileID: 860462837}
-  _bullet: {fileID: 3284175937708600988, guid: a25b56d4c93de1642a56f7349587e4b1, type: 3}
-  _point: {fileID: 1062046150}
-  _weaponView: {fileID: 755424798}
-  _collisionEffect: {fileID: 2861712105189598100, guid: 81e44cc8d9a0c344dba9681b8532a311, type: 3}
-  _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}
-  _bulletConfig: {fileID: 11400000, guid: 7a1b9a748e05dce48b16a4c728c13226, type: 2}
 --- !u!1 &944178489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7090,13 +7235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4b34df5d494ba4d8032d5f3b88409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waves:
-  - {fileID: 11400000, guid: 88748e6eaa253604c89f913fac9e6d33, type: 2}
-  - {fileID: 11400000, guid: fb6cbc4673ac9f64680842c73328f764, type: 2}
-  - {fileID: 11400000, guid: c6d6cdf4fc4793d43ae410d4d235fc1a, type: 2}
-  _bootstrapEnemy: {fileID: 758998196}
-  _timeBetweenWaves: 5
-  _timerBetweenWavesView: {fileID: 675028965}
 --- !u!4 &1605971035
 Transform:
   m_ObjectHideFlags: 0
@@ -16968,3 +17106,6 @@ SceneRoots:
   - {fileID: 675028966}
   - {fileID: 326346016}
   - {fileID: 791392346}
+  - {fileID: 849272946}
+  - {fileID: 759860492}
+  - {fileID: 509830257}
