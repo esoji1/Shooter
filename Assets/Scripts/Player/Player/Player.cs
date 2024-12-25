@@ -13,13 +13,14 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     private PointHealth _pointHealth;
     private Canvas _healthUi;
     private HealthView _healthView;
-    private HealthInfo _healthInfo;
     private HealthInfo _healthInfoPrefab;
+    private HealthInfo _healthInfo;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
     public Flip Flip => _flip;
     public PointHealth PointHealth => _pointHealth;
+    public Health Health => _health;
 
     public event Action OnHit;
     public event Action<int> OnDamage;
@@ -48,12 +49,12 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
 
     [Inject]
     private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement,
-        Canvas healthUi, HealthInfo healthInfoPrefab)
+        Canvas healthUi, HealthInfo healthInfo)
     {
         _playerView = playerView;
         _joystickForMovement = joystickForMovement;
         _healthUi = healthUi;
-        _healthInfoPrefab = healthInfoPrefab;
+        _healthInfoPrefab = healthInfo;
     }
 
     public void Damage(int damage)

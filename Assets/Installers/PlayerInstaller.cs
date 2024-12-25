@@ -21,7 +21,7 @@ public class PlayerInstaller : MonoInstaller
 
         Container
             .BindInterfacesAndSelfTo<HealthInfo>()
-            .FromComponentInNewPrefab(_healthInfoPrefab)
+            .FromInstance(_healthInfoPrefab)
             .AsSingle();
     }
 }

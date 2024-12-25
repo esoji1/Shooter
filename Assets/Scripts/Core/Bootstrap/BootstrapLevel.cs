@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class BootstrapGameInitialize : MonoBehaviour
+public class BootstrapLevel : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private BootstrapEnemyFactory _bootstrapEnemyFactory;
     [SerializeField] private BootstrapEnemyWaveSpawner _bootstrapEnemyWaveSpawner;
     [SerializeField] private BootstrapWeaponKalash _bootstrapWeaponKalash;
+    [SerializeField] private BootstrapGameplayMediator GameplayMediator;
+
+    public Player Player => _player;
 
     private void Awake()
     {
@@ -16,5 +20,9 @@ public class BootstrapGameInitialize : MonoBehaviour
         _bootstrapEnemyWaveSpawner.EnemyWaveSpawner.StartEnemyWaveSpawner();
 
         _bootstrapWeaponKalash.Initialize();
+        GameplayMediator.Initialie();
     }
+
+    public void RestartLevel() 
+        => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 }
