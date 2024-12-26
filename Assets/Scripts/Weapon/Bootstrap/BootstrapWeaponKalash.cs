@@ -10,9 +10,11 @@ public class BootstrapWeaponKalash : MonoBehaviour
     [SerializeField] private ParticleSystem _bloodEffect;
     [SerializeField] private ProjectileConfig _bulletConfig;
     [SerializeField] private WeaponKalash _weaponKalash;
+    [SerializeField] private AudioSource _audioSource;
 
     public void Initialize()
     {
-        _weaponKalash.Initialize(_rotateWeapon, _bullet, _point, _weaponView, _collisionEffect, _bloodEffect, _bulletConfig);
+        _weaponKalash.Initialize(_rotateWeapon, _bullet, _point, _weaponView,
+            _collisionEffect, _bloodEffect, _bulletConfig, _audioSource);
     }
 }

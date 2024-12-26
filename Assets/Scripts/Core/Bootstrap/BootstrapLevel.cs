@@ -13,6 +13,8 @@ public class BootstrapLevel : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
+
         _player.Initialize();
         _bootstrapEnemyFactory.Initialize();
 
@@ -25,4 +27,7 @@ public class BootstrapLevel : MonoBehaviour
 
     public void RestartLevel() 
         => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    public void StopGame()
+        => Time.timeScale = 0;
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponKalash : MonoBehaviour
@@ -10,7 +11,9 @@ public class WeaponKalash : MonoBehaviour
     private ParticleSystem _collisionEffect;
     private ParticleSystem _bloodEffect;
     private ProjectileConfig _bulletConfig;
+    private AudioSource _audioSourcePrefab;
 
+    private List<AudioSource> _audioSources = new();
     private Coroutine _shootCoroutine;
     private float _delay = 0.1f;
 
@@ -24,7 +27,7 @@ public class WeaponKalash : MonoBehaviour
     }
 
     public void Initialize(RotateWeapon rotateWeapon, Bullet bullet, Transform point, WeaponView weaponView,
-        ParticleSystem collisionEffect, ParticleSystem bloodEffect, ProjectileConfig bulletConfig)
+        ParticleSystem collisionEffect, ParticleSystem bloodEffect, ProjectileConfig bulletConfig, AudioSource audioSource)
     {
         _rotateWeapon = rotateWeapon;
         _bullet = bullet;
@@ -36,6 +39,8 @@ public class WeaponKalash : MonoBehaviour
 
         _weaponView.Initialize();
         _spawnProjectile = new SpawnProjectile();
+
+        _audioSourcePrefab = audioSource;
     }
 
     private IEnumerator Shoot()
@@ -44,6 +49,10 @@ public class WeaponKalash : MonoBehaviour
         {
             GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_bullet.gameObject, _point);
             Bullet bullet = bulletGameObject.GetComponent<Bullet>();
+
+            AudioSource audioSource = GetAvailableAudioSource();
+            audioSource.Play();
+
             bullet.GetComponent<Bullet>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect, _bulletConfig);
             yield return new WaitForSeconds(_delay);
         }
@@ -66,5 +75,16 @@ public class WeaponKalash : MonoBehaviour
             StopCoroutine(_shootCoroutine);
             _shootCoroutine = null;
         }
+    }
+
+    private AudioSource GetAvailableAudioSource()
+    {
+        foreach (AudioSource source in _audioSources)
+            if (source.isPlaying == false)
+                return source;
+
+        AudioSource newSource = Instantiate(_audioSourcePrefab, transform);
+        _audioSources.Add(newSource);
+        return newSource;
     }
 }

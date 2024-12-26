@@ -1,21 +1,25 @@
 ﻿public class GameplayMediator
 {
     private DefeatPanel _defeatPanel;
-    private BootstrapLevel _bootstrapGameInitialize;
+    private BootstrapLevel _bootstrapLevel;
 
     public GameplayMediator(DefeatPanel defeatPanel, BootstrapLevel bootstrapGameInitialize)
     {
         _defeatPanel = defeatPanel;
-        _bootstrapGameInitialize = bootstrapGameInitialize;
+        _bootstrapLevel = bootstrapGameInitialize;
 
-        _bootstrapGameInitialize.Player.Health.OnDie += OnDefeat;
+        _bootstrapLevel.Player.Health.OnDie += OnDefeat;
     }
 
     public void RestartLevel()
     {
         _defeatPanel.Hide();
-        _bootstrapGameInitialize.RestartLevel();
+        _bootstrapLevel.RestartLevel();
     }
 
-    private void OnDefeat() => _defeatPanel.Show();
+    private void OnDefeat()
+    {
+        _bootstrapLevel.StopGame();
+        _defeatPanel.Show();
+    }
 }

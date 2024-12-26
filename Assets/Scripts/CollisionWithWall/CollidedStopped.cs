@@ -12,12 +12,8 @@ public class CollidedStopped : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, _rayDistance, _wallLayer);
 
         if (hit.collider != null)
-        {
             IsThereWall = hit.collider.TryGetComponent(out Wall wall);
-        }
         else
-        {
             IsThereWall = false;
-        }
     }
 }

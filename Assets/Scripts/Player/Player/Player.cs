@@ -63,6 +63,5 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         OnDamage?.Invoke(damage);
 
         _health.TakeDamage(damage);
-        Debug.Log(_health.HealthValue);
     }
 }

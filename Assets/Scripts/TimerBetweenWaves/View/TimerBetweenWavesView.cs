@@ -12,7 +12,6 @@ public class TimerBetweenWavesView : MonoBehaviour
     public void Show() => _timeBetweenWaves.gameObject.SetActive(true);
     public void Hide() => _timeBetweenWaves.gameObject.SetActive(false);
 
-
     private IEnumerator StartCountdown(float timeBetweenWaves)
     {
         Show();

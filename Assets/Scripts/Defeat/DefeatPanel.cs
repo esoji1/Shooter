@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DefeatPanel : MonoBehaviour
@@ -29,8 +30,6 @@ public class DefeatPanel : MonoBehaviour
     private void OnRestartClick() 
         => _gameplayMediator.RestartLevel();
 
-    private void OnExitHomeClick()
-    {
-
-    }
+    private void OnExitHomeClick() 
+        => SceneManager.LoadScene(1);
 }
