@@ -6,14 +6,18 @@ public class BootstrapLevel : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private BootstrapEnemyFactory _bootstrapEnemyFactory;
     [SerializeField] private BootstrapEnemyWaveSpawner _bootstrapEnemyWaveSpawner;
-    [SerializeField] private BootstrapWeaponKalash _bootstrapWeaponKalash;
+    [SerializeField] private BootstrapWeapon _bootstrapWeapon;
     [SerializeField] private BootstrapGameplayMediator GameplayMediator;
+    [SerializeField] private BootstraTakeAwayWeapon _bootstraTakeAwayWeapon;
+    [SerializeField] private JoystickAttack _joystickAttack;
 
     public Player Player => _player;
-
+    
     private void Awake()
     {
         Time.timeScale = 1;
+
+        _joystickAttack.Initialize();
 
         _player.Initialize();
         _bootstrapEnemyFactory.Initialize();
@@ -21,7 +25,8 @@ public class BootstrapLevel : MonoBehaviour
         _bootstrapEnemyWaveSpawner.Initialize();
         _bootstrapEnemyWaveSpawner.EnemyWaveSpawner.StartEnemyWaveSpawner();
 
-        _bootstrapWeaponKalash.Initialize();
+        _bootstraTakeAwayWeapon.Initialize();
+        _bootstrapWeapon.Initialize();
         GameplayMediator.Initialie();
     }
 

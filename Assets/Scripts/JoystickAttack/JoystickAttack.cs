@@ -1,23 +1,33 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 public class JoystickAttack : BaseJoystickHandler
 {
-    [SerializeField] private RotateWeapon _rotateWeapon;
-    [SerializeField] private WeaponView _weaponView;
- 
+    //[SerializeField] private BootstrapWeapon _weapon;
+    [SerializeField] private Transform _weaponPosition;
+
+    private RotateWeapon _rotateWeapon;
     private BaseJoystickInfo _joystickInfoAttack;
+
+    private List<BaseWeapon> _weapons = new();
 
     public override Image JoystickBackground => _joystickInfoAttack.JoystickBackground;
     public override Image Joystick => _joystickInfoAttack.Joystick;
     public override Image JoystickArea => _joystickInfoAttack.JoystickArea;
-
-    public Vector2 InputVector => _inputVector;
-
+    public RotateWeapon RotateWeapon => _rotateWeapon;
+    
     private void Update()
     {
-        _rotateWeapon.JoystickRotationWeapon(_inputVector, _weaponView.GetWeaponView);
+        _rotateWeapon.JoystickRotationWeapon(_inputVector);
+    }
+
+    public void Initialize()
+    {
+        _rotateWeapon = new RotateWeapon(_weaponPosition);
+
+        //_weapon.OnSpawnWeapon += AddWeapon;
     }
 
     [Inject]
@@ -25,4 +35,7 @@ public class JoystickAttack : BaseJoystickHandler
     {
         _joystickInfoAttack = joystickInfo;
     }
+
+    private void AddWeapon(BaseWeapon weapon) 
+        => _weapons.Add(weapon);
 }
