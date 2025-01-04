@@ -1,0 +1,743 @@
+fileFormatVersion: 2
+guid: 3157d7ac06114d244a75d5922d271d93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2955690599890685844
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_0'
+  - first:
+      213: 610202337269869988
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_1'
+  - first:
+      213: -5641861016920187857
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_2'
+  - first:
+      213: -6150597536025363545
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_3'
+  - first:
+      213: 6805804818438398869
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_4'
+  - first:
+      213: -354611505830105520
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_5'
+  - first:
+      213: 743900339925109427
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_6'
+  - first:
+      213: 540812666695578373
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_7'
+  - first:
+      213: -2352252267421661444
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_8'
+  - first:
+      213: 3427641050549802127
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_9'
+  - first:
+      213: -7211737131173836857
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_10'
+  - first:
+      213: 7132159125633336638
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_11'
+  - first:
+      213: -640870620463215696
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_12'
+  - first:
+      213: -249320347612152081
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_13'
+  - first:
+      213: -6561739997191172133
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_14'
+  - first:
+      213: -7123722400250962994
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_15'
+  - first:
+      213: 9089931157391472054
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_16'
+  - first:
+      213: -466125902438042220
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_17'
+  - first:
+      213: 2139845387114956523
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_18'
+  - first:
+      213: 6180228133162023749
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_19'
+  - first:
+      213: 6912056922335222449
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_20'
+  - first:
+      213: -6931244309557389397
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_21'
+  - first:
+      213: -5594059432817287620
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_22'
+  - first:
+      213: 2890305879509486740
+    second: '[RELOAD] Assault_rifle_V1.00 - Reload_23'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_0'
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 19
+        width: 85
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60fd8f2f074bf6d0800000000000000
+      internalID: -2955690599890685844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_1'
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 15
+        width: 85
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad6512facfd77800800000000000000
+      internalID: 610202337269869988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_2'
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c19560c4514b1b0800000000000000
+      internalID: -5641861016920187857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_3'
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 15
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abb0d4d020b4aaa0800000000000000
+      internalID: -6150597536025363545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_4'
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593a9a57c63137e50800000000000000
+      internalID: 6805804818438398869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_5'
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05eeab9d6ba241bf0800000000000000
+      internalID: -354611505830105520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_6'
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba4785fa6dd25a00800000000000000
+      internalID: 743900339925109427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_7'
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503fb68414a518700800000000000000
+      internalID: 540812666695578373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_8'
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6893a860f1b5fd0800000000000000
+      internalID: -2352252267421661444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_9'
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f845193006d619f20800000000000000
+      internalID: 3427641050549802127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_10'
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 15
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c783e2e943caeb90800000000000000
+      internalID: -7211737131173836857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_11'
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 30
+        width: 85
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e358fecdfe48af260800000000000000
+      internalID: 7132159125633336638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_12'
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 21
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb4e40f09b2b17f0800000000000000
+      internalID: -640870620463215696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_13'
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 25
+        width: 85
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feefc4df67c3a8cf0800000000000000
+      internalID: -249320347612152081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_14'
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 26
+        width: 85
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf82f6fc3400f4a0800000000000000
+      internalID: -6561739997191172133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_15'
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 27
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb5c865834732d90800000000000000
+      internalID: -7123722400250962994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_16'
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 26
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5f2152a3ce52e70800000000000000
+      internalID: 9089931157391472054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_17'
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 25
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495729c16fcf789f0800000000000000
+      internalID: -466125902438042220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_18'
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 24
+        width: 85
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6ce3dca0242bd10800000000000000
+      internalID: 2139845387114956523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_19'
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 14
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b7ffb2eb494c550800000000000000
+      internalID: 6180228133162023749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_20'
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 13
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba1213362f8cef50800000000000000
+      internalID: 6912056922335222449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_21'
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 12
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7526516064fcf90800000000000000
+      internalID: -6931244309557389397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_22'
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 11
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e908e9598ed52b0800000000000000
+      internalID: -5594059432817287620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[RELOAD] Assault_rifle_V1.00 - Reload_23'
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 9
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cc26842ed6c1820800000000000000
+      internalID: 2890305879509486740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
