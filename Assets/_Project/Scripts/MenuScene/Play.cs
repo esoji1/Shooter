@@ -18,7 +18,7 @@ public class Play : MonoBehaviour
 
     private void OpenLevelMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
 

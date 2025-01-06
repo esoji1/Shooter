@@ -1103,6 +1103,7 @@ Transform:
   - {fileID: 1783961491}
   - {fileID: 2015499487}
   - {fileID: 806944845}
+  - {fileID: 540450141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202184731
@@ -3420,6 +3421,70 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.375, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &540450140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540450141}
+  - component: {fileID: 540450142}
+  m_Layer: 0
+  m_Name: BootstrapChaoticMovementUnits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &540450141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540450140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 181725543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540450142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540450140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9ba5fe4dfed6d4b9c58e9816d2b108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platypus: {fileID: 1814964914442682001, guid: 8a488b0bf1e11bf41b7e9832c6cdfcb5, type: 3}
+  _point:
+  - {fileID: 1713904731}
+  - {fileID: 477646148}
+  - {fileID: 1781636338}
+  - {fileID: 2139586732}
+  - {fileID: 384669951}
+  - {fileID: 1751374744}
+  - {fileID: 245587995}
+  - {fileID: 361730450}
+  - {fileID: 1841460812}
+  - {fileID: 1669379270}
+  - {fileID: 445658367}
+  - {fileID: 428615470}
+  - {fileID: 1910501997}
+  - {fileID: 310207124}
+  - {fileID: 77658110}
+  - {fileID: 356491403}
+  - {fileID: 354343924}
+  _chaoticMovementUnits: {fileID: 1813455620}
 --- !u!1 &605975220
 GameObject:
   m_ObjectHideFlags: 0
@@ -4243,15 +4308,10 @@ MonoBehaviour:
   _skeletonConfig: {fileID: 11400000, guid: 36304dc87be4c7343ac68397f2ae9504, type: 2}
   _orcConfig: {fileID: 11400000, guid: 3573835f279651b45a1d24fc016080f8, type: 2}
   _magicianConfig: {fileID: 11400000, guid: 4605ae87b4c9e6641963abb64f907bb3, type: 2}
-  _fireballConfig:
-    <Speed>k__BackingField: 10
-    <Damage>k__BackingField: 5
-    <NumberSecondsBeforeRemoval>k__BackingField: 4
-    <Delay>k__BackingField: 0.1
+  _fireballConfig: {fileID: 11400000, guid: d907bd6e0deed9149b61e41081f9bbfe, type: 2}
   _player: {fileID: 1235892790}
   _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}
   _collisionEffect: {fileID: 2861712105189598100, guid: 81e44cc8d9a0c344dba9681b8532a311, type: 3}
-  _fireball: {fileID: 3508631885773005338, guid: 02fb8af039f31e547a4244e660d9f54a, type: 3}
   _point:
   - {fileID: 1713904731}
   - {fileID: 477646148}
@@ -4317,11 +4377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
-  - {fileID: 11400000, guid: 88748e6eaa253604c89f913fac9e6d33, type: 2}
   - {fileID: 11400000, guid: fb6cbc4673ac9f64680842c73328f764, type: 2}
   - {fileID: 11400000, guid: c6d6cdf4fc4793d43ae410d4d235fc1a, type: 2}
   _bootstrapEnemy: {fileID: 758998196}
-  _timeBetweenWaves: 20
+  _timeBetweenWaves: 10
   _timerBetweenWavesView: {fileID: 675028965}
   _enemyWaveSpawner: {fileID: 1605971034}
 --- !u!4 &759860492
@@ -4562,6 +4621,7 @@ MonoBehaviour:
   _bootstrapEnemyWaveSpawner: {fileID: 759860491}
   _textVictory: {fileID: 1321278969}
   _openMenuWithLevels: {fileID: 176136331}
+  _bootstrapChaoticMovementUnits: {fileID: 540450142}
 --- !u!1 &809645289
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +4807,7 @@ MonoBehaviour:
   _joystickAttack: {fileID: 2131762385}
   _bootstrapSpawnBox: {fileID: 2015499488}
   _bootstrapVictory: {fileID: 806944846}
+  _bootstrapChaoticMovementUnits: {fileID: 540450142}
 --- !u!4 &849272946
 Transform:
   m_ObjectHideFlags: 0
@@ -9166,6 +9227,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1813455619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1813455621}
+  - component: {fileID: 1813455620}
+  m_Layer: 0
+  m_Name: ChaoticMovementUnits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1813455620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813455619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ade131fc7bb22c4daec03a484b468d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1813455621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813455619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.970824, y: -1.5785983, z: 0.11057681}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815085316
 GameObject:
   m_ObjectHideFlags: 0
@@ -18222,3 +18327,4 @@ SceneRoots:
   - {fileID: 959491818}
   - {fileID: 179076261}
   - {fileID: 176136332}
+  - {fileID: 1813455621}

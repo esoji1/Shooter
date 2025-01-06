@@ -52,7 +52,6 @@ public class TakeAwayWeapon : MonoBehaviour
                 ChangeSpriteRotation();
 
                 _isWeaponOccupied = true;
-                Debug.Log("Взял");
             }
         }
     }
@@ -60,10 +59,7 @@ public class TakeAwayWeapon : MonoBehaviour
     private void AwayWeapon()
     {
         if (_isWeaponOccupied && _collider != null)
-        {
             ResetParameters();
-            Debug.Log("Бросил");
-        }
     }
 
     private void EnterTake(Collider2D collider)

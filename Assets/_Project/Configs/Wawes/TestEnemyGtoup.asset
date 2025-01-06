@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f5dc2073967b7d4d91afb5a55fa8806, type: 3}
-  m_Name: FireballConfig
+  m_Script: {fileID: 11500000, guid: 08ab1f6db712e124dab6fe817e3ec4d8, type: 3}
+  m_Name: TestEnemyGtoup
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 8
-  <Damage>k__BackingField: 20
-  <NumberSecondsBeforeRemoval>k__BackingField: 4
+  <EnemyTypes>k__BackingField: 1
+  <Count>k__BackingField: 1
+  <SpawnInterval>k__BackingField: 0

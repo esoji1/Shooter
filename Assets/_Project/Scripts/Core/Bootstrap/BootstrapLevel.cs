@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 public class BootstrapLevel : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class BootstrapLevel : MonoBehaviour
     [SerializeField] private JoystickAttack _joystickAttack;
     [SerializeField] private BootstrapSpawnBox _bootstrapSpawnBox;
     [SerializeField] private BootstrapVictory _bootstrapVictory;
+    [SerializeField] private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
+
+    private SceneLoadMediator _sceneLoader;
 
     public Player Player => _player;
-    
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -35,7 +39,15 @@ public class BootstrapLevel : MonoBehaviour
         _bootstrapSpawnBox.SpawnBox.FirtSpawnBox();
 
         _bootstrapVictory.Initialize();
+        _bootstrapChaoticMovementUnits.Initialize();
     }
+
+    //[Inject]
+    //private void Construct(SceneLoadMediator sceneLoader, LevelLoadingData levelLoadingData)
+    //{
+    //    _sceneLoader = sceneLoader;
+    //    Debug.Log(levelLoadingData.Level);
+    //}
 
     public void RestartLevel() 
         => SceneManager.LoadScene(SceneManager.GetActiveScene().name);

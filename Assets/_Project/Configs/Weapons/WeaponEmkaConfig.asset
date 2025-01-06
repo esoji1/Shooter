@@ -13,8 +13,4 @@ MonoBehaviour:
   m_Name: WeaponEmkaConfig
   m_EditorClassIdentifier: 
   <WeaponPrefab>k__BackingField: {fileID: 2753885435579650874, guid: f1c36d79d1883324cacb7d6c8107b197, type: 3}
-  <Bullet>k__BackingField:
-    <Speed>k__BackingField: 20
-    <Damage>k__BackingField: 100
-    <NumberSecondsBeforeRemoval>k__BackingField: 4
-    <Delay>k__BackingField: 0.07
+  <Bullet>k__BackingField: {fileID: 11400000, guid: cd80c99f9d307f7419ecbe65476eccfb, type: 2}

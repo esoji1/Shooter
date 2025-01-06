@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jump_fall_land_0: -5995316297036934644
+      jump_fall_land_1: -2509140947103444741
+      jump_fall_land_2: -7908240157946556392
+      jump_fall_land_3: 6417008763090444116
+      jump_fall_land_4: 7541398627092847674
+      jump_fall_land_5: -5146205245187333593
+      jump_fall_land_6: -8085396925322289342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

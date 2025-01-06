@@ -31,5 +31,5 @@ public class DefeatPanel : MonoBehaviour
         => _gameplayMediator.RestartLevel();
 
     private void OnExitHomeClick() 
-        => SceneManager.LoadScene(1);
+        => SceneManager.LoadScene(0);
 }

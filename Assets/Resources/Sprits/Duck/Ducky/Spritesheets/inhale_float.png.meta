@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      inhale_float_0: 8307443508056790126
+      inhale_float_1: -8389433893866760241
+      inhale_float_2: -1544569792097544907
+      inhale_float_3: -3752841338021498254
+      inhale_float_4: 5441345314347276359
+      inhale_float_5: -4544258196696541716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

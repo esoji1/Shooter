@@ -5,17 +5,21 @@ public class Victory
     private BootstrapEnemyWaveSpawner _bootstrapEnemyWaveSpawner;
     private GameObject _textVictory;
     private OpenMenuWithLevels _openMenuWithLevels;
+    private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
 
-    private float _delay = 5f;
+    private float _delay = 20f;
 
-    public Victory(BootstrapEnemyWaveSpawner bootstrapEnemyWaveSpawner, GameObject textVictory, OpenMenuWithLevels openMenuWithLevels)
+    public Victory(BootstrapEnemyWaveSpawner bootstrapEnemyWaveSpawner, GameObject textVictory,
+        OpenMenuWithLevels openMenuWithLevels, BootstrapChaoticMovementUnits bootstrapChaoticMovementUnits)
     {
         _bootstrapEnemyWaveSpawner = bootstrapEnemyWaveSpawner;
         _textVictory = textVictory;
         _openMenuWithLevels = openMenuWithLevels;
 
         _bootstrapEnemyWaveSpawner.EnemyWaveSpawner.OnWin += Show;
+
         _openMenuWithLevels = openMenuWithLevels;
+        _bootstrapChaoticMovementUnits = bootstrapChaoticMovementUnits;
     }
 
     private void Show()
@@ -23,6 +27,8 @@ public class Victory
         _textVictory.SetActive(true);
 
         _bootstrapEnemyWaveSpawner.EnemyWaveSpawner.OnWin -= Show;
+        _bootstrapChaoticMovementUnits.ChaoticMovementUnits.StartSpawnUnits();
+
         _openMenuWithLevels.GoMenuWithDelay(_delay);
     }
 }

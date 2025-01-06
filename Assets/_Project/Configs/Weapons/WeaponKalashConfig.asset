@@ -13,8 +13,4 @@ MonoBehaviour:
   m_Name: WeaponKalashConfig
   m_EditorClassIdentifier: 
   <WeaponPrefab>k__BackingField: {fileID: 36233142280170023, guid: 4493f6c799f00ce419149f964cc7c207, type: 3}
-  <Bullet>k__BackingField:
-    <Speed>k__BackingField: 10
-    <Damage>k__BackingField: 5
-    <NumberSecondsBeforeRemoval>k__BackingField: 4
-    <Delay>k__BackingField: 0.1
+  <Bullet>k__BackingField: {fileID: 11400000, guid: 8002e947136a2bf4abaa107f9846e753, type: 2}

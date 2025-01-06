@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
 {
     private RotateWeapon _rotateWeapon;
-    private Bullet _bullet;
     private BaseWeaponView _weaponView;
     private ParticleSystem _collisionEffect;
     private ParticleSystem _bloodEffect;
@@ -23,11 +22,10 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     public Transform Point => _point;
     public BaseWeaponView WeaponView => _weaponView;
 
-    public virtual void Initialize(RotateWeapon rotateWeapon, Bullet bullet, ParticleSystem collisionEffect, 
+    public virtual void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect, 
         ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource)
     {
         _rotateWeapon = rotateWeapon;
-        _bullet = bullet;
 
         _point = transform.GetComponentInChildren<PointWeapon>().transform;
 
@@ -55,7 +53,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     {
         while (true)
         {
-            GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_bullet.gameObject, _point);
+            GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_weaponConfig.Bullet.Projectile, _point);
             Bullet bullet = bulletGameObject.GetComponent<Bullet>();
 
             AudioSource audioSource = playMusic.GetAvailableAudioSource(_audioSources, _audioSourcePrefab, transform);
