@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253d2e023af539f41a326a3f1954cab3, type: 3}
+  m_Name: EasyDifficultyConfig
+  m_EditorClassIdentifier: 
+  <SkeletonConfig>k__BackingField: {fileID: 11400000, guid: 36304dc87be4c7343ac68397f2ae9504, type: 2}
+  <OrcConfig>k__BackingField: {fileID: 11400000, guid: 3573835f279651b45a1d24fc016080f8, type: 2}
+  <MagicianConfig>k__BackingField: {fileID: 11400000, guid: 4605ae87b4c9e6641963abb64f907bb3, type: 2}

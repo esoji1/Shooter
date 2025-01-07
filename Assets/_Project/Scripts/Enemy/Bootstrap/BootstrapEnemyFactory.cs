@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BootstrapEnemyFactory : MonoBehaviour
 {
-    [SerializeField] private EnemyConfig _skeletonConfig, _orcConfig, _magicianConfig;
     [SerializeField] private ProjectileConfig _fireballConfig;
     [SerializeField] private Player _player;
     [SerializeField] private ParticleSystem _bloodEffect;
@@ -17,9 +16,9 @@ public class BootstrapEnemyFactory : MonoBehaviour
     public EnemyFactory EnemyFactory => _enemyFactory;
     public List<Transform> Point => _point;
 
-    public void Initialize()
+    public void Initialize(DifficultyConfig difficultyConfig)
     {
-        _enemyFactory = new EnemyFactory(_skeletonConfig, _orcConfig, _magicianConfig,
+        _enemyFactory = new EnemyFactory(difficultyConfig.SkeletonConfig, difficultyConfig.OrcConfig, difficultyConfig.MagicianConfig,
             _fireballConfig, _player, _bloodEffect, _collisionEffect, _healthInfoPrefab, _healthUi);
     }
 }

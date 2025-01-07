@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253d2e023af539f41a326a3f1954cab3, type: 3}
+  m_Name: ComplexComplexityConfig
+  m_EditorClassIdentifier: 
+  <SkeletonConfig>k__BackingField: {fileID: 11400000, guid: c4292e26b98f8d848aecd317a559e4c3, type: 2}
+  <OrcConfig>k__BackingField: {fileID: 11400000, guid: 7c2702e723e0c4447a06a699b144a010, type: 2}
+  <MagicianConfig>k__BackingField: {fileID: 11400000, guid: d0f589cdcdcab21438f95bc59bbdd35e, type: 2}

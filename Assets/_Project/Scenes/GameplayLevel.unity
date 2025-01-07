@@ -1253,37 +1253,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.375, y: 1}
   m_EdgeRadius: 0
---- !u!1 &206055614
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 206055615}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &206055615
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206055614}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.7045145, y: 0.20721763, z: -0.004792708}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &222035477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,7 +2946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d07827736b21b46abe8b4c71d57157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 3284175937708600988, guid: a25b56d4c93de1642a56f7349587e4b1, type: 3}
   _collisionEffect: {fileID: 2861712105189598100, guid: 81e44cc8d9a0c344dba9681b8532a311, type: 3}
   _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}
   _emkaConfig: {fileID: 11400000, guid: c5f9738a72d34b64289c2f4b5e88ed72, type: 2}
@@ -4377,6 +4345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
+  - {fileID: 11400000, guid: 88748e6eaa253604c89f913fac9e6d33, type: 2}
   - {fileID: 11400000, guid: fb6cbc4673ac9f64680842c73328f764, type: 2}
   - {fileID: 11400000, guid: c6d6cdf4fc4793d43ae410d4d235fc1a, type: 2}
   _bootstrapEnemy: {fileID: 758998196}
@@ -18322,7 +18291,6 @@ SceneRoots:
   - {fileID: 675028966}
   - {fileID: 791392346}
   - {fileID: 181725543}
-  - {fileID: 206055615}
   - {fileID: 1829440811}
   - {fileID: 959491818}
   - {fileID: 179076261}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 public class BootstrapLevel : MonoBehaviour
@@ -16,6 +15,8 @@ public class BootstrapLevel : MonoBehaviour
     [SerializeField] private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
 
     private SceneLoadMediator _sceneLoader;
+    private LevelLoadingData _levelLoadingData;
+    private DifficultyConfig _difficultyConfig;
 
     public Player Player => _player;
 
@@ -26,7 +27,7 @@ public class BootstrapLevel : MonoBehaviour
         _joystickAttack.Initialize();
 
         _player.Initialize();
-        _bootstrapEnemyFactory.Initialize();
+        _bootstrapEnemyFactory.Initialize(_difficultyConfig);
 
         _bootstrapEnemyWaveSpawner.Initialize();
         _bootstrapEnemyWaveSpawner.EnemyWaveSpawner.StartEnemyWaveSpawner();
@@ -42,15 +43,18 @@ public class BootstrapLevel : MonoBehaviour
         _bootstrapChaoticMovementUnits.Initialize();
     }
 
-    //[Inject]
-    //private void Construct(SceneLoadMediator sceneLoader, LevelLoadingData levelLoadingData)
-    //{
-    //    _sceneLoader = sceneLoader;
-    //    Debug.Log(levelLoadingData.Level);
-    //}
+    [Inject]
+    private void Construct(SceneLoadMediator sceneLoader, LevelLoadingData levelLoadingData)
+    {
+        _sceneLoader = sceneLoader;
+        _levelLoadingData = levelLoadingData;
+        _difficultyConfig = levelLoadingData.DifficultyConfig;
+
+        Debug.Log(levelLoadingData.Level);
+    }
 
     public void RestartLevel() 
-        => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        => _sceneLoader.GoToGameplayLevel(new LevelLoadingData(_levelLoadingData.Level));
 
     public void StopGame()
         => Time.timeScale = 0;
