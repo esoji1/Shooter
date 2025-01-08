@@ -6,19 +6,22 @@ public class WeaponFactory
     private RotateWeapon _rotateWeapon;
     private ParticleSystem _collisionEffect;
     private ParticleSystem _bloodEffect;
-    private WeaponConfig _klashConfig, _emkaConfig;
-    private AudioSource _audioSourcePrefab;
+    private WeaponConfig _klashConfig, _emkaConfig, _gunConfig, _sniperConfig, _submachineConfig;
+    private Player _player;
 
     public WeaponFactory(RotateWeapon rotateWeapon, ParticleSystem collisionEffect, 
-        ParticleSystem bloodEffect, WeaponConfig klashConfig,WeaponConfig emkaConfig, 
-        AudioSource audioSourcePrefab)
+        ParticleSystem bloodEffect, WeaponConfig klashConfig, WeaponConfig emkaConfig, WeaponConfig gunConfig,
+        WeaponConfig sniperConfig, WeaponConfig submachineConfig, Player player)
     {
         _rotateWeapon = rotateWeapon;
         _collisionEffect = collisionEffect;
         _bloodEffect = bloodEffect;
         _klashConfig = klashConfig;
         _emkaConfig = emkaConfig;
-        _audioSourcePrefab = audioSourcePrefab;
+        _gunConfig = gunConfig;
+        _sniperConfig = sniperConfig;
+        _submachineConfig = submachineConfig;
+        _player = player;
     }
 
     public BaseWeapon Get(WeaponTypes weaponType, Vector3 position)
@@ -39,6 +42,15 @@ public class WeaponFactory
             case WeaponTypes.Kalash:
                 return _klashConfig;
 
+            case WeaponTypes.Gun:
+                return _gunConfig;
+
+            case WeaponTypes.Sniper:
+                return _sniperConfig;
+
+            case WeaponTypes.Submachine:
+                return _submachineConfig;
+
             default:
                 throw new ArgumentException(nameof(types));
         }
@@ -49,12 +61,29 @@ public class WeaponFactory
         switch (instance)
         {
             case WeaponKalash kalash:
-                kalash.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _klashConfig, _audioSourcePrefab);
+                kalash.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _klashConfig, _klashConfig.AudioPrefab,
+                    _player);
                 return kalash;
 
             case WeaponEmka emka:
-                emka.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _emkaConfig, _audioSourcePrefab);
+                emka.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _emkaConfig, _emkaConfig.AudioPrefab,
+                    _player);
                 return emka;
+
+            case WeaponGun gun:
+                gun.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _gunConfig, _gunConfig.AudioPrefab,
+                    _player);
+                return gun;
+
+            case WeaponSniper sniper:
+                sniper.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _sniperConfig, _sniperConfig.AudioPrefab,
+                    _player);
+                return sniper;
+
+            case WeaponSubmachine submachine:
+                submachine.Initialize(_rotateWeapon, _collisionEffect, _bloodEffect, _submachineConfig, _submachineConfig.AudioPrefab,
+                    _player);
+                return submachine;
 
             default:
                 throw new ArgumentException(nameof(instance));

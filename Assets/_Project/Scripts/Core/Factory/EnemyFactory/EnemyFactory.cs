@@ -11,13 +11,12 @@ public class EnemyFactory
     private HealthInfo _healthInfo;
     private Canvas _healthUi;
 
-    public EnemyFactory(EnemyConfig skeletonConfig, EnemyConfig orcConfig, EnemyConfig magicianConfig,
-        ProjectileConfig fireballConfig, Player player, ParticleSystem bloodEffect, ParticleSystem collisionEffect,
-        HealthInfo healthInfo, Canvas healthUi)
+    public EnemyFactory(DifficultyConfig difficultyConfig, ProjectileConfig fireballConfig, Player player,
+        ParticleSystem bloodEffect, ParticleSystem collisionEffect, HealthInfo healthInfo, Canvas healthUi)
     {
-        _skeletonConfig = skeletonConfig;
-        _orcConfig = orcConfig;
-        _magicianConfig = magicianConfig;
+        _skeletonConfig = difficultyConfig.SkeletonConfig;
+        _orcConfig = difficultyConfig.OrcConfig;
+        _magicianConfig = difficultyConfig.MagicianConfig;
         _fireballConfig = fireballConfig;
         _player = player;
         _bloodEffect = bloodEffect;

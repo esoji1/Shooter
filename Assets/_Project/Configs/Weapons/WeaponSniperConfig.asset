@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f42ed2601ceac489581c66669063a6, type: 3}
+  m_Name: WeaponSniperConfig
+  m_EditorClassIdentifier: 
+  <WeaponPrefab>k__BackingField: {fileID: 3459198187467256003, guid: 04b35425407b579459b380d3b5c9d160, type: 3}
+  <Bullet>k__BackingField: {fileID: 11400000, guid: 493cd2d270129d24189c0019f2b59c9f, type: 2}
+  <AudioPrefab>k__BackingField: {fileID: 8160109155483072811, guid: f52808f64fd214245ac85412ac27c8c0, type: 3}

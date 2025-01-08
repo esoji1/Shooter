@@ -1,39 +1,41 @@
 using Assets.Scripts.Weapon.Bullet;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     private ProjectileConfig _bulletConfig;
-    private Bullet _bullet;
+    private Projectile _projectile;
     private ParticleSystem _collisionEffect;
     private ParticleSystem _bloodEffect;
     private Vector2 _direction;
+    private GameObject _owner;
 
     private RemoveBullet _removeBullet;
     private DealDamage _dealDamage;
 
     private void Update()
     {
-        _removeBullet.RemoveTimePasses(_bullet.gameObject, _bulletConfig.NumberSecondsBeforeRemoval);
+        _removeBullet.RemoveTimePasses(_projectile.gameObject, _bulletConfig.NumberSecondsBeforeRemoval);
 
         GiveBulletAcceleration();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _removeBullet.RemovalUponCollisionWall(collision, _bullet.gameObject, _collisionEffect);
+        _removeBullet.RemovalUponCollisionWall(collision, _projectile.gameObject, _collisionEffect);
 
-        _dealDamage.Damage(collision, _bulletConfig.Damage, _bullet.gameObject, _bloodEffect);
+        _dealDamage.Damage(collision, _bulletConfig.Damage, _projectile.gameObject, _bloodEffect, _owner);
     }
 
-    public void Initialize(Vector2 direction, Bullet bullet, ParticleSystem collisionEffect,
-        ParticleSystem bloodEffect, ProjectileConfig fireballConfig)
+    public void Initialize(Vector2 direction, Projectile projectile, ParticleSystem collisionEffect,
+        ParticleSystem bloodEffect, ProjectileConfig fireballConfig, GameObject owner)
     {
         _direction = direction.normalized;
-        _bullet = bullet;
+        _projectile = projectile;
         _collisionEffect = collisionEffect;
         _bloodEffect = bloodEffect;
         _bulletConfig = fireballConfig;
+        _owner = owner;
 
         _removeBullet = new RemoveBullet();
         _dealDamage = new DealDamage();

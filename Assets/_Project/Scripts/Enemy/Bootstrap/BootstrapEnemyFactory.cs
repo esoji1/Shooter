@@ -18,7 +18,6 @@ public class BootstrapEnemyFactory : MonoBehaviour
 
     public void Initialize(DifficultyConfig difficultyConfig)
     {
-        _enemyFactory = new EnemyFactory(difficultyConfig.SkeletonConfig, difficultyConfig.OrcConfig, difficultyConfig.MagicianConfig,
-            _fireballConfig, _player, _bloodEffect, _collisionEffect, _healthInfoPrefab, _healthUi);
+        _enemyFactory = new EnemyFactory(difficultyConfig, _fireballConfig, _player, _bloodEffect, _collisionEffect, _healthInfoPrefab, _healthUi);
     }
 }

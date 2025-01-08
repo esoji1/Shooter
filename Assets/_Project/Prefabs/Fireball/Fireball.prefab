@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6070961790264964877}
   - component: {fileID: 3670603424850252474}
   - component: {fileID: 6233973462776913431}
-  - component: {fileID: 3508631885773005338}
   - component: {fileID: 2390677713067686137}
   - component: {fileID: 7959148595837493036}
+  - component: {fileID: 4928671552957358189}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -275709435
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7fd1264bb8449684b82576df3cab9e03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,18 +113,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3508631885773005338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3636435983192567279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f798ae123c5cf5489cdba0d6010f6d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2390677713067686137
 Rigidbody2D:
   serializedVersion: 5
@@ -198,3 +186,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1480702, y: 0.46559227}
   m_EdgeRadius: 0
+--- !u!114 &4928671552957358189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636435983192567279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2250695753472448b3181c11a27996b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

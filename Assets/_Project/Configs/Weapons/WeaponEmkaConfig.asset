@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <WeaponPrefab>k__BackingField: {fileID: 2753885435579650874, guid: f1c36d79d1883324cacb7d6c8107b197, type: 3}
   <Bullet>k__BackingField: {fileID: 11400000, guid: cd80c99f9d307f7419ecbe65476eccfb, type: 2}
+  <AudioPrefab>k__BackingField: {fileID: 1225318756473097029, guid: 47ecd13b6164e504b9bc5d999f5418ea, type: 3}

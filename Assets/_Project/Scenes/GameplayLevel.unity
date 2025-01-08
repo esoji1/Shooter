@@ -2950,8 +2950,11 @@ MonoBehaviour:
   _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}
   _emkaConfig: {fileID: 11400000, guid: c5f9738a72d34b64289c2f4b5e88ed72, type: 2}
   _kalashConfig: {fileID: 11400000, guid: 2c08f3983b296224c96b77385724ec3f, type: 2}
-  _audioSource: {fileID: 3300753963612495447, guid: 8bba66dcb7a25754bb790732d73a3037, type: 3}
+  _gunConfig: {fileID: 11400000, guid: e437b8f89209313429ad3515f2738195, type: 2}
+  _sniperConfig: {fileID: 11400000, guid: c6986fe298c81f44cbfa545f3f8da7cf, type: 2}
+  _submachineConfig: {fileID: 11400000, guid: 09112cd7166f8ad41a7454959759b5aa, type: 2}
   _joystickAttack: {fileID: 2131762385}
+  _player: {fileID: 1235892790}
 --- !u!1 &515323121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,9 +4276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba88bc8f797cf264f9e9988f38ccd66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skeletonConfig: {fileID: 11400000, guid: 36304dc87be4c7343ac68397f2ae9504, type: 2}
-  _orcConfig: {fileID: 11400000, guid: 3573835f279651b45a1d24fc016080f8, type: 2}
-  _magicianConfig: {fileID: 11400000, guid: 4605ae87b4c9e6641963abb64f907bb3, type: 2}
   _fireballConfig: {fileID: 11400000, guid: d907bd6e0deed9149b61e41081f9bbfe, type: 2}
   _player: {fileID: 1235892790}
   _bloodEffect: {fileID: 1421135496017491501, guid: 33e7ae61b20853149b6e039a63970d6b, type: 3}

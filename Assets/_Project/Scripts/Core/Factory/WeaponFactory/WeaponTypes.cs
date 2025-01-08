@@ -1,5 +1,8 @@
 ﻿public enum WeaponTypes
 {
     Emka = 0,
-    Kalash
+    Kalash,
+    Gun,
+    Sniper,
+    Submachine,
 }

@@ -24,7 +24,7 @@ public class Fireball : MonoBehaviour
         _removeBullet.RemovalUponCollisionWall(collision, _fireball.gameObject, _collisionEffect);
 
         if (collision.TryGetComponent(out Player player))
-            _dealDamage.Damage(collision, _fireballConfig.Damage, _fireball.gameObject, _bloodEffect);
+            _dealDamage.Damage(collision, _fireballConfig.Damage, _fireball.gameObject, _bloodEffect, null);
     }
 
     public void Initialize(Vector2 direction, Fireball fireball, ParticleSystem bloodEffect,

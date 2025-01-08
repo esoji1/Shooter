@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8399000515643487323}
-  - component: {fileID: 3937136160140744462}
   - component: {fileID: 6699491169971591697}
   - component: {fileID: 7543255045539142851}
+  - component: {fileID: 392822361695589323}
   m_Layer: 0
-  m_Name: Bullet 1
+  m_Name: BulletEmka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,18 +35,6 @@ Transform:
   - {fileID: 1526694201859379371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3937136160140744462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973122325720715705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf21e729d67f424429d79bb95c6d24bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &6699491169971591697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -120,6 +108,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &392822361695589323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973122325720715705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2250695753472448b3181c11a27996b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7573365845878086268
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: -275709435
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8389509757741084032, guid: 7c2c2864b82a9f64a85963a04e2ad369, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 508c1f4582ce38d4ebe6832bbd57e541, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

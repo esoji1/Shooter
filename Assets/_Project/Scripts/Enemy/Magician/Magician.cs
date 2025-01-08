@@ -37,8 +37,8 @@ public class Magician : BaseEnemy
     protected override void TryDealDamageToTarget()
     {
         GameObject magicianGameObject = _spawnProjectile.ProjectileSpawnPoint(_fireballConfig.Projectile, _pointAttack.transform);
-        Fireball fireball = magicianGameObject.GetComponent<Fireball>();
-        fireball.Initialize(Direction.normalized, fireball, _bloodEffect, _collisionEffect, _fireballConfig);
+        Projectile fireball = magicianGameObject.GetComponent<Projectile>();
+        fireball.Initialize(Direction.normalized, fireball, _collisionEffect, _bloodEffect, _fireballConfig, gameObject);
     }
 
     protected void FlipPointAttack(Vector2 inputVector)

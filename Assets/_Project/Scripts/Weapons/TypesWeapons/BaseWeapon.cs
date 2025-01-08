@@ -10,6 +10,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     private ParticleSystem _bloodEffect;
     private WeaponConfig _weaponConfig;
     private AudioSource _audioSourcePrefab;
+    private Player _player;
 
     private Transform _point;
 
@@ -22,9 +23,10 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     public Transform Point => _point;
     public BaseWeaponView WeaponView => _weaponView;
 
-    public virtual void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect, 
-        ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource)
+    public virtual void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect,
+        ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource, Player player)
     {
+        _player = player;
         _rotateWeapon = rotateWeapon;
 
         _point = transform.GetComponentInChildren<PointWeapon>().transform;
@@ -53,14 +55,16 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     {
         while (true)
         {
+            yield return new WaitForSeconds(_weaponConfig.Bullet.Delay);
+
             GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_weaponConfig.Bullet.Projectile, _point);
-            Bullet bullet = bulletGameObject.GetComponent<Bullet>();
+            Projectile bullet = bulletGameObject.GetComponent<Projectile>();
 
             AudioSource audioSource = playMusic.GetAvailableAudioSource(_audioSources, _audioSourcePrefab, transform);
             audioSource.Play();
 
-            bullet.GetComponent<Bullet>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect, _weaponConfig.Bullet);
-            yield return new WaitForSeconds(_weaponConfig.Bullet.Delay);
+            bullet.GetComponent<Projectile>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect,
+                _weaponConfig.Bullet, _player.gameObject);
         }
     }
 

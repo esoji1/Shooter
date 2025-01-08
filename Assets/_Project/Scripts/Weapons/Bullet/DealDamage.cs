@@ -5,8 +5,11 @@ namespace Assets.Scripts.Weapon.Bullet
 {
     public class DealDamage
     {
-        public void Damage(Collider2D collision, int damage, GameObject bullet, ParticleSystem bloodEffect)
+        public void Damage(Collider2D collision, int damage, GameObject bullet, ParticleSystem bloodEffect, GameObject owner)
         {
+            if (collision.gameObject == owner)
+                return;
+
             if (collision.TryGetComponent(out IDamage component))
             {
                 ParticleSystem effect = Object.Instantiate(bloodEffect, bullet.transform.position, Quaternion.identity, null);
