@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class EnemyFactory
 {
-    private EnemyConfig _skeletonConfig, _orcConfig, _magicianConfig, _mediumSkeletonConfig;
+    private EnemyConfig _skeletonConfig, _orcConfig, _magicianConfig, _mediumSkeletonConfig, _kamikazeConfig, 
+        _robotConfig;
     private ProjectileConfig _fireballConfig;
     private Player _player;
     private ParticleSystem _bloodEffect;
@@ -20,7 +21,9 @@ public class EnemyFactory
         _orcConfig = difficultyConfig.OrcConfig;
         _magicianConfig = difficultyConfig.MagicianConfig;
         _mediumSkeletonConfig = difficultyConfig.MediumSkeletonConfig;
-            
+        _kamikazeConfig = difficultyConfig.KamikazeConfig;
+        _robotConfig = difficultyConfig.RobotConfig;
+
         _fireballConfig = fireballConfig;
         _player = player;
         _bloodEffect = bloodEffect;
@@ -54,6 +57,12 @@ public class EnemyFactory
             case EnemyTypes.MediumSkeleton:
                 return _mediumSkeletonConfig;
 
+            case EnemyTypes.Kamikaze:
+                return _kamikazeConfig;
+
+            case EnemyTypes.Robot:
+                return _robotConfig;
+
             default:
                 throw new ArgumentException(nameof(types));
         }
@@ -61,7 +70,8 @@ public class EnemyFactory
 
     private BaseEnemy InitializeObject(BaseEnemy instance, EnemyConfig config)
     {
-        if (instance is Orc || instance is Skeleton || instance is MediumSkeleton)
+        if (instance is Orc || instance is Skeleton || instance is MediumSkeleton || instance is Kamikaze || 
+            instance is Robot)
         {
             instance.Initialize(config, _player, _healthInfo, _healthUi, _takingDamage);
 

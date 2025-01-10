@@ -7,7 +7,7 @@ public class Victory
     private OpenMenuWithLevels _openMenuWithLevels;
     private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
 
-    private float _delay = 20f;
+    private float _delay = 10;
 
     public Victory(BootstrapEnemyWaveSpawner bootstrapEnemyWaveSpawner, GameObject textVictory,
         OpenMenuWithLevels openMenuWithLevels, BootstrapChaoticMovementUnits bootstrapChaoticMovementUnits)

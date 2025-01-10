@@ -3,5 +3,7 @@
     Skeleton = 0,
     Orc,
     Magician,
-    MediumSkeleton
+    MediumSkeleton,
+    Kamikaze,
+    Robot,
 }

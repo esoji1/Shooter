@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
 
@@ -7,6 +8,7 @@ public class PlayerInstaller : MonoInstaller
     [SerializeField] private HealthInfo _healthInfoPrefab;
     [SerializeField] private Canvas _healthUi;
     [SerializeField] private AudioSource _takingDamage;
+    [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
 
     public override void InstallBindings()
     {
@@ -28,6 +30,11 @@ public class PlayerInstaller : MonoInstaller
         Container
             .BindInterfacesAndSelfTo<AudioSource>()
             .FromInstance(_takingDamage)
+            .AsSingle();
+
+        Container
+            .BindInterfacesAndSelfTo<CinemachineImpulseSource>()
+            .FromInstance(_cinemachineImpulseSource)
             .AsSingle();
     }
 }

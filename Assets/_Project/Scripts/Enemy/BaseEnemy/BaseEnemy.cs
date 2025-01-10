@@ -10,6 +10,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     protected BaseViewEnemy BaseView;
     protected Player Target;
     protected Health Health;
+    protected HealthView HealthView;
 
     private Canvas _healthUi;
     private AudioSource _takingDamage;
@@ -23,7 +24,6 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private ChangeEnemyPosition _changeEnemyPosition;
     private Flip _flip;
     private HealthInfo _healthInfo;
-    private HealthView _healthView;
     private PlayMusic _playMusic;
 
     protected abstract PointHealth Point { get; }
@@ -46,7 +46,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
         HandleMovementAndAttack();
 
-        _healthView.FollowTargetHealth();
+        HealthView.FollowTargetHealth();
     }
 
     public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi,
@@ -61,7 +61,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
         _healthInfo = Instantiate(healthInfo);
         _healthInfo.Initialize(_healthUi);
-        _healthView = new HealthView(this, config.Health, _healthInfo);
+        HealthView = new HealthView(this, config.Health, _healthInfo);
 
         _changeEnemyPosition = new ChangeEnemyPosition();
         _flip = new Flip();
@@ -154,7 +154,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         }
     }
 
-    private IEnumerator DelayBeforeAttack()
+    protected virtual IEnumerator DelayBeforeAttack()
     {
         while (true)
         {

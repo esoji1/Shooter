@@ -16,3 +16,5 @@ MonoBehaviour:
   <OrcConfig>k__BackingField: {fileID: 11400000, guid: 2a1f2de8f692f7f458dfda16f8210617, type: 2}
   <MagicianConfig>k__BackingField: {fileID: 11400000, guid: a3ab8f01657975b4bba8ed54a6089f91, type: 2}
   <MediumSkeletonConfig>k__BackingField: {fileID: 11400000, guid: 4bc423410a2f93742964db7de5c10c51, type: 2}
+  <KamikazeConfig>k__BackingField: {fileID: 11400000, guid: 88d65e8fbc0e57f469c14ddb93e21913, type: 2}
+  <RobotConfig>k__BackingField: {fileID: 11400000, guid: cc72cfff58af44940929199ee24ddf96, type: 2}

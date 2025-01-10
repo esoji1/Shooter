@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1998daf67e10844b668f7df7293708, type: 3}
+  m_Name: KamikazeConfig
+  m_EditorClassIdentifier: 
+  <Prefab>k__BackingField: {fileID: 6634688010583215956, guid: 9f4f566b075505842a690ecce2503f75, type: 3}
+  <Speed>k__BackingField: 5
+  <AttackRadius>k__BackingField: 1
+  <Damage>k__BackingField: 70
+  <Health>k__BackingField: 25

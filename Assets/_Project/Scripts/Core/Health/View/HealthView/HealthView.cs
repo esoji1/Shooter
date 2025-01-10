@@ -23,6 +23,18 @@ public class HealthView
     public void FollowTargetHealth()
         => _healthInfo.SetPositon(_onDamage.PointHealth.transform);
 
+    public void AddHealth(int value)
+    {
+        _currentHp += value;
+
+        _currentHp = Mathf.Clamp(_currentHp, 0, _maxHp);
+
+        UpdateHealthBar();
+
+        if (_currentHp <= 0)
+            _onDamage.OnDamage -= Damage;
+    }
+
     private void Damage(int damage)
     {
         _currentHp -= damage;
@@ -34,6 +46,7 @@ public class HealthView
         if (_currentHp <= 0)
             _onDamage.OnDamage -= Damage;
     }
+
 
     private void UpdateHealthBar()
         => _healthInfo.BarForeground.fillAmount = (float)_currentHp / _maxHp;

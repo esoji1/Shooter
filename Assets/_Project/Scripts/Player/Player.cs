@@ -1,8 +1,8 @@
 using Assets.Scripts.Enemy;
 using System;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Audio;
 using Zenject;
 
 public class Player : MonoBehaviour, IDamage, IOnDamage
@@ -18,9 +18,11 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     private HealthInfo _healthInfoPrefab;
     private HealthInfo _healthInfo;
     private AudioSource _takingDamage;
+    private CinemachineImpulseSource _cinemachineImpulseSource;
 
     private List<AudioSource> _audioSources = new();
     private PlayMusic _playMusic;
+    private int _numberHealth = 100;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
@@ -55,27 +57,28 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _playerView.Initialize();
         _flip = new Flip();
         _playerStateMachine = new PlayerStateMachine(this);
-        _health = new Health(100);
+        _health = new Health(_numberHealth);
 
         _playMusic = new PlayMusic();
 
         _healthInfo = Instantiate(_healthInfoPrefab);
         _healthInfo.Initialize(_healthUi);
 
-        _healthView = new HealthView(this, 100, _healthInfo);
+        _healthView = new HealthView(this, _numberHealth, _healthInfo);
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
     [Inject]
     private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement,
-        Canvas healthUi, HealthInfo healthInfo, AudioSource takingDamage)
+        Canvas healthUi, HealthInfo healthInfo, AudioSource takingDamage, CinemachineImpulseSource cinemachineImpulseSource)
     {
         _playerView = playerView;
         _joystickForMovement = joystickForMovement;
         _healthUi = healthUi;
         _healthInfoPrefab = healthInfo;
         _takingDamage = takingDamage;
+        _cinemachineImpulseSource = cinemachineImpulseSource;
     }
 
     public void Damage(int damage)
@@ -85,6 +88,8 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
 
         AudioSource audioSource = _playMusic.GetAvailableAudioSource(_audioSources, _takingDamage, transform);
         audioSource.Play();
+
+        _cinemachineImpulseSource.GenerateImpulse();
 
         _health.TakeDamage(damage);
     }
