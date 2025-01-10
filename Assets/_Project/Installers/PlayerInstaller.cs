@@ -6,6 +6,7 @@ public class PlayerInstaller : MonoInstaller
     [SerializeField] private JoysickForMovement _joysickForMovement;
     [SerializeField] private HealthInfo _healthInfoPrefab;
     [SerializeField] private Canvas _healthUi;
+    [SerializeField] private AudioSource _takingDamage;
 
     public override void InstallBindings()
     {
@@ -22,6 +23,11 @@ public class PlayerInstaller : MonoInstaller
         Container
             .BindInterfacesAndSelfTo<HealthInfo>()
             .FromInstance(_healthInfoPrefab)
+            .AsSingle();
+
+        Container
+            .BindInterfacesAndSelfTo<AudioSource>()
+            .FromInstance(_takingDamage)
             .AsSingle();
     }
 }

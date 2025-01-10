@@ -1,6 +1,7 @@
 using Assets.Scripts.Enemy;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
@@ -11,9 +12,10 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     protected Health Health;
 
     private Canvas _healthUi;
-
+    private AudioSource _takingDamage;
     private bool _isDie = false;
     private Vector2 _direction;
+    private List<AudioSource> _audioSources = new();
 
     private Coroutine _coroutine;
     private BoxCollider2D _boxCollider2D;
@@ -22,6 +24,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private Flip _flip;
     private HealthInfo _healthInfo;
     private HealthView _healthView;
+    private PlayMusic _playMusic;
 
     protected abstract PointHealth Point { get; }
 
@@ -46,16 +49,20 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         _healthView.FollowTargetHealth();
     }
 
-    public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi)
+    public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi,
+        AudioSource takingDamage)
     {
         Target = target;
         Config = config;
         _healthUi = healthUi;
+        _takingDamage = takingDamage;
+
+        _playMusic = new PlayMusic();
 
         _healthInfo = Instantiate(healthInfo);
         _healthInfo.Initialize(_healthUi);
-
         _healthView = new HealthView(this, config.Health, _healthInfo);
+
         _changeEnemyPosition = new ChangeEnemyPosition();
         _flip = new Flip();
 
@@ -73,6 +80,9 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     {
         OnDamage?.Invoke(damage);
 
+        AudioSource audioSource = _playMusic.GetAvailableAudioSource(_audioSources, _takingDamage, transform);
+        audioSource.Play();
+
         Health.TakeDamage(damage);
     }
 
@@ -82,7 +92,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
         StopAttackIfNeeded();
 
-        float removingnemy = 5f;
+        float removingEnemy = 5f;
 
         _isDie = true;
         _boxCollider2D.enabled = false;
@@ -91,9 +101,9 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
         Health.OnDie -= Die;
 
-        Destroy(_healthInfo.InstantiatedHealthBar, removingnemy);
-        Destroy(_healthInfo.GetHealthInfo.gameObject, removingnemy);
-        Destroy(gameObject, removingnemy);
+        Destroy(_healthInfo.InstantiatedHealthBar, removingEnemy);
+        Destroy(_healthInfo.GetHealthInfo.gameObject, removingEnemy);
+        Destroy(gameObject, removingEnemy);
     }
 
     protected abstract void TryDealDamageToTarget();

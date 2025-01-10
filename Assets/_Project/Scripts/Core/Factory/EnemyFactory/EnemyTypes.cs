@@ -2,5 +2,6 @@
 {
     Skeleton = 0,
     Orc,
-    Magician
+    Magician,
+    MediumSkeleton
 }

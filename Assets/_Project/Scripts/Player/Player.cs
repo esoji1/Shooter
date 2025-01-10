@@ -1,6 +1,8 @@
 using Assets.Scripts.Enemy;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using Zenject;
 
 public class Player : MonoBehaviour, IDamage, IOnDamage
@@ -15,6 +17,10 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     private HealthView _healthView;
     private HealthInfo _healthInfoPrefab;
     private HealthInfo _healthInfo;
+    private AudioSource _takingDamage;
+
+    private List<AudioSource> _audioSources = new();
+    private PlayMusic _playMusic;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
@@ -51,6 +57,8 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _playerStateMachine = new PlayerStateMachine(this);
         _health = new Health(100);
 
+        _playMusic = new PlayMusic();
+
         _healthInfo = Instantiate(_healthInfoPrefab);
         _healthInfo.Initialize(_healthUi);
 
@@ -61,18 +69,22 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
 
     [Inject]
     private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement,
-        Canvas healthUi, HealthInfo healthInfo)
+        Canvas healthUi, HealthInfo healthInfo, AudioSource takingDamage)
     {
         _playerView = playerView;
         _joystickForMovement = joystickForMovement;
         _healthUi = healthUi;
         _healthInfoPrefab = healthInfo;
+        _takingDamage = takingDamage;
     }
 
     public void Damage(int damage)
     {
         OnHit?.Invoke();
         OnDamage?.Invoke(damage);
+
+        AudioSource audioSource = _playMusic.GetAvailableAudioSource(_audioSources, _takingDamage, transform);
+        audioSource.Play();
 
         _health.TakeDamage(damage);
     }

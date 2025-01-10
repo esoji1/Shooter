@@ -9,6 +9,7 @@ public class LevelLoadingData
     private const string ComplexComplexityConfig = "ComplexComplexityConfig";
 
     private const string ConfigsPath = "LevelSettings";
+
     private DifficultyConfig _difficultyConfig;
 
     public LevelLoadingData(int level)

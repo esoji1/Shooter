@@ -15,3 +15,4 @@ MonoBehaviour:
   <SkeletonConfig>k__BackingField: {fileID: 11400000, guid: c4292e26b98f8d848aecd317a559e4c3, type: 2}
   <OrcConfig>k__BackingField: {fileID: 11400000, guid: 7c2702e723e0c4447a06a699b144a010, type: 2}
   <MagicianConfig>k__BackingField: {fileID: 11400000, guid: d0f589cdcdcab21438f95bc59bbdd35e, type: 2}
+  <MediumSkeletonConfig>k__BackingField: {fileID: 11400000, guid: c2366b0e05c596f469f0ddbdf9247569, type: 2}
