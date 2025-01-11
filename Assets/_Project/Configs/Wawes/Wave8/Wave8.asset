@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff79ac91c8b131840b9888b5be55d538, type: 3}
-  m_Name: Wave3
+  m_Name: Wave8
   m_EditorClassIdentifier: 
   <EnemyGroups>k__BackingField:
-  - {fileID: 11400000, guid: 2876fa557d5191a4ca319e9de52c961b, type: 2}
-  - {fileID: 11400000, guid: 788f679ebbd65a9409b10f9c79253666, type: 2}
+  - {fileID: 11400000, guid: d60afda208b10ef49b93d068f1f85070, type: 2}
+  - {fileID: 11400000, guid: 35b01b2e5b469e049b62ddc5fb5ec6de, type: 2}
+  - {fileID: 11400000, guid: 2fa48b10f0631894dbe2509c8a4caa44, type: 2}

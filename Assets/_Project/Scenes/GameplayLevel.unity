@@ -4346,7 +4346,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _waves:
-  - {fileID: 11400000, guid: b160826b5b018694995714017c416545, type: 2}
+  - {fileID: 11400000, guid: 88748e6eaa253604c89f913fac9e6d33, type: 2}
+  - {fileID: 11400000, guid: fb6cbc4673ac9f64680842c73328f764, type: 2}
+  - {fileID: 11400000, guid: c6d6cdf4fc4793d43ae410d4d235fc1a, type: 2}
+  - {fileID: 11400000, guid: 1737a7214d83c854bad434643c4848e3, type: 2}
+  - {fileID: 11400000, guid: bdb2225365ee3e246964c58101291b20, type: 2}
+  - {fileID: 11400000, guid: 2c390d9fbbdacce4da6d0558058ba628, type: 2}
+  - {fileID: 11400000, guid: 0761768c70e38014d830f88223b14fb8, type: 2}
+  - {fileID: 11400000, guid: 295ea14df984d9040af24414f8d556bf, type: 2}
+  - {fileID: 11400000, guid: 727341517f393a040a8505469677a1e3, type: 2}
+  - {fileID: 11400000, guid: 4d4e310e0d276a24ab03ea2953fcb6d5, type: 2}
   _bootstrapEnemy: {fileID: 758998196}
   _timeBetweenWaves: 10
   _timerBetweenWavesView: {fileID: 675028965}
@@ -8082,6 +8091,135 @@ MonoBehaviour:
     FrequencyGain: 1
     Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!1 &1565803257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565803259}
+  - component: {fileID: 1565803258}
+  m_Layer: 0
+  m_Name: BackgroundAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1565803258
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565803257}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5af87472b4735404788dd7604299e6c7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5af87472b4735404788dd7604299e6c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1565803259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565803257}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1053.4166, y: 495.58084, z: -7.831764}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594133220
 GameObject:
   m_ObjectHideFlags: 0
@@ -18375,3 +18513,4 @@ SceneRoots:
   - {fileID: 179076261}
   - {fileID: 176136332}
   - {fileID: 1813455621}
+  - {fileID: 1565803259}

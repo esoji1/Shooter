@@ -49,8 +49,6 @@ public class BootstrapLevel : MonoBehaviour
         _sceneLoader = sceneLoader;
         _levelLoadingData = levelLoadingData;
         _difficultyConfig = levelLoadingData.DifficultyConfig;
-
-        Debug.Log(levelLoadingData.Level);
     }
 
     public void RestartLevel() 

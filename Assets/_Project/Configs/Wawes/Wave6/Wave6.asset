@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08ab1f6db712e124dab6fe817e3ec4d8, type: 3}
-  m_Name: EnemyGroup
+  m_Script: {fileID: 11500000, guid: ff79ac91c8b131840b9888b5be55d538, type: 3}
+  m_Name: Wave6
   m_EditorClassIdentifier: 
-  <EnemyTypes>k__BackingField: 1
-  <Count>k__BackingField: 8
-  <SpawnInterval>k__BackingField: 0.5
+  <EnemyGroups>k__BackingField:
+  - {fileID: 11400000, guid: 97b1b495ade21934fadd0e1d6aca3694, type: 2}
+  - {fileID: 11400000, guid: 51dfba079d623334192329c21c345c6a, type: 2}

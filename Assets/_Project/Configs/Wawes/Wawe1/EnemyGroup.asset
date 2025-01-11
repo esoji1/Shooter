@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemyGroup
   m_EditorClassIdentifier: 
   <EnemyTypes>k__BackingField: 1
-  <Count>k__BackingField: 8
+  <Count>k__BackingField: 5
   <SpawnInterval>k__BackingField: 0.5

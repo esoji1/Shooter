@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ab1f6db712e124dab6fe817e3ec4d8, type: 3}
   m_Name: EnemyGroup
   m_EditorClassIdentifier: 
-  <EnemyTypes>k__BackingField: 1
-  <Count>k__BackingField: 8
+  <EnemyTypes>k__BackingField: 5
+  <Count>k__BackingField: 6
   <SpawnInterval>k__BackingField: 0.5

@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Wave1
   m_EditorClassIdentifier: 
   <EnemyGroups>k__BackingField:
-  - {fileID: 11400000, guid: e7299af39e2d9a94e8ee03c90ff366cc, type: 2}
   - {fileID: 11400000, guid: 94e30cc00ef0bce44bb5f01c5e909fa0, type: 2}
