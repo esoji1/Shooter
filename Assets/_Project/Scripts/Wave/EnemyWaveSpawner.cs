@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,6 +11,8 @@ public class EnemyWaveSpawner : MonoBehaviour
     private BootstrapEnemyFactory _bootstrapEnemy;
     private float _timeBetweenWaves;
     private TimerBetweenWavesView _timerBetweenWavesView;
+
+    private WaveView _waveView;
 
     private List<BaseEnemy> _activeEnemies = new();
     private int _currentWaveIndex = 0;
@@ -21,12 +24,14 @@ public class EnemyWaveSpawner : MonoBehaviour
     public event Action OnWin;
 
     public void Initialize(List<Wave> waves, BootstrapEnemyFactory bootstrapEnemy,
-        float timeBetweenWaves, TimerBetweenWavesView timerBetweenWavesView)
+        float timeBetweenWaves, TimerBetweenWavesView timerBetweenWavesView, TextMeshProUGUI waveText)
     {
         _waves = waves;
         _bootstrapEnemy = bootstrapEnemy;
         _timeBetweenWaves = timeBetweenWaves;
         _timerBetweenWavesView = timerBetweenWavesView;
+
+        _waveView = new WaveView(waveText, _waves.Count);
     }
 
     public void StartEnemyWaveSpawner()
@@ -34,6 +39,8 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     private IEnumerator SpawnWaves()
     {
+        _waveView.Show(_currentWaveIndex);
+
         while (_currentWaveIndex < _waves.Count)
         {
             if (_isSpawning == false)
@@ -59,6 +66,8 @@ public class EnemyWaveSpawner : MonoBehaviour
 
                 if (_currentWaveIndex < _waves.Count)
                 {
+                    _waveView.Show(_currentWaveIndex);
+
                     _timerBetweenWavesView.StartTimeBeetwenWaves(_timeBetweenWaves);
                     yield return new WaitForSeconds(_timeBetweenWaves);
                 }

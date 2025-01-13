@@ -13,6 +13,7 @@ public class BootstrapLevel : MonoBehaviour
     [SerializeField] private BootstrapSpawnBox _bootstrapSpawnBox;
     [SerializeField] private BootstrapVictory _bootstrapVictory;
     [SerializeField] private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
+    [SerializeField] private BootstrapPausePanel _bootstrapPausePanel;
 
     private SceneLoadMediator _sceneLoader;
     private LevelLoadingData _levelLoadingData;
@@ -41,6 +42,8 @@ public class BootstrapLevel : MonoBehaviour
 
         _bootstrapVictory.Initialize();
         _bootstrapChaoticMovementUnits.Initialize();
+
+        _bootstrapPausePanel.Initialize();
     }
 
     [Inject]
