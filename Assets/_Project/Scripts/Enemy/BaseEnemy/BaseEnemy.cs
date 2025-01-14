@@ -34,10 +34,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     public event Action<BaseEnemy> OnEnemyDie;
     public event Action<int> OnDamage;
 
-    private void Awake()
-    {
-        _boxCollider2D = GetComponent<BoxCollider2D>();
-    }
+    private void Awake() 
+        => _boxCollider2D = GetComponent<BoxCollider2D>();
 
     protected virtual void Update()
     {

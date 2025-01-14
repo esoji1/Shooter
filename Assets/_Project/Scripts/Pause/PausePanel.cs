@@ -4,37 +4,33 @@ using UnityEngine.UI;
 
 public class PausePanel : MonoBehaviour
 {
-    private Button _pause;
-    private Button _restart;
-    private Button _exitHome;
-    private GameObject _pausePanel;
+    [SerializeField] private Button _pause;
+    [SerializeField] private Button _restart;
+    [SerializeField] private Button _exitHome;
+    [SerializeField] private GameObject _pauseMenu;
     private PauseMediator _pauseMediator;
 
     private bool _isPause = true;
 
-    private void OnDestroy()
+    private void OnEnable()
     {
-        _pause.onClick.RemoveListener(Pause);
-
-        _restart.onClick.RemoveListener(OnRestartClick);
-        _exitHome.onClick.RemoveListener(OnExitHomeClick);
-    }
-
-    public void Initialize(PauseMediator pauseMediator, Button pause, Button restart, Button exitHome, GameObject pausePanel)
-    {
-        _pause = pause;
-        _restart = restart;
-        _exitHome = exitHome;
-        _pausePanel = pausePanel;
-        _pauseMediator = pauseMediator;
-
         _pause.onClick.AddListener(Pause);
         _restart.onClick.AddListener(OnRestartClick);
         _exitHome.onClick.AddListener(OnExitHomeClick);
     }
 
-    public void Show() => _pausePanel.SetActive(true);
-    public void Hide() => _pausePanel.SetActive(false);
+    private void OnDisable()
+    {
+        _pause.onClick.RemoveListener(Pause);
+        _restart.onClick.RemoveListener(OnRestartClick);
+        _exitHome.onClick.RemoveListener(OnExitHomeClick);
+    }
+
+    public void Initialize(PauseMediator pauseMediator) 
+        =>_pauseMediator = pauseMediator;  
+
+    public void Show() => _pauseMenu.SetActive(true);
+    public void Hide() => _pauseMenu.SetActive(false);
 
     private void Pause()
     {

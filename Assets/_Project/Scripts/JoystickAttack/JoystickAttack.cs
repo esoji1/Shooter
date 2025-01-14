@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine.UI;
 using Zenject;
 
@@ -13,15 +12,11 @@ public class JoystickAttack : BaseJoystickHandler
     public override Image JoystickArea => _joystickInfoAttack.JoystickArea;
     public RotateWeapon RotateWeapon => _rotateWeapon;
     
-    private void Update()
-    {
-        _rotateWeapon.JoystickRotationWeapon(_inputVector);
-    }
+    public void Initialize() 
+        => _rotateWeapon = new RotateWeapon(_weaponPosition);
 
-    public void Initialize()
-    {
-        _rotateWeapon = new RotateWeapon(_weaponPosition);
-    }
+    private void Update() 
+        => _rotateWeapon.JoystickRotationWeapon(_inputVector);
 
     [Inject]
     private void Construct(BaseJoystickInfo joystickInfo, WeaponPosition weaponPosition)

@@ -12,10 +12,8 @@ public abstract class BaseJoystickHandler : MonoBehaviour, IDragHandler, IPointe
 
     protected Vector2 _inputVector;
 
-    private void Start()
-    {
-        _joystickBackgroundStartPosition = JoystickBackground.rectTransform.anchoredPosition;
-    }
+    private void Start() 
+        => _joystickBackgroundStartPosition = JoystickBackground.rectTransform.anchoredPosition;
 
     public void OnDrag(PointerEventData eventData)
     {

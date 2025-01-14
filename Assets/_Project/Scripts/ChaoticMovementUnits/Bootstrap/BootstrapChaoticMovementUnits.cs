@@ -9,8 +9,6 @@ public class BootstrapChaoticMovementUnits : MonoBehaviour
 
     public ChaoticMovementUnits ChaoticMovementUnits => _chaoticMovementUnits;
 
-    public void Initialize()
-    {
-        _chaoticMovementUnits.Initialize(_platypus, _point);
-    }
+    private void Awake() 
+        => _chaoticMovementUnits.Initialize(_platypus, _point);
 }

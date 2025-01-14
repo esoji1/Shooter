@@ -7,10 +7,7 @@ public class RotateWeapon
 
     public bool IsAttackJoystickActive { get; private set; } = false;
 
-    public RotateWeapon(WeaponPosition weaponTransform)
-    {
-        _weaponTransform = weaponTransform.transform;
-    }
+    public RotateWeapon(WeaponPosition weaponTransform) => _weaponTransform = weaponTransform.transform;
 
     public void JoystickRotationWeapon(Vector2 inputVector)
     {

@@ -34,7 +34,7 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     public event Action<int> OnDamage;
     public event Action<Collider2D> OnEnterCollider;
     public event Action<Collider2D> OnExitCollider;
-
+    
     private void Update()
     {
         _playerStateMachine.Update();
@@ -42,15 +42,9 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _healthView.FollowTargetHealth();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        OnEnterCollider?.Invoke(collision);
-    }
+    private void OnTriggerEnter2D(Collider2D collision) => OnEnterCollider?.Invoke(collision);
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        OnExitCollider?.Invoke(collision);
-    }
+    private void OnTriggerExit2D(Collider2D collision) => OnExitCollider?.Invoke(collision);
 
     public void Initialize()
     {

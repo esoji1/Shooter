@@ -17,9 +17,7 @@ public class BootstrapEnemyFactory : MonoBehaviour
     public EnemyFactory EnemyFactory => _enemyFactory;
     public List<Transform> Point => _point;
 
-    public void Initialize(DifficultyConfig difficultyConfig)
-    {
-        _enemyFactory = new EnemyFactory(difficultyConfig, _fireballConfig, _player, _bloodEffect,
+    public void Initialize(DifficultyConfig difficultyConfig) 
+        => _enemyFactory = new EnemyFactory(difficultyConfig, _fireballConfig, _player, _bloodEffect,
             _collisionEffect, _healthInfoPrefab, _healthUi, _takingDamage);
-    }
 }

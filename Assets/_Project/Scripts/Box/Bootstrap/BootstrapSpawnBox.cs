@@ -11,8 +11,9 @@ public class BootstrapSpawnBox : MonoBehaviour
 
     public SpawnBox SpawnBox => _spawnBox;
 
-    public void Initialize()
+    private void Awake()
     {
         _spawnBox.Initialize(_box, _enemyWaveSpawner, _weaponFactory.WeaponFactory, _takeAwayWeapon, _pointBox);
+        _spawnBox.FirtSpawnBox();
     }
 }

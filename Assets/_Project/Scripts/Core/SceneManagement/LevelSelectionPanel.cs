@@ -23,8 +23,6 @@ public class LevelSelectionPanel : MonoBehaviour
             levelSelectionButton.Click -= OnLevelSelected;
     }
 
-    private void OnLevelSelected(int level)
-    {
-        _sceneLoader.GoToGameplayLevel(new LevelLoadingData(level));
-    }
+    private void OnLevelSelected(int level) 
+        => _sceneLoader.GoToGameplayLevel(new LevelLoadingData(level));
 }

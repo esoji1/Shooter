@@ -3,12 +3,12 @@
     private DefeatPanel _defeatPanel;
     private BootstrapLevel _bootstrapLevel;
 
-    public GameplayMediator(DefeatPanel defeatPanel, BootstrapLevel bootstrapGameInitialize)
+    public GameplayMediator(DefeatPanel defeatPanel, BootstrapLevel bootstrapGameInitialize, Player player)
     {
         _defeatPanel = defeatPanel;
         _bootstrapLevel = bootstrapGameInitialize;
 
-        _bootstrapLevel.Player.Health.OnDie += OnDefeat;
+        player.Health.OnDie += OnDefeat;
     }
 
     public void RestartLevel()

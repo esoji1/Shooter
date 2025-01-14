@@ -6,19 +6,10 @@ public class Play : MonoBehaviour
 {
     [SerializeField] private Button _play;
 
-    private void OnEnable()
-    {
-        _play.onClick.AddListener(OpenLevelMenu);
-    }
+    private void OnEnable() => _play.onClick.AddListener(OpenLevelMenu);
 
-    private void OnDisable()
-    {
-        _play.onClick.RemoveListener(OpenLevelMenu);
-    }
+    private void OnDisable() => _play.onClick.RemoveListener(OpenLevelMenu);
 
-    private void OpenLevelMenu()
-    {
-        SceneManager.LoadScene(1);
-    }
+    private void OpenLevelMenu() => SceneManager.LoadScene(1);
 }
 

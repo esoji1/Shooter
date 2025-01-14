@@ -13,6 +13,9 @@ public class BootstrapEnemyWaveSpawner : MonoBehaviour
 
     public EnemyWaveSpawner EnemyWaveSpawner => _enemyWaveSpawner;
 
-    public void Initialize() 
-        => _enemyWaveSpawner.Initialize(_waves, _bootstrapEnemy, _timeBetweenWaves, _timerBetweenWavesView, _waveText);
+    private void Awake()
+    {
+        _enemyWaveSpawner.Initialize(_waves, _bootstrapEnemy, _timeBetweenWaves, _timerBetweenWavesView, _waveText);
+        _enemyWaveSpawner.StartEnemyWaveSpawner();
+    }
 }

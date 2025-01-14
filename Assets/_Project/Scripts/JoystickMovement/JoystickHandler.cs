@@ -10,8 +10,6 @@ public class JoystickHandler : BaseJoystickHandler
     public override Image JoystickArea => _joystickInfoMovement.JoystickArea;
 
     [Inject]
-    private void Construct(BaseJoystickInfo joystickInfo)
-    {
-        _joystickInfoMovement = joystickInfo;
-    }
+    private void Construct(BaseJoystickInfo joystickInfo) 
+        => _joystickInfoMovement = joystickInfo;
 }

@@ -12,8 +12,6 @@ public class BootstraTakeAwayWeapon : MonoBehaviour
 
     public TakeAwayWeapon TakeAwayWeapon => _takeAwayTheWeapon;
 
-    public void Initialize()
-    {
-        _takeAwayTheWeapon.Initialize(_take, _awayWeapon, _weaponPosition, _player, _joystickAttack);
-    }
+    private void Awake() 
+        => _takeAwayTheWeapon.Initialize(_take, _awayWeapon, _weaponPosition, _player, _joystickAttack);
 }

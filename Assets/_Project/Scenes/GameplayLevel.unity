@@ -3022,6 +3022,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf1818578c0d7e46ae727d8dae4f1da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pause: {fileID: 473791699}
+  _restart: {fileID: 734849597}
+  _exitHome: {fileID: 1474837513}
+  _pauseMenu: {fileID: 852091780}
 --- !u!1 &477646147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,7 +3230,6 @@ MonoBehaviour:
   _gunConfig: {fileID: 11400000, guid: e437b8f89209313429ad3515f2738195, type: 2}
   _sniperConfig: {fileID: 11400000, guid: c6986fe298c81f44cbfa545f3f8da7cf, type: 2}
   _submachineConfig: {fileID: 11400000, guid: 09112cd7166f8ad41a7454959759b5aa, type: 2}
-  _joystickAttack: {fileID: 2131762385}
   _player: {fileID: 1235892790}
 --- !u!1 &515323121
 GameObject:
@@ -5326,13 +5329,12 @@ MonoBehaviour:
   _bootstrapEnemyFactory: {fileID: 758998196}
   _bootstrapEnemyWaveSpawner: {fileID: 759860491}
   _bootstrapWeaponFactory: {fileID: 509830258}
-  GameplayMediator: {fileID: 429759790}
+  _gameplayMediator: {fileID: 429759790}
   _bootstraTakeAwayWeapon: {fileID: 1783961492}
   _joystickAttack: {fileID: 2131762385}
   _bootstrapSpawnBox: {fileID: 2015499488}
   _bootstrapVictory: {fileID: 806944846}
   _bootstrapChaoticMovementUnits: {fileID: 540450142}
-  _bootstrapPausePanel: {fileID: 1719955332}
 --- !u!4 &849272946
 Transform:
   m_ObjectHideFlags: 0
@@ -9418,10 +9420,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 473791702}
   _bootstrapLevel: {fileID: 849272945}
-  _pause: {fileID: 473791699}
-  _restart: {fileID: 734849597}
-  _exitHome: {fileID: 1474837513}
-  _pauseMenu: {fileID: 852091780}
 --- !u!1 &1721835780
 GameObject:
   m_ObjectHideFlags: 0

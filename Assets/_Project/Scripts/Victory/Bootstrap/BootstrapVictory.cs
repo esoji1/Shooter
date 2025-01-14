@@ -7,8 +7,6 @@ public class BootstrapVictory : MonoBehaviour
     [SerializeField] private OpenMenuWithLevels _openMenuWithLevels;
     [SerializeField] private BootstrapChaoticMovementUnits _bootstrapChaoticMovementUnits;
 
-    public void Initialize()
-    {
-        Victory victory = new Victory(_bootstrapEnemyWaveSpawner, _textVictory, _openMenuWithLevels, _bootstrapChaoticMovementUnits);
-    }
+    private void Awake() 
+        => new Victory(_bootstrapEnemyWaveSpawner, _textVictory, _openMenuWithLevels, _bootstrapChaoticMovementUnits);
 }
