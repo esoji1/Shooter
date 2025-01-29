@@ -735,7 +735,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOAD] Assault_rifle_V1.00 - Reload_0': -2955690599890685844
+      '[RELOAD] Assault_rifle_V1.00 - Reload_1': 610202337269869988
+      '[RELOAD] Assault_rifle_V1.00 - Reload_10': -7211737131173836857
+      '[RELOAD] Assault_rifle_V1.00 - Reload_11': 7132159125633336638
+      '[RELOAD] Assault_rifle_V1.00 - Reload_12': -640870620463215696
+      '[RELOAD] Assault_rifle_V1.00 - Reload_13': -249320347612152081
+      '[RELOAD] Assault_rifle_V1.00 - Reload_14': -6561739997191172133
+      '[RELOAD] Assault_rifle_V1.00 - Reload_15': -7123722400250962994
+      '[RELOAD] Assault_rifle_V1.00 - Reload_16': 9089931157391472054
+      '[RELOAD] Assault_rifle_V1.00 - Reload_17': -466125902438042220
+      '[RELOAD] Assault_rifle_V1.00 - Reload_18': 2139845387114956523
+      '[RELOAD] Assault_rifle_V1.00 - Reload_19': 6180228133162023749
+      '[RELOAD] Assault_rifle_V1.00 - Reload_2': -5641861016920187857
+      '[RELOAD] Assault_rifle_V1.00 - Reload_20': 6912056922335222449
+      '[RELOAD] Assault_rifle_V1.00 - Reload_21': -6931244309557389397
+      '[RELOAD] Assault_rifle_V1.00 - Reload_22': -5594059432817287620
+      '[RELOAD] Assault_rifle_V1.00 - Reload_23': 2890305879509486740
+      '[RELOAD] Assault_rifle_V1.00 - Reload_3': -6150597536025363545
+      '[RELOAD] Assault_rifle_V1.00 - Reload_4': 6805804818438398869
+      '[RELOAD] Assault_rifle_V1.00 - Reload_5': -354611505830105520
+      '[RELOAD] Assault_rifle_V1.00 - Reload_6': 743900339925109427
+      '[RELOAD] Assault_rifle_V1.00 - Reload_7': 540812666695578373
+      '[RELOAD] Assault_rifle_V1.00 - Reload_8': -2352252267421661444
+      '[RELOAD] Assault_rifle_V1.00 - Reload_9': 3427641050549802127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

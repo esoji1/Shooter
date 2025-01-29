@@ -435,7 +435,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_0': 3445778344423202111
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_1': -2309072266037916008
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_10': -2633844436987709455
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_11': 2483550923425156376
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_2': 5792933076587486325
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_3': -7485195713890137446
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_4': 2213678073698984158
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_5': -2427218438966852487
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_6': -4976737383432855288
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_7': 6380985626244623850
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_8': -8978588794473898802
+      '[SHOOT WITH MUZZLE FLASH] Revolver - Colt 45_9': 765335493520426766
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

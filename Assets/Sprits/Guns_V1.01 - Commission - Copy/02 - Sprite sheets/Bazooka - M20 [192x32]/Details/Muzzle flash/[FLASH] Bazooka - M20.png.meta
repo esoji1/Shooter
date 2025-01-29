@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FLASH] Bazooka - M20_0': 7087312052420721301
+      '[FLASH] Bazooka - M20_1': -8994542888184697360
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

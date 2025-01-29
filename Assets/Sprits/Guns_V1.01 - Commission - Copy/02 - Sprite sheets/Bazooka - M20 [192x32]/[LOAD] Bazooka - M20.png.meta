@@ -660,7 +660,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[LOAD] Bazooka - M20_0': -3207605913144972855
+      '[LOAD] Bazooka - M20_1': 1644001288765388911
+      '[LOAD] Bazooka - M20_10': 7544322719025280418
+      '[LOAD] Bazooka - M20_11': -5991589659745392848
+      '[LOAD] Bazooka - M20_12': 5610673119160694039
+      '[LOAD] Bazooka - M20_13': -2239315733281315811
+      '[LOAD] Bazooka - M20_14': 1377190386052127112
+      '[LOAD] Bazooka - M20_15': -378625438311857378
+      '[LOAD] Bazooka - M20_16': 1597653549419790104
+      '[LOAD] Bazooka - M20_17': -5520222935330718643
+      '[LOAD] Bazooka - M20_18': -7215398585224083698
+      '[LOAD] Bazooka - M20_19': -983206357362907743
+      '[LOAD] Bazooka - M20_2': -4705475054483343977
+      '[LOAD] Bazooka - M20_20': -2232979866781537668
+      '[LOAD] Bazooka - M20_3': -4339687513868031780
+      '[LOAD] Bazooka - M20_4': -8675663435541396549
+      '[LOAD] Bazooka - M20_5': 1347417414100436721
+      '[LOAD] Bazooka - M20_6': -2290676399413132232
+      '[LOAD] Bazooka - M20_7': -1762594565614421111
+      '[LOAD] Bazooka - M20_8': -2427344225103591756
+      '[LOAD] Bazooka - M20_9': -5887414920828550005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

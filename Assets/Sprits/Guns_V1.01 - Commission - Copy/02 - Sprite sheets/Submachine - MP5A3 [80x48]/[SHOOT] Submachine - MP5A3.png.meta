@@ -435,7 +435,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT] Submachine - MP5A3_0': -5503305257753929101
+      '[SHOOT] Submachine - MP5A3_1': -3354277151148122450
+      '[SHOOT] Submachine - MP5A3_10': 8046809182877611301
+      '[SHOOT] Submachine - MP5A3_11': 6636875533005339796
+      '[SHOOT] Submachine - MP5A3_2': -1563712141396129300
+      '[SHOOT] Submachine - MP5A3_3': -2854050547093579523
+      '[SHOOT] Submachine - MP5A3_4': -3242929179460766643
+      '[SHOOT] Submachine - MP5A3_5': -1549093295091198638
+      '[SHOOT] Submachine - MP5A3_6': -8026863105977388904
+      '[SHOOT] Submachine - MP5A3_7': 8930554183836819610
+      '[SHOOT] Submachine - MP5A3_8': 352805144746136397
+      '[SHOOT] Submachine - MP5A3_9': 2388272031562813316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

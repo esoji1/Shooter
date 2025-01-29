@@ -410,7 +410,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-range-attack6_0: -2869531791208626277
+      xeno-grunt-range-attack6_1: 16586580555433402
+      xeno-grunt-range-attack6_10: 3865453292643679176
+      xeno-grunt-range-attack6_2: -474465607678170740
+      xeno-grunt-range-attack6_3: -7346181464939823767
+      xeno-grunt-range-attack6_4: -3597276939744999064
+      xeno-grunt-range-attack6_5: 8735556343842773118
+      xeno-grunt-range-attack6_6: -5972614796155025945
+      xeno-grunt-range-attack6_7: -15724338061420675
+      xeno-grunt-range-attack6_8: 5881311704599079158
+      xeno-grunt-range-attack6_9: 4389851491517357877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

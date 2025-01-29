@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FLASH] AK 47_0': -219699613443412042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

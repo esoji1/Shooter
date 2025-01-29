@@ -510,7 +510,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL]PistolV1.01_0': -1468778687981988818
+      '[FULL]PistolV1.01_1': 2090147106068935682
+      '[FULL]PistolV1.01_10': -1796205362489589526
+      '[FULL]PistolV1.01_11': 7981508546157704493
+      '[FULL]PistolV1.01_12': 4071287530746267595
+      '[FULL]PistolV1.01_13': -6497618390717888457
+      '[FULL]PistolV1.01_14': 771880672129079414
+      '[FULL]PistolV1.01_2': -7881484879755604751
+      '[FULL]PistolV1.01_3': 1084714102468171962
+      '[FULL]PistolV1.01_4': 6138769478041680370
+      '[FULL]PistolV1.01_5': -4161181446068131569
+      '[FULL]PistolV1.01_6': 8677545719099564615
+      '[FULL]PistolV1.01_7': 1320048121034861380
+      '[FULL]PistolV1.01_8': 594444587261319217
+      '[FULL]PistolV1.01_9': 7160693447756970744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

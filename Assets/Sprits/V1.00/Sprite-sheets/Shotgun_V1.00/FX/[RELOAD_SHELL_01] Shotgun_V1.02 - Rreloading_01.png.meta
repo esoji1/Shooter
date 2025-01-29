@@ -485,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_0': 3860590460658130708
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_1': -4396951191126639063
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_10': -2843920064161945176
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_11': 4763653340387006637
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_12': -4185243420236253802
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_13': -3405215813237373530
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_2': 8982475697357406098
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_3': 7179198716538550082
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_4': 828478045050236723
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_5': 5771908883332261149
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_6': 4754021646606350521
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_7': 4322233714470624714
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_8': 5975879691231569081
+      '[RELOAD_SHELL_01] Shotgun_V1.02 - Rreloading_01_9': 4481553494584122235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

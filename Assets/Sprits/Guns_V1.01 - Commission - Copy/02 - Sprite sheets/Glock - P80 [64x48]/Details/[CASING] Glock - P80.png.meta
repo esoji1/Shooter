@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[CASING] Glock - P80_0': 1283565605895009347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

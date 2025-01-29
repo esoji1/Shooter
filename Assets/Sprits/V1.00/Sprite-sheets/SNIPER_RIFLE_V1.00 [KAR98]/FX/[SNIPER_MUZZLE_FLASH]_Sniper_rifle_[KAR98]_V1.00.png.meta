@@ -410,7 +410,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_0': 764455923269090420
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_1': 5035177919050831216
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_10': -556230210024908071
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_2': 163419216688343614
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_3': 2757967064224450700
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_4': -7045989504651767173
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_5': -2231700370377335757
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_6': -1525248197636381748
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_7': -5092494866518910972
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_8': 9179174709041482953
+      '[SNIPER_MUZZLE_FLASH]_Sniper_rifle_[KAR98]_V1.00_9': 1693564461995182919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

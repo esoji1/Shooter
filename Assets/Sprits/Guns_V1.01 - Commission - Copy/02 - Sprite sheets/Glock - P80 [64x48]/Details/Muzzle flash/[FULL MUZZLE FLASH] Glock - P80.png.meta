@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL MUZZLE FLASH] Glock - P80_0': -2372057810297964942
+      '[FULL MUZZLE FLASH] Glock - P80_1': 8612643938988408369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

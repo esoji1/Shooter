@@ -710,7 +710,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-range-attack_0: 9054283897674080488
+      xeno-grunt-range-attack_1: -3723143335198627752
+      xeno-grunt-range-attack_10: -8739210284051256538
+      xeno-grunt-range-attack_11: -1451089467924576856
+      xeno-grunt-range-attack_12: 2764333666965202946
+      xeno-grunt-range-attack_13: -5830500445954165610
+      xeno-grunt-range-attack_14: -5131818984719878313
+      xeno-grunt-range-attack_15: 4437431582615751627
+      xeno-grunt-range-attack_16: 8915380683832259553
+      xeno-grunt-range-attack_17: 1104670962042204527
+      xeno-grunt-range-attack_18: 5467860422944860640
+      xeno-grunt-range-attack_19: 2370532915325878413
+      xeno-grunt-range-attack_2: -6242557717188959884
+      xeno-grunt-range-attack_20: -5125483449754784616
+      xeno-grunt-range-attack_21: -8185128133701921333
+      xeno-grunt-range-attack_22: -2505032530333701789
+      xeno-grunt-range-attack_3: 8976779426891303508
+      xeno-grunt-range-attack_4: 411871815273126530
+      xeno-grunt-range-attack_5: -3847533330988333505
+      xeno-grunt-range-attack_6: 1547206583567394869
+      xeno-grunt-range-attack_7: -224785832036256100
+      xeno-grunt-range-attack_8: -668669025916023198
+      xeno-grunt-range-attack_9: 2354701965186674033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

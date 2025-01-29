@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      M20 Thick Rocket_0: 3900959002943859100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

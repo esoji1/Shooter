@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[MUZZLE_FIRE] PistolV1.00_0': 7756844751375897349
+      '[MUZZLE_FIRE] PistolV1.00_1': -8674017300894868608
+      '[MUZZLE_FIRE] PistolV1.00_2': -4504098788293875633
+      '[MUZZLE_FIRE] PistolV1.00_3': 2244835643805264712
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

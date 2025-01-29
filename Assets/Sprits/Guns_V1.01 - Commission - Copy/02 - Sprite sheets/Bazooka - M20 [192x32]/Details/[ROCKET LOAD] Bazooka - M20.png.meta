@@ -410,7 +410,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[ROCKET LOAD] Bazooka - M20_0': 6213660955128888494
+      '[ROCKET LOAD] Bazooka - M20_1': 939062138433679479
+      '[ROCKET LOAD] Bazooka - M20_10': 9121855648525299687
+      '[ROCKET LOAD] Bazooka - M20_2': 8353183344725188503
+      '[ROCKET LOAD] Bazooka - M20_3': -3622970785654394516
+      '[ROCKET LOAD] Bazooka - M20_4': 955215246605614707
+      '[ROCKET LOAD] Bazooka - M20_5': -154236833531443813
+      '[ROCKET LOAD] Bazooka - M20_6': -4961773630316336996
+      '[ROCKET LOAD] Bazooka - M20_7': 3032962524002319956
+      '[ROCKET LOAD] Bazooka - M20_8': -906119119259368832
+      '[ROCKET LOAD] Bazooka - M20_9': -8348546333505699591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

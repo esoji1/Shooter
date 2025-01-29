@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_0': 9167286349639655021
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_1': 5334730300254839153
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_2': -1524562073116569802
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_3': -2361734081416465824
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_4': -2979378087531756660
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_5': 4363626449224640037
+      '[FULL_MUZZLE_FLASH] Shotgun_V1.02_6': 4396644578258359111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

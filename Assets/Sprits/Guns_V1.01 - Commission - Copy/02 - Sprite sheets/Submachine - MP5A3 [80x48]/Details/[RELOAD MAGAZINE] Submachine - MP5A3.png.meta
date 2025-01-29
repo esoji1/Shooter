@@ -460,7 +460,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOAD MAGAZINE] Submachine - MP5A3_0': -1207313835138521788
+      '[RELOAD MAGAZINE] Submachine - MP5A3_1': 2208003387615187019
+      '[RELOAD MAGAZINE] Submachine - MP5A3_10': -5512507035621374728
+      '[RELOAD MAGAZINE] Submachine - MP5A3_11': -8854047314714364285
+      '[RELOAD MAGAZINE] Submachine - MP5A3_12': -5711274184843157700
+      '[RELOAD MAGAZINE] Submachine - MP5A3_2': -4586735556711921507
+      '[RELOAD MAGAZINE] Submachine - MP5A3_3': 1193840528476670812
+      '[RELOAD MAGAZINE] Submachine - MP5A3_4': 2122140398403304859
+      '[RELOAD MAGAZINE] Submachine - MP5A3_5': -125749931558435247
+      '[RELOAD MAGAZINE] Submachine - MP5A3_6': 3184144939700397246
+      '[RELOAD MAGAZINE] Submachine - MP5A3_7': -8278514064569503323
+      '[RELOAD MAGAZINE] Submachine - MP5A3_8': 3317861543380514071
+      '[RELOAD MAGAZINE] Submachine - MP5A3_9': -8099208798050347526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

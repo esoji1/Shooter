@@ -385,7 +385,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_0': 1398959134610802891
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_1': -7389147721043230008
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_2': -6878686086181167442
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_3': -4682417819834532143
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_4': 4730518242406072392
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_5': 1902751194855481132
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_6': -4035753335553304402
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_7': -4683063784453657964
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_8': -7384922697367943728
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_9': -7362835111737506053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

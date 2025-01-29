@@ -735,7 +735,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cloud_posion_0: -309361876272492430
+      Cloud_posion_1: 6665734461557407607
+      Cloud_posion_10: -4687625359291995768
+      Cloud_posion_11: -7949389235287059509
+      Cloud_posion_12: 2587618797905882157
+      Cloud_posion_13: -96512224764406452
+      Cloud_posion_14: 4036926263013344328
+      Cloud_posion_15: -7817996782822032248
+      Cloud_posion_16: 6365374462130516840
+      Cloud_posion_17: -7920861631685512354
+      Cloud_posion_18: -6441074926986329089
+      Cloud_posion_19: 973175298384132108
+      Cloud_posion_2: 2082259064084706269
+      Cloud_posion_20: -9093075147800585650
+      Cloud_posion_21: -1368780355631494915
+      Cloud_posion_22: 184091512046542956
+      Cloud_posion_23: -934075649718148375
+      Cloud_posion_3: -7472526618719504938
+      Cloud_posion_4: 879215392525085888
+      Cloud_posion_5: -2366173951875849525
+      Cloud_posion_6: 2481094300041663851
+      Cloud_posion_7: 3057347470537660942
+      Cloud_posion_8: 6072584485878547611
+      Cloud_posion_9: 8765418502711476693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

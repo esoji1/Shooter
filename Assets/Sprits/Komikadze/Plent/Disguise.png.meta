@@ -410,7 +410,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Disguise_0: -6850982065420010537
+      Disguise_1: -7761923028187326870
+      Disguise_10: -4267186742157344204
+      Disguise_2: -7174686010367908915
+      Disguise_3: 1047792565375534011
+      Disguise_4: -1415307117974517230
+      Disguise_5: 2692312458537868321
+      Disguise_6: 8101915133778554942
+      Disguise_7: -435668341287008459
+      Disguise_8: 1377395650014985886
+      Disguise_9: -690430750047280612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

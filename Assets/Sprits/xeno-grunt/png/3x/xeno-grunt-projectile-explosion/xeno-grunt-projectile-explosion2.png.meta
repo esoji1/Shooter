@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-projectile-explosion2_0: 8210756655895184784
+      xeno-grunt-projectile-explosion2_1: -4584846209571254759
+      xeno-grunt-projectile-explosion2_2: -2652689894875578197
+      xeno-grunt-projectile-explosion2_3: -3472325419152044857
+      xeno-grunt-projectile-explosion2_4: 1654988776092585122
+      xeno-grunt-projectile-explosion2_5: -2767709676809257779
+      xeno-grunt-projectile-explosion2_6: -899695318913170328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

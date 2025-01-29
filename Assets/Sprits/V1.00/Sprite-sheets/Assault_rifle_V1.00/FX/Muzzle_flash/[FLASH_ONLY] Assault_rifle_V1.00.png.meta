@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FLASH_ONLY] Assault_rifle_V1.00_0': -3898306309899492699
+      '[FLASH_ONLY] Assault_rifle_V1.00_1': -18469124796818240
+      '[FLASH_ONLY] Assault_rifle_V1.00_2': -6935279120441580058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

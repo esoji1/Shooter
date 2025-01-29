@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOAD MAGAZINE] Glock - P80_0': -8262370771562017991
+      '[RELOAD MAGAZINE] Glock - P80_1': -8078650825430278618
+      '[RELOAD MAGAZINE] Glock - P80_2': 4506364270813754047
+      '[RELOAD MAGAZINE] Glock - P80_3': -6308154636934139463
+      '[RELOAD MAGAZINE] Glock - P80_4': 7160083326936189109
+      '[RELOAD MAGAZINE] Glock - P80_5': 7055177816961845480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

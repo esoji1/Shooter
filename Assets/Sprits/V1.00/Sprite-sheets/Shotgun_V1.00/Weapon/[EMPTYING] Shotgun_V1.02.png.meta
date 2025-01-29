@@ -485,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[EMPTYING] Shotgun_V1.02_0': 2088418356045653586
+      '[EMPTYING] Shotgun_V1.02_1': 2331453189084599509
+      '[EMPTYING] Shotgun_V1.02_10': -1580354718636229874
+      '[EMPTYING] Shotgun_V1.02_11': 5159438192747358962
+      '[EMPTYING] Shotgun_V1.02_12': 7553782951320809569
+      '[EMPTYING] Shotgun_V1.02_13': 8704345171974503800
+      '[EMPTYING] Shotgun_V1.02_2': -5881505666285234546
+      '[EMPTYING] Shotgun_V1.02_3': 6234501854145850383
+      '[EMPTYING] Shotgun_V1.02_4': -6743582618657354386
+      '[EMPTYING] Shotgun_V1.02_5': -4881473313244157614
+      '[EMPTYING] Shotgun_V1.02_6': 4328730101059669720
+      '[EMPTYING] Shotgun_V1.02_7': 7999074827651517121
+      '[EMPTYING] Shotgun_V1.02_8': -8157819355757984313
+      '[EMPTYING] Shotgun_V1.02_9': -3064484716200430078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

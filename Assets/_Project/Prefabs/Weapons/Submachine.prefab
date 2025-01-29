@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3656311421140986158}
   - component: {fileID: 206993874596628132}
   - component: {fileID: 5979829786876320362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SubmachineView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7330182604328636330}
   - component: {fileID: 6688725897409874591}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 6697920012599271142}
   - component: {fileID: 4839829004597156338}
   - component: {fileID: 1351683483902188263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Submachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

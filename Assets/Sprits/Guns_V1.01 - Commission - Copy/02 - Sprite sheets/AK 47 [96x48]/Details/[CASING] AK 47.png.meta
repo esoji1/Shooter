@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[CASING] AK 47_0': 8564252355072163970
+      '[CASING] AK 47_1': -3180670935793781572
+      '[CASING] AK 47_2': -7049460087153995395
+      '[CASING] AK 47_3': 2115482761185204837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

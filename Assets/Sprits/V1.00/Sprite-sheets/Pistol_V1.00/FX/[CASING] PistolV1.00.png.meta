@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[CASING] PistolV1.00_0': -8176048351834071270
+      '[CASING] PistolV1.00_1': 7935899030081756840
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

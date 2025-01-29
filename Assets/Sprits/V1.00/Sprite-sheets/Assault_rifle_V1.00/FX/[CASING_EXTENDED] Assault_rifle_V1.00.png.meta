@@ -335,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[CASING_EXTENDED] Assault_rifle_V1.00_0': 2814369869302081497
+      '[CASING_EXTENDED] Assault_rifle_V1.00_1': -3872591012965155466
+      '[CASING_EXTENDED] Assault_rifle_V1.00_2': -2924838377946246770
+      '[CASING_EXTENDED] Assault_rifle_V1.00_3': 7223691594575721079
+      '[CASING_EXTENDED] Assault_rifle_V1.00_4': 2801717545352551971
+      '[CASING_EXTENDED] Assault_rifle_V1.00_5': -230195217403526901
+      '[CASING_EXTENDED] Assault_rifle_V1.00_6': 2374895908590011056
+      '[CASING_EXTENDED] Assault_rifle_V1.00_7': 3770401650024064946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

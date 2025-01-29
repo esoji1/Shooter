@@ -335,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[EMPTY MAGAZINE] Glock - P80_0': -7480612449178669
+      '[EMPTY MAGAZINE] Glock - P80_1': -7915382538896808015
+      '[EMPTY MAGAZINE] Glock - P80_2': -8689290154426102665
+      '[EMPTY MAGAZINE] Glock - P80_3': -8413562111899627856
+      '[EMPTY MAGAZINE] Glock - P80_4': 1025114741362040210
+      '[EMPTY MAGAZINE] Glock - P80_5': 1300084325439557608
+      '[EMPTY MAGAZINE] Glock - P80_6': -8902138759991664420
+      '[EMPTY MAGAZINE] Glock - P80_7': 7518915931969430757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

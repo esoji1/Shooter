@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[EMPTY MAGAZINE] AK 47_0': 8579463394310013504
+      '[EMPTY MAGAZINE] AK 47_1': 1473768326617620174
+      '[EMPTY MAGAZINE] AK 47_2': -7786391051232896895
+      '[EMPTY MAGAZINE] AK 47_3': 6918169437228168850
+      '[EMPTY MAGAZINE] AK 47_4': -1271805408146042405
+      '[EMPTY MAGAZINE] AK 47_5': 1926834632632528364
+      '[EMPTY MAGAZINE] AK 47_6': 2688249993915373909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

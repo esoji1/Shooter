@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FIRE] Bazooka - M20_0': 4115007428707679030
+      '[FIRE] Bazooka - M20_1': -6767663422311875160
+      '[FIRE] Bazooka - M20_2': -315267638779425343
+      '[FIRE] Bazooka - M20_3': -4071716779456758647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

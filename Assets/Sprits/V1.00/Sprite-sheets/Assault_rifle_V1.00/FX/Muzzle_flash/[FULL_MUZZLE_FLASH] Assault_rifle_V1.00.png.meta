@@ -460,7 +460,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_0': 3671602967030333706
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_1': 1766277085183046467
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_10': -7544166900648226576
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_11': -8984538567030996713
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_12': 6695013138461008297
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_2': 859098648515370576
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_3': -7283479775425848116
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_4': -4770212239602731533
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_5': 5271391000310866332
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_6': 5123734045212410762
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_7': 472343721573643115
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_8': 2572544983005778118
+      '[FULL_MUZZLE_FLASH] Assault_rifle_V1.00_9': -9167444507425846182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

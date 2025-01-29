@@ -1,11 +1,12 @@
 using Assets.Scripts.Enemy;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
 
-public class Player : MonoBehaviour, IDamage, IOnDamage
+public class Player : MonoBehaviour, IDamage, IOnDamage, IBuffPicker
 {
     private PlayerView _playerView;
     private JoysickForMovement _joystickForMovement;
@@ -19,32 +20,32 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
     private HealthInfo _healthInfo;
     private AudioSource _takingDamage;
     private CinemachineImpulseSource _cinemachineImpulseSource;
+    private LayerMask _layerMask;
 
     private List<AudioSource> _audioSources = new();
     private PlayMusic _playMusic;
     private int _numberHealth = 100;
+    private float _radius = 0.8f;
+    private Collider2D _weaponCollider;
 
     public PlayerView PlayerView => _playerView;
     public JoysickForMovement JoysickForMovement => _joystickForMovement;
     public Flip Flip => _flip;
     public PointHealth PointHealth => _pointHealth;
     public Health Health => _health;
+    public Collider2D WeaponCollider => _weaponCollider;
 
     public event Action OnHit;
     public event Action<int> OnDamage;
-    public event Action<Collider2D> OnEnterCollider;
-    public event Action<Collider2D> OnExitCollider;
-    
+
     private void Update()
     {
         _playerStateMachine.Update();
-
         _healthView.FollowTargetHealth();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) => OnEnterCollider?.Invoke(collision);
-
-    private void OnTriggerExit2D(Collider2D collision) => OnExitCollider?.Invoke(collision);
+    private void FixedUpdate() =>
+        _weaponCollider = Physics2D.OverlapCircle(transform.position, _radius, _layerMask);
 
     public void Initialize()
     {
@@ -65,7 +66,8 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
 
     [Inject]
     private void Construct(PlayerView playerView, JoysickForMovement joystickForMovement,
-        Canvas healthUi, HealthInfo healthInfo, AudioSource takingDamage, CinemachineImpulseSource cinemachineImpulseSource)
+        Canvas healthUi, HealthInfo healthInfo, AudioSource takingDamage, CinemachineImpulseSource cinemachineImpulseSource,
+        LayerMask layerMask)
     {
         _playerView = playerView;
         _joystickForMovement = joystickForMovement;
@@ -73,6 +75,7 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _healthInfoPrefab = healthInfo;
         _takingDamage = takingDamage;
         _cinemachineImpulseSource = cinemachineImpulseSource;
+        _layerMask = layerMask;
     }
 
     public void Damage(int damage)
@@ -86,5 +89,18 @@ public class Player : MonoBehaviour, IDamage, IOnDamage
         _cinemachineImpulseSource.GenerateImpulse();
 
         _health.TakeDamage(damage);
+    }
+
+    public void AddHealth(int value)
+    {
+        int healthAfterHealing = _numberHealth - value;
+
+        if (healthAfterHealing >= _health.HealthValue)
+        {
+            _health.AddHealth(value);
+            _healthView.AddHealth(value);
+        }
+
+        Debug.Log(_health.HealthValue);
     }
 }

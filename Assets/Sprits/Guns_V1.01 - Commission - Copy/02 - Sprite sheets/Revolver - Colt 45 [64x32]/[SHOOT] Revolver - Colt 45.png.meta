@@ -385,7 +385,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT] Revolver - Colt 45_0': 7352884494138938786
+      '[SHOOT] Revolver - Colt 45_1': -4613036639190868373
+      '[SHOOT] Revolver - Colt 45_2': 8441675183248344320
+      '[SHOOT] Revolver - Colt 45_3': 5646982265216417021
+      '[SHOOT] Revolver - Colt 45_4': -7822479488977931836
+      '[SHOOT] Revolver - Colt 45_5': 2497211698621368887
+      '[SHOOT] Revolver - Colt 45_6': -155975626479773566
+      '[SHOOT] Revolver - Colt 45_7': -3688673695978008555
+      '[SHOOT] Revolver - Colt 45_8': 8324243564321679690
+      '[SHOOT] Revolver - Colt 45_9': -6380040061441788038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

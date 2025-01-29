@@ -299,10 +299,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 480018387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
-  m_AnchorMin: {x: 0.84049505, y: 0.41053978}
-  m_AnchorMax: {x: 0.9036397, y: 0.44378418}
-  m_AnchoredPosition: {x: -3.5, y: -0.5}
-  m_SizeDelta: {x: 2.9644165, y: -3}
+  m_AnchorMin: {x: 0.8932794, y: 0.4305035}
+  m_AnchorMax: {x: 0.8932794, y: 0.4305035}
+  m_AnchoredPosition: {x: -8.500061, y: -4}
+  m_SizeDelta: {x: 136.96442, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71309950
 MonoBehaviour:
@@ -450,10 +450,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 480018387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.824}
-  m_AnchorMin: {x: 0.76822346, y: 0.41053978}
-  m_AnchorMax: {x: 0.829349, y: 0.44378418}
-  m_AnchoredPosition: {x: -5, y: -0.5}
-  m_SizeDelta: {x: 5.9644165, y: -3}
+  m_AnchorMin: {x: 0.81280726, y: 0.4305035}
+  m_AnchorMax: {x: 0.81280726, y: 0.4305035}
+  m_AnchoredPosition: {x: -13, y: -4}
+  m_SizeDelta: {x: 134.96442, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82890166
 MonoBehaviour:
@@ -2367,7 +2367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.156, y: 0.9126691}
   m_AnchorMax: {x: 0.156, y: 0.9126691}
-  m_AnchoredPosition: {x: -186.20001, y: 47.199997}
+  m_AnchoredPosition: {x: -186.19995, y: 47.19995}
   m_SizeDelta: {x: 199, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &427375229
@@ -4772,6 +4772,7 @@ MonoBehaviour:
   _healthUi: {fileID: 791392345}
   _healthInfoPrefab: {fileID: 4444821813202015223, guid: bb15151b52b4cfa4c90b4dfab9252f96, type: 3}
   _takingDamage: {fileID: 5447732590887955354, guid: fc3da34954a7e3c45a54f3949e312346, type: 3}
+  _hilka: {fileID: 4714150346715478794, guid: 6eaa4404b6755bf4587ac2cdcf21f859, type: 3}
 --- !u!4 &758998197
 Transform:
   m_ObjectHideFlags: 0
@@ -5327,14 +5328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1235892790}
   _bootstrapEnemyFactory: {fileID: 758998196}
-  _bootstrapEnemyWaveSpawner: {fileID: 759860491}
   _bootstrapWeaponFactory: {fileID: 509830258}
   _gameplayMediator: {fileID: 429759790}
-  _bootstraTakeAwayWeapon: {fileID: 1783961492}
   _joystickAttack: {fileID: 2131762385}
-  _bootstrapSpawnBox: {fileID: 2015499488}
-  _bootstrapVictory: {fileID: 806944846}
-  _bootstrapChaoticMovementUnits: {fileID: 540450142}
 --- !u!4 &849272946
 Transform:
   m_ObjectHideFlags: 0
@@ -11298,6 +11294,9 @@ MonoBehaviour:
   _healthUi: {fileID: 791392345}
   _takingDamage: {fileID: 5447732590887955354, guid: fc3da34954a7e3c45a54f3949e312346, type: 3}
   _cinemachineImpulseSource: {fileID: 1485717991}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1979495920
 GameObject:
   m_ObjectHideFlags: 0
@@ -19381,13 +19380,13 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 265685301}
   - {fileID: 1485717989}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 663941470}
   - {fileID: 222035481}
   - {fileID: 1235892787}
-  - {fileID: 265685301}
   - {fileID: 391700973}
   - {fileID: 500212961}
   - {fileID: 1426871396}

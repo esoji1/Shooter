@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[animated] Shotgun_V1.02_FULL_0': 4651548060935000744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

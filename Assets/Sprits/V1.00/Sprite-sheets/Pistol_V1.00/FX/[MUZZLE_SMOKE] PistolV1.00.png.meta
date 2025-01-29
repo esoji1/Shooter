@@ -360,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[MUZZLE_SMOKE] PistolV1.00_0': -2658267992261798533
+      '[MUZZLE_SMOKE] PistolV1.00_1': -8512736374783662348
+      '[MUZZLE_SMOKE] PistolV1.00_2': -6525989968056673058
+      '[MUZZLE_SMOKE] PistolV1.00_3': 2127987574319435307
+      '[MUZZLE_SMOKE] PistolV1.00_4': -5490904076209266171
+      '[MUZZLE_SMOKE] PistolV1.00_5': 6252514443374969293
+      '[MUZZLE_SMOKE] PistolV1.00_6': -7241794328606767904
+      '[MUZZLE_SMOKE] PistolV1.00_7': 5567707143703408089
+      '[MUZZLE_SMOKE] PistolV1.00_8': 4783716630796705422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

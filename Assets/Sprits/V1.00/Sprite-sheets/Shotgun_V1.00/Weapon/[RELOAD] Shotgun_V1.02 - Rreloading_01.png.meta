@@ -485,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_0': -5548452659488508953
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_1': -6951749633333786947
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_10': 3056428949989772132
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_11': 3809730604347380289
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_12': -6928665762675384643
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_13': -8401588448320773484
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_2': 1161366950085324229
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_3': -3266774734080572775
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_4': -8007759412618564729
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_5': 6786573024117793151
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_6': -161565819192357065
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_7': 3692428484509661208
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_8': 3420274412113813823
+      '[RELOAD] Shotgun_V1.02 - Rreloading_01_9': -2105938652840675927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

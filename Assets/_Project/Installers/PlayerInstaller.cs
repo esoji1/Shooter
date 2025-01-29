@@ -9,6 +9,7 @@ public class PlayerInstaller : MonoInstaller
     [SerializeField] private Canvas _healthUi;
     [SerializeField] private AudioSource _takingDamage;
     [SerializeField] private CinemachineImpulseSource _cinemachineImpulseSource;
+    [SerializeField] private LayerMask _layerMask;
 
     public override void InstallBindings()
     {
@@ -35,6 +36,11 @@ public class PlayerInstaller : MonoInstaller
         Container
             .BindInterfacesAndSelfTo<CinemachineImpulseSource>()
             .FromInstance(_cinemachineImpulseSource)
+            .AsSingle();
+
+        Container
+            .BindInterfacesAndSelfTo<LayerMask>()
+            .FromInstance(_layerMask)
             .AsSingle();
     }
 }

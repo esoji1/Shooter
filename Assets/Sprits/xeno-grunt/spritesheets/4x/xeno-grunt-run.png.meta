@@ -335,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-run_0: 7818863716190487849
+      xeno-grunt-run_1: -3644576982137265356
+      xeno-grunt-run_2: 3845512995219387983
+      xeno-grunt-run_3: -7103234986171998603
+      xeno-grunt-run_4: -4847713645010016591
+      xeno-grunt-run_5: -8015664020134729660
+      xeno-grunt-run_6: -8340289237036481491
+      xeno-grunt-run_7: 3972753653658904688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-jump-effect2_0: 9044240747932212531
+      xeno-grunt-jump-effect2_1: -6268307041057679759
+      xeno-grunt-jump-effect2_2: 5009651275373150892
+      xeno-grunt-jump-effect2_3: 2652579227435122546
+      xeno-grunt-jump-effect2_4: -7731836798530074209
+      xeno-grunt-jump-effect2_5: 5365334336244533252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

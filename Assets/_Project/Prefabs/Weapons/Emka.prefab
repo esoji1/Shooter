@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3612074374884884660}
   - component: {fileID: 5514170970695109245}
   - component: {fileID: 2753885435579650874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Emka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3669845800397861016}
   - component: {fileID: 8485632365624858198}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7065695054694158453}
   - component: {fileID: 705038527971924006}
   - component: {fileID: 6162581641266927015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EmkaView
   m_TagString: Untagged
   m_Icon: {fileID: 0}

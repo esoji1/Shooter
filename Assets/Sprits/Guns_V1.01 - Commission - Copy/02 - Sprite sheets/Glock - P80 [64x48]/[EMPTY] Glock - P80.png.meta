@@ -660,7 +660,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[EMPTY] Glock - P80_0': 8358773651410596491
+      '[EMPTY] Glock - P80_1': 9030250038441628362
+      '[EMPTY] Glock - P80_10': -7065024186563477575
+      '[EMPTY] Glock - P80_11': 1161148314927320498
+      '[EMPTY] Glock - P80_12': 241554267651214040
+      '[EMPTY] Glock - P80_13': -9044354865305273868
+      '[EMPTY] Glock - P80_14': -4163775823500239210
+      '[EMPTY] Glock - P80_15': -2244547438809559888
+      '[EMPTY] Glock - P80_16': -2106442572908175668
+      '[EMPTY] Glock - P80_17': -3613013584479439038
+      '[EMPTY] Glock - P80_18': -558421404758446067
+      '[EMPTY] Glock - P80_19': 5822360371272187427
+      '[EMPTY] Glock - P80_2': 1558900988165147294
+      '[EMPTY] Glock - P80_20': -8566276657250333761
+      '[EMPTY] Glock - P80_3': -5636395727935705934
+      '[EMPTY] Glock - P80_4': 3484671659947103412
+      '[EMPTY] Glock - P80_5': -4422537444101531232
+      '[EMPTY] Glock - P80_6': 1452716276389732969
+      '[EMPTY] Glock - P80_7': -5919787844870121230
+      '[EMPTY] Glock - P80_8': -2198037323114521609
+      '[EMPTY] Glock - P80_9': 1202883429062493848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

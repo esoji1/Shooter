@@ -12,10 +12,11 @@ public class EnemyFactory
     private HealthInfo _healthInfo;
     private Canvas _healthUi;
     private AudioSource _takingDamage;
+    private Hilka _hilka;
 
     public EnemyFactory(DifficultyConfig difficultyConfig, ProjectileConfig fireballConfig, Player player,
         ParticleSystem bloodEffect, ParticleSystem collisionEffect, HealthInfo healthInfo, Canvas healthUi,
-        AudioSource takingDamage)
+        AudioSource takingDamage, Hilka hilka)
     {
         _skeletonConfig = difficultyConfig.SkeletonConfig;
         _orcConfig = difficultyConfig.OrcConfig;
@@ -31,6 +32,7 @@ public class EnemyFactory
         _healthInfo = healthInfo;
         _healthUi = healthUi;
         _takingDamage = takingDamage;
+        _hilka = hilka;
     }
 
     public BaseEnemy Get(EnemyTypes enemyType, Vector3 position)
@@ -73,15 +75,15 @@ public class EnemyFactory
         if (instance is Orc || instance is Skeleton || instance is MediumSkeleton || instance is Kamikaze || 
             instance is Robot)
         {
-            instance.Initialize(config, _player, _healthInfo, _healthUi, _takingDamage);
+            instance.Initialize(config, _player, _healthInfo, _healthUi, _takingDamage, _hilka);
 
             return instance;
         }
         else if (instance is Magician)
         {
             Magician magician = instance.GetComponent<Magician>();
-            magician.Initialize(config, _player, _bloodEffect,
-                _collisionEffect, _fireballConfig, _healthInfo, _healthUi, _takingDamage);
+            magician.Initialize(config, _player, _bloodEffect, _collisionEffect, _fireballConfig, _healthInfo,
+                _healthUi, _takingDamage, _hilka);
 
             return magician;
         }

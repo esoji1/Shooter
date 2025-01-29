@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SMOKE] Thick Bazooka - M20_0': -2430110283348266280
+      '[SMOKE] Thick Bazooka - M20_1': 7402092627142434329
+      '[SMOKE] Thick Bazooka - M20_2': -5112581435318323254
+      '[SMOKE] Thick Bazooka - M20_3': -6025552113487683484
+      '[SMOKE] Thick Bazooka - M20_4': -5351591463899310691
+      '[SMOKE] Thick Bazooka - M20_5': 602183137282536032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

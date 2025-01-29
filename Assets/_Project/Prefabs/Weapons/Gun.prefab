@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4919681825100022473}
   - component: {fileID: 5590992203216897808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 359726677247561830}
   - component: {fileID: 809887209584274835}
   - component: {fileID: 4567177203185973597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 5205821187715021485}
   - component: {fileID: 4378098887269061309}
   - component: {fileID: 6440820439610002499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

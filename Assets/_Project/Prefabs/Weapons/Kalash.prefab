@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6237787196526244652}
   - component: {fileID: 5853547334716676570}
   - component: {fileID: 5180514649808330019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KalashView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7986969413769970657}
   - component: {fileID: 6522495357882549567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PointWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 36233142280170023}
   - component: {fileID: 4639072893159559107}
   - component: {fileID: 3359796470893381495}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Kalash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

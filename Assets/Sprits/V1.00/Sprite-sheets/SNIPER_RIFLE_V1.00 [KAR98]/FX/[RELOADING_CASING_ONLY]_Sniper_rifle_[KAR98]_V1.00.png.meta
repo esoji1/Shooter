@@ -335,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_0': 1813946963476535761
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_1': 3852925173220003978
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_2': 8522266453083879655
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_3': 3275222893525316255
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_4': 807035632547793724
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_5': 4239854724547726285
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_6': -7515843019326146449
+      '[RELOADING_CASING_ONLY]_Sniper_rifle_[KAR98]_V1.00_7': 1402241536592284222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

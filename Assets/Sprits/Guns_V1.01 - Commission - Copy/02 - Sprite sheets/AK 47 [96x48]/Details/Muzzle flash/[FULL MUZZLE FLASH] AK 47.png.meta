@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL MUZZLE FLASH] AK 47_0': -4388864894777134597
+      '[FULL MUZZLE FLASH] AK 47_1': 5284509035980544772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

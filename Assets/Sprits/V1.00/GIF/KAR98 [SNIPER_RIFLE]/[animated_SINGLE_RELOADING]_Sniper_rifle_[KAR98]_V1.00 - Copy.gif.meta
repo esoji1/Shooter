@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[animated_SINGLE_RELOADING]_Sniper_rifle_[KAR98]_V1.00 - Copy_0': -6195003625076494210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

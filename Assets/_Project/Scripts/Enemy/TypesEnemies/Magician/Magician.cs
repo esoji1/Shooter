@@ -21,9 +21,9 @@ public class Magician : BaseEnemy
 
     public void Initialize(EnemyConfig config, Player target, ParticleSystem bloodEffect,
         ParticleSystem collisionEffect, ProjectileConfig fireballConfig, HealthInfo healthInfo,
-        Canvas healthUi, AudioSource takeDomage)
+        Canvas healthUi, AudioSource takeDomage, Hilka hilka)
     {
-        base.Initialize(config, target, healthInfo, healthUi, takeDomage);
+        base.Initialize(config, target, healthInfo, healthUi, takeDomage, hilka);
 
         _fireballConfig = fireballConfig;
         _bloodEffect = bloodEffect;

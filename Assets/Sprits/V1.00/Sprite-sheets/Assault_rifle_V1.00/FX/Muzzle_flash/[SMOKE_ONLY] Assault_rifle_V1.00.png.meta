@@ -385,7 +385,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SMOKE_ONLY] Assault_rifle_V1.00_0': -5908828045241156102
+      '[SMOKE_ONLY] Assault_rifle_V1.00_1': -800659085201461093
+      '[SMOKE_ONLY] Assault_rifle_V1.00_2': 4571586586134289061
+      '[SMOKE_ONLY] Assault_rifle_V1.00_3': 4362904396264175398
+      '[SMOKE_ONLY] Assault_rifle_V1.00_4': -6450786831933749018
+      '[SMOKE_ONLY] Assault_rifle_V1.00_5': 3022834682768031919
+      '[SMOKE_ONLY] Assault_rifle_V1.00_6': 7334087442151719527
+      '[SMOKE_ONLY] Assault_rifle_V1.00_7': -4483509503993924347
+      '[SMOKE_ONLY] Assault_rifle_V1.00_8': -1305242130093081369
+      '[SMOKE_ONLY] Assault_rifle_V1.00_9': 2296423250925116442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

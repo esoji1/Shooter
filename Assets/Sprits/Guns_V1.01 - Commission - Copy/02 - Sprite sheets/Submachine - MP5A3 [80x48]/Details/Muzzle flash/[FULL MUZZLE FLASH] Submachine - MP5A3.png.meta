@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FULL MUZZLE FLASH] Submachine - MP5A3_0': 4964256087182174293
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

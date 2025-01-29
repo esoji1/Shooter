@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[animated] PistolV1.00_0': -3860386685962978953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

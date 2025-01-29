@@ -885,7 +885,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-projectile-explosion_0: 1516022959606485625
+      xeno-grunt-projectile-explosion_1: -3879650206143220355
+      xeno-grunt-projectile-explosion_10: 7350435142954573521
+      xeno-grunt-projectile-explosion_11: 7936704380995140082
+      xeno-grunt-projectile-explosion_12: 8965080516539713566
+      xeno-grunt-projectile-explosion_13: 6611645340380014562
+      xeno-grunt-projectile-explosion_14: 6374986201773890035
+      xeno-grunt-projectile-explosion_15: -2044486833627670643
+      xeno-grunt-projectile-explosion_16: -807237247381411546
+      xeno-grunt-projectile-explosion_17: 4662603985558438290
+      xeno-grunt-projectile-explosion_18: 895594523719562285
+      xeno-grunt-projectile-explosion_19: 8067541301549580022
+      xeno-grunt-projectile-explosion_2: 1749147894102306450
+      xeno-grunt-projectile-explosion_20: -8962612188279198919
+      xeno-grunt-projectile-explosion_21: -880902834811365776
+      xeno-grunt-projectile-explosion_22: -136648506010764539
+      xeno-grunt-projectile-explosion_23: 1213528453200980668
+      xeno-grunt-projectile-explosion_24: 2955763612263179288
+      xeno-grunt-projectile-explosion_25: -1439292244420786626
+      xeno-grunt-projectile-explosion_26: 4844392032865844876
+      xeno-grunt-projectile-explosion_27: 6025672508923670466
+      xeno-grunt-projectile-explosion_28: 2024892324463130468
+      xeno-grunt-projectile-explosion_29: 2309284343549470584
+      xeno-grunt-projectile-explosion_3: 3895805716352264653
+      xeno-grunt-projectile-explosion_4: 1076577138254779570
+      xeno-grunt-projectile-explosion_5: 2816523850569596238
+      xeno-grunt-projectile-explosion_6: 6215811203416663180
+      xeno-grunt-projectile-explosion_7: 70540147782119304
+      xeno-grunt-projectile-explosion_8: 7639548571927428723
+      xeno-grunt-projectile-explosion_9: -5737608654659965048
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

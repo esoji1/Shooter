@@ -17,6 +17,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private bool _isDie = false;
     private Vector2 _direction;
     private List<AudioSource> _audioSources = new();
+    private Hilka _hilka;
 
     private Coroutine _coroutine;
     private BoxCollider2D _boxCollider2D;
@@ -25,6 +26,9 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private Flip _flip;
     private HealthInfo _healthInfo;
     private PlayMusic _playMusic;
+    private SpawnWithProbability _spawnWithProbability;
+
+    private int _spawnProbability = 20;
 
     protected abstract PointHealth Point { get; }
 
@@ -48,12 +52,13 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     }
 
     public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi,
-        AudioSource takingDamage)
+        AudioSource takingDamage, Hilka hilka)
     {
         Target = target;
         Config = config;
         _healthUi = healthUi;
         _takingDamage = takingDamage;
+        _hilka = hilka;
 
         _playMusic = new PlayMusic();
 
@@ -70,6 +75,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         StartCoroutine(_changeEnemyPosition.SetRandomPosition(Config.AttackRadius));
 
         Health = new Health(Config.Health);
+        _spawnWithProbability = new SpawnWithProbability(hilka);
 
         Health.OnDie += Die;
     }
@@ -98,6 +104,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         BaseView.PlayDie();
 
         Health.OnDie -= Die;
+
+        _spawnWithProbability.SpawnWithProbabilityInPercent(_spawnProbability, transform);
 
         Destroy(_healthInfo.InstantiatedHealthBar, removingEnemy);
         Destroy(_healthInfo.GetHealthInfo.gameObject, removingEnemy);

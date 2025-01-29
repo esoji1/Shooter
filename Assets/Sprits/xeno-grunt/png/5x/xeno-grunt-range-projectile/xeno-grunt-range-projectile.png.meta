@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-range-projectile_0: 140033305553211580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

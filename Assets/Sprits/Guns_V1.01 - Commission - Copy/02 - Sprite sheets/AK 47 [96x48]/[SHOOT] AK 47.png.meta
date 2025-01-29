@@ -435,7 +435,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT] AK 47_0': -6146931957864444200
+      '[SHOOT] AK 47_1': 10485137752638322
+      '[SHOOT] AK 47_10': 7044331415851517124
+      '[SHOOT] AK 47_11': -2437547777362995531
+      '[SHOOT] AK 47_2': 3378595027340441386
+      '[SHOOT] AK 47_3': 996607796661273886
+      '[SHOOT] AK 47_4': 7998867671164760948
+      '[SHOOT] AK 47_5': -8177198915394816332
+      '[SHOOT] AK 47_6': 5562175577466763657
+      '[SHOOT] AK 47_7': -7955265450303655774
+      '[SHOOT] AK 47_8': 4370885372322879904
+      '[SHOOT] AK 47_9': -5055617937063463860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

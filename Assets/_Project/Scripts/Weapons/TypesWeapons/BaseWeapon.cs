@@ -18,7 +18,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     private Coroutine _shootCoroutine;
 
     private SpawnProjectile _spawnProjectile;
-    private PlayMusic playMusic;
+    private PlayMusic _playMusic;
 
     public Transform Point => _point;
     public BaseWeaponView WeaponView => _weaponView;
@@ -40,7 +40,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
         _spawnProjectile = new SpawnProjectile();
 
         _audioSourcePrefab = audioSource;
-        playMusic = new PlayMusic();
+        _playMusic = new PlayMusic();
     }
 
     public void Attack()
@@ -60,7 +60,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
             GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_weaponConfig.Bullet.Projectile, _point);
             Projectile bullet = bulletGameObject.GetComponent<Projectile>();
 
-            AudioSource audioSource = playMusic.GetAvailableAudioSource(_audioSources, _audioSourcePrefab, transform);
+            AudioSource audioSource = _playMusic.GetAvailableAudioSource(_audioSources, _audioSourcePrefab, transform);
             audioSource.Play();
 
             bullet.GetComponent<Projectile>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect,

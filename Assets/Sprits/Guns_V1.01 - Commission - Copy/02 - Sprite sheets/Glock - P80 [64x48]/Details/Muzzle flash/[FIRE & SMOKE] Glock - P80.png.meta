@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[FIRE & SMOKE] Glock - P80_0': -1766110438837882731
+      '[FIRE & SMOKE] Glock - P80_1': -8026832584739677608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      preview-xeno-grunt-death_0: -6357635526532143369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

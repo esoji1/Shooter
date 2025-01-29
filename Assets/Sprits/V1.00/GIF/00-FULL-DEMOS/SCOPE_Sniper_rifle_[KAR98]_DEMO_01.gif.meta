@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SCOPE_Sniper_rifle_[KAR98]_DEMO_01_0: 6789983680618529818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

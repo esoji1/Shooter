@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xeno-grunt-knockback_0: 9127816269171138107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
