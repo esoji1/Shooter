@@ -1,5 +1,4 @@
 using Assets.Scripts.Enemy;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
@@ -24,7 +23,7 @@ public class Player : MonoBehaviour, IDamage, IOnDamage, IBuffPicker
 
     private List<AudioSource> _audioSources = new();
     private PlayMusic _playMusic;
-    private int _numberHealth = 100;
+    private int _maxHealth = 100;
     private float _radius = 0.8f;
     private Collider2D _weaponCollider;
 
@@ -52,14 +51,14 @@ public class Player : MonoBehaviour, IDamage, IOnDamage, IBuffPicker
         _playerView.Initialize();
         _flip = new Flip();
         _playerStateMachine = new PlayerStateMachine(this);
-        _health = new Health(_numberHealth);
+        _health = new Health(_maxHealth);
 
         _playMusic = new PlayMusic();
 
         _healthInfo = Instantiate(_healthInfoPrefab);
         _healthInfo.Initialize(_healthUi);
 
-        _healthView = new HealthView(this, _numberHealth, _healthInfo);
+        _healthView = new HealthView(this, _maxHealth, _healthInfo);
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
@@ -93,14 +92,12 @@ public class Player : MonoBehaviour, IDamage, IOnDamage, IBuffPicker
 
     public void AddHealth(int value)
     {
-        int healthAfterHealing = _numberHealth - value;
+        int healthToAdd = Mathf.Min(value, _maxHealth - _health.HealthValue);
 
-        if (healthAfterHealing >= _health.HealthValue)
+        if (healthToAdd > 0)
         {
-            _health.AddHealth(value);
-            _healthView.AddHealth(value);
+            _health.AddHealth(healthToAdd);
+            _healthView.AddHealth(healthToAdd);
         }
-
-        Debug.Log(_health.HealthValue);
     }
 }

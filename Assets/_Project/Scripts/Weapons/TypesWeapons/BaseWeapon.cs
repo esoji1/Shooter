@@ -13,6 +13,7 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     private Player _player;
 
     private Transform _point;
+    private Aim _aim;
 
     private List<AudioSource> _audioSources = new();
     private Coroutine _shootCoroutine;
@@ -22,12 +23,14 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
 
     public Transform Point => _point;
     public BaseWeaponView WeaponView => _weaponView;
+    public Aim Aim => _aim;
 
     public virtual void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect,
-        ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource, Player player)
+        ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource, Player player, Aim aim)
     {
         _player = player;
         _rotateWeapon = rotateWeapon;
+        _aim = aim;
 
         _point = transform.GetComponentInChildren<PointWeapon>().transform;
 

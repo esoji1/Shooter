@@ -27,25 +27,28 @@ public class RotateWeapon
         }
     }
 
-    public void ChangeWeapom(BaseWeapon weapon) 
-        => _weapon = weapon;
+    public void ChangeWeapom(BaseWeapon weapon) => 
+        _weapon = weapon;
 
     private void FlipWeaponPointShooting(Vector2 inputVector)
     {
         if (_weapon == null)
             return;
 
-        float heightYLessZero = -0.02f;
-        float heightYGreaterZero = 0.0203f;
+        float lowerYPosition = -0.02f;
+        float upperYPosition = 0.0203f;
+        float aimOffsetY = 0.16f;
 
         if (inputVector.x < 0f)
         {
-            _weapon.Point.localPosition = new Vector2(_weapon.Point.localPosition.x, heightYLessZero);
+            _weapon.Point.localPosition = new Vector2(_weapon.Point.localPosition.x, lowerYPosition);
+            _weapon.Aim.transform.localPosition = new Vector2(_weapon.Aim.transform.localPosition.x, -aimOffsetY);
             _weapon.WeaponView.SpriteRenderer.flipY = true;
         }
         else if (inputVector.x > 0f)
         {
-            _weapon.Point.localPosition = new Vector2(_weapon.Point.localPosition.x, heightYGreaterZero);
+            _weapon.Point.localPosition = new Vector2(_weapon.Point.localPosition.x, upperYPosition);
+            _weapon.Aim.transform.localPosition = new Vector2(_weapon.Aim.transform.localPosition.x, aimOffsetY);
             _weapon.WeaponView.SpriteRenderer.flipY = false;
         }
     }

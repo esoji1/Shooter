@@ -6,6 +6,7 @@ public class BootstrapWeaponFactory : MonoBehaviour
     [SerializeField] private ParticleSystem _bloodEffect;
     [SerializeField] private WeaponConfig _emkaConfig, _kalashConfig, _gunConfig, _sniperConfig, _submachineConfig;
     [SerializeField] private Player _player;
+    [SerializeField] private Aim _aim;
 
     private WeaponFactory _weaponFactory;
 
@@ -13,5 +14,5 @@ public class BootstrapWeaponFactory : MonoBehaviour
 
     public void Initialize(JoystickAttack joystickAttack) 
         => _weaponFactory = new WeaponFactory(joystickAttack.RotateWeapon, _collisionEffect,
-            _bloodEffect, _kalashConfig, _emkaConfig, _gunConfig, _sniperConfig, _submachineConfig, _player);
+            _bloodEffect, _kalashConfig, _emkaConfig, _gunConfig, _sniperConfig, _submachineConfig, _player, _aim);
 }

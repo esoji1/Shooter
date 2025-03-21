@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Wall
-  - 
+  - Weapom
   - 
   - 
   - 
@@ -47,8 +47,14 @@ TagManager:
   - name: Wall
     uniqueID: 3587402347
     locked: 0
+  - name: Enemy
+    uniqueID: 3441518879
+    locked: 0
   - name: Player
     uniqueID: 4019257861
+    locked: 0
+  - name: Weapon
+    uniqueID: 32425945
     locked: 0
   m_RenderingLayers:
   - Default
