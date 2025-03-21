@@ -1,9 +1,9 @@
-using Assets.Scripts.Enemy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MoveWhileAttacking), typeof(AttackControl))]
 public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 {
     protected EnemyConfig Config;
@@ -27,6 +27,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private HealthInfo _healthInfo;
     private PlayMusic _playMusic;
     private SpawnWithProbability _spawnWithProbability;
+    private MoveWhileAttacking _moveWhileAttacking;
+    private AttackControl _attackControl;
 
     private int _spawnProbability = 20;
 
@@ -34,11 +36,19 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 
     protected Vector2 Direction => _direction;
     public PointHealth PointHealth => Point;
+    public BaseViewEnemy GetBaseView => BaseView;
+    public EnemyConfig GetConfig => Config;
+    public Transform GetTarget => Target.transform;
+    public bool IsDie => _isDie;
+    public ChangeEnemyPosition ChangeEnemyPosition => _changeEnemyPosition;
+    public Flip Flip => _flip;
+    public Health GetHealth => Health;
+    public HealthView GetHealthView => HealthView;
 
     public event Action<BaseEnemy> OnEnemyDie;
     public event Action<int> OnDamage;
 
-    private void Awake() 
+    private void Awake()
         => _boxCollider2D = GetComponent<BoxCollider2D>();
 
     protected virtual void Update()
@@ -46,7 +56,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         if (Target == null || _isDie)
             return;
 
-        HandleMovementAndAttack();
+        //HandleMovementAndAttack();
 
         HealthView.FollowTargetHealth();
     }
@@ -77,6 +87,12 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Health = new Health(Config.Health);
         _spawnWithProbability = new SpawnWithProbability(hilka);
 
+        _moveWhileAttacking = GetComponent<MoveWhileAttacking>();
+        _moveWhileAttacking.Initialize(this);
+
+        _attackControl = GetComponent<AttackControl>();
+        _attackControl.Initialize(this);
+
         Health.OnDie += Die;
     }
 
@@ -90,11 +106,11 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Health.TakeDamage(damage);
     }
 
-    protected void Die()
+    private void Die()
     {
         OnEnemyDie?.Invoke(this);
 
-        StopAttackIfNeeded();
+        //StopAttackIfNeeded();
 
         float removingEnemy = 5f;
 
@@ -112,64 +128,50 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Destroy(gameObject, removingEnemy);
     }
 
-    protected abstract void TryDealDamageToTarget();
+    //protected abstract void TryDealDamageToTarget();
 
-    private void HandleMovementAndAttack()
-    {
-        float distance = Vector2.Distance(transform.position, Target.transform.position);
-        _direction = (Target.transform.position - transform.position).normalized;
+    //private void HandleMovementAndAttack()
+    //{
+    //    float distance = Vector2.Distance(transform.position, Target.transform.position);
+    //    if (distance > Config.AttackRadius)
+    //    {
+    //        StopAttackIfNeeded();
+    //    }
+    //    else
+    //    {
+    //        StartAttackIfNeeded();
+    //    }
+    //}
 
-        _flip.FlipSpriteY(_direction, BaseView.SpriteRenderer);
+    //private void StopAttackIfNeeded()
+    //{
+    //    if (_coroutine != null)
+    //    {
+    //        BaseView.StopAttack();
+    //        StopCoroutine(_coroutine);
+    //        _coroutine = null;
+    //    }
+    //}
 
-        if (distance > Config.AttackRadius)
-        {
-            MoveTowardsTarget();
-            StopAttackIfNeeded();
-        }
-        else
-        {
-            StartAttackIfNeeded();
-        }
-    }
+    //private void StartAttackIfNeeded()
+    //{
+    //    if (_coroutine == null)
+    //    {
+    //        BaseView.StopWalk();
+    //        _coroutine = StartCoroutine(DelayBeforeAttack());
+    //    }
+    //}
 
-    private void MoveTowardsTarget()
-    {
-        BaseView.StopAttack();
-        BaseView.StartWalk();
+    //protected virtual IEnumerator DelayBeforeAttack()
+    //{
+    //    while (true)
+    //    {
+    //        BaseView.StartAttack();
 
-        Vector3 targetPosition = Target.transform.position + _changeEnemyPosition.AddRandomPositionToGo;
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Config.Speed * Time.deltaTime);
-    }
+    //        float attackAnimationTime = BaseView.Animator.GetCurrentAnimatorStateInfo(0).length;
+    //        yield return new WaitForSeconds(attackAnimationTime);
 
-    private void StopAttackIfNeeded()
-    {
-        if (_coroutine != null)
-        {
-            BaseView.StopAttack();
-            StopCoroutine(_coroutine);
-            _coroutine = null;
-        }
-    }
-
-    private void StartAttackIfNeeded()
-    {
-        if (_coroutine == null)
-        {
-            BaseView.StopWalk();
-            _coroutine = StartCoroutine(DelayBeforeAttack());
-        }
-    }
-
-    protected virtual IEnumerator DelayBeforeAttack()
-    {
-        while (true)
-        {
-            BaseView.StartAttack();
-
-            float attackAnimationTime = BaseView.Animator.GetCurrentAnimatorStateInfo(0).length;
-            yield return new WaitForSeconds(attackAnimationTime);
-
-            TryDealDamageToTarget();
-        }
-    }
+    //        TryDealDamageToTarget();
+    //    }
+    //}
 }

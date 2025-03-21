@@ -34,12 +34,12 @@ public class Magician : BaseEnemy
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
-    protected override void TryDealDamageToTarget()
-    {
-        GameObject magicianGameObject = _spawnProjectile.ProjectileSpawnPoint(_fireballConfig.Projectile, _pointAttack.transform);
-        Projectile fireball = magicianGameObject.GetComponent<Projectile>();
-        fireball.Initialize(Direction.normalized, fireball, _collisionEffect, _bloodEffect, _fireballConfig, gameObject);
-    }
+    //protected override void TryDealDamageToTarget()
+    //{
+    //    //GameObject magicianGameObject = _spawnProjectile.ProjectileSpawnPoint(_fireballConfig.Projectile, _pointAttack.transform);
+    //    //Projectile fireball = magicianGameObject.GetComponent<Projectile>();
+    //    //fireball.Initialize(Direction.normalized, fireball, _collisionEffect, _bloodEffect, _fireballConfig, gameObject);
+    //}
 
     protected void FlipPointAttack(Vector2 inputVector)
     {

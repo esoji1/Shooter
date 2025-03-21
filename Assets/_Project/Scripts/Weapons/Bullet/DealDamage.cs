@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Enemy;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.Weapon.Bullet
 {

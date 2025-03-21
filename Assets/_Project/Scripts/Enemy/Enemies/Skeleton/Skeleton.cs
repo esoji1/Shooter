@@ -1,7 +1,6 @@
-using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class Skeleton : BaseEnemy
+public class Skeleton : BaseEnemy, NormalAttack
 {
     private PointHealth _pointHealth;
 
@@ -15,9 +14,9 @@ public class Skeleton : BaseEnemy
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
-    protected override void TryDealDamageToTarget()
-    {
-        if (Target.TryGetComponent(out IDamage damage))
-            damage.Damage(Config.Damage);
-    }
+    //protected override void TryDealDamageToTarget()
+    //{
+    //    if (Target.TryGetComponent(out IDamage damage))
+    //        damage.Damage(Config.Damage);
+    //}
 }

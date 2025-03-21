@@ -1,7 +1,4 @@
-﻿namespace Assets.Scripts.Enemy
+﻿public interface IDamage
 {
-    public interface IDamage
-    {
-        void Damage(int damage);
-    }
+    void Damage(int damage);
 }

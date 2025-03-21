@@ -1,8 +1,6 @@
-using Assets.Scripts.Enemy;
-using System.Collections;
 using UnityEngine;
 
-public class Kamikaze : BaseEnemy
+public class Orc : BaseEnemy, NormalAttack
 {
     private PointHealth _pointHealth;
 
@@ -16,17 +14,9 @@ public class Kamikaze : BaseEnemy
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
 
-    protected override void TryDealDamageToTarget()
-    {
-        if (Target.TryGetComponent(out IDamage damage))
-            damage.Damage(Config.Damage);
-
-        Damage(Config.Health);
-    }
-
-    protected override IEnumerator DelayBeforeAttack()
-    {
-        TryDealDamageToTarget();
-        yield return null;
-    }
+    //protected override void TryDealDamageToTarget()
+    //{
+    //    if (Target.TryGetComponent(out IDamage damage))
+    //        damage.Damage(Config.Damage);
+    //}
 }
