@@ -14,11 +14,7 @@ public class ChangeEnemyPosition
 
         while (true)
         {
-            _addRandomPositionToGo = new Vector3(
-                Random.Range(-lessAttackRadius, lessAttackRadius),
-                Random.Range(-lessAttackRadius, lessAttackRadius)
-            );
-
+            _addRandomPositionToGo = new Vector3(Random.Range(-lessAttackRadius, lessAttackRadius), Random.Range(-lessAttackRadius, lessAttackRadius));
             yield return new WaitForSeconds(changePosition);
         }
     }

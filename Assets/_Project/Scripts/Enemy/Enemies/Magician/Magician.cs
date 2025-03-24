@@ -19,10 +19,7 @@ public class Magician : BaseEnemy, RangeAttack
     public SpawnProjectile SpawnProjectile => _spawnProjectile;
     public GameObject GameObject => gameObject;
 
-    protected override void Update()
-    {
-        base.Update();
-    }
+    protected override void Update() => base.Update();
 
     public void Initialize(EnemyConfig config, Player target, ParticleSystem bloodEffect,
         ParticleSystem collisionEffect, ProjectileConfig fireballConfig, HealthInfo healthInfo,

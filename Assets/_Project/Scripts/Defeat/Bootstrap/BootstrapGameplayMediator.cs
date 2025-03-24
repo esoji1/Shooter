@@ -10,7 +10,6 @@ public class BootstrapGameplayMediator : MonoBehaviour
     public void Initialize(Player player)
     {
         _gameplayMediator = new GameplayMediator(_defeatPanel, _bootstrapGameInitialize, player);
-
         _defeatPanel.Initialize(_gameplayMediator);
     }
 }

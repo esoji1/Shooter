@@ -12,7 +12,7 @@ public class BootstrapWeaponFactory : MonoBehaviour
 
     public WeaponFactory WeaponFactory => _weaponFactory;
 
-    public void Initialize(JoystickAttack joystickAttack) 
-        => _weaponFactory = new WeaponFactory(joystickAttack.RotateWeapon, _collisionEffect,
+    public void Initialize(JoystickAttack joystickAttack) =>
+        _weaponFactory = new WeaponFactory(joystickAttack.RotateWeapon, _collisionEffect,
             _bloodEffect, _kalashConfig, _emkaConfig, _gunConfig, _sniperConfig, _submachineConfig, _player, _aim);
 }

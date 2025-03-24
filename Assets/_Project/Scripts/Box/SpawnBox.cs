@@ -17,8 +17,8 @@ public class SpawnBox : MonoBehaviour
     private GameObject _box;
     private List<BaseWeapon> _weapon = new();
 
-    private void OnDestroy() 
-        => _enemyWaveSpawner.TimerBetweenWavesView.OnStartTimer -= SpawnBoxOnStartTimer;
+    private void OnDestroy() => 
+        _enemyWaveSpawner.TimerBetweenWavesView.OnStartTimer -= SpawnBoxOnStartTimer;
 
     public void Initialize(GameObject boxPrefab, EnemyWaveSpawner enemyWaveSpawner, WeaponFactory weaponFactory, BootstraTakeAwayWeapon takeAwayWeapon,
         PointBox pointBox)

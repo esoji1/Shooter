@@ -13,10 +13,4 @@ public class MediumSkeleton : BaseEnemy, NormalAttack
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
-
-    //protected override void TryDealDamageToTarget()
-    //{
-    //    if (Target.TryGetComponent(out IDamage damage))
-    //        damage.Damage(Config.Damage);
-    //}
 }

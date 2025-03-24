@@ -15,8 +15,8 @@ public class ChaoticMovementUnits : MonoBehaviour
         _points = points;
     }
 
-    public void StartSpawnUnits()
-        => StartCoroutine(MaxSpawnedUnits());
+    public void StartSpawnUnits() =>
+        StartCoroutine(MaxSpawnedUnits());
 
     private IEnumerator MaxSpawnedUnits()
     {

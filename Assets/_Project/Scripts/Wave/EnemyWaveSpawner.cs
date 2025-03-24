@@ -34,8 +34,8 @@ public class EnemyWaveSpawner : MonoBehaviour
         _waveView = new WaveView(waveText, _waves.Count);
     }
 
-    public void StartEnemyWaveSpawner()
-        => StartCoroutine(SpawnWaves());
+    public void StartEnemyWaveSpawner() =>
+        StartCoroutine(SpawnWaves());
 
     private IEnumerator SpawnWaves()
     {

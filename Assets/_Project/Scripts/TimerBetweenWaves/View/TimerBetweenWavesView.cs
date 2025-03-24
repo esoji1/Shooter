@@ -9,8 +9,8 @@ public class TimerBetweenWavesView : MonoBehaviour
 
     public event Action<float> OnStartTimer;
 
-    public void StartTimeBeetwenWaves(float timeBetweenWaves) 
-        => StartCoroutine(StartCountdown(timeBetweenWaves));
+    public void StartTimeBeetwenWaves(float timeBetweenWaves) =>
+        StartCoroutine(StartCountdown(timeBetweenWaves));
 
     public void Show() => _timeBetweenWaves.gameObject.SetActive(true);
     public void Hide() => _timeBetweenWaves.gameObject.SetActive(false);

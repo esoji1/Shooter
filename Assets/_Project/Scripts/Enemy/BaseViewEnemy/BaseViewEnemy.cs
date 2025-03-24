@@ -13,11 +13,7 @@ public abstract class BaseViewEnemy : MonoBehaviour
     public SpriteRenderer SpriteRenderer => _spriteRenderer;
     public Animator Animator => _animator;
 
-    public void Initialize()
-    {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _animator = GetComponent<Animator>();
-    }
+    public void Initialize() => ExtractComponents();
 
     public void StartWalk() => _animator.SetBool(IsWalk, true);
     public void StopWalk() => _animator.SetBool(IsWalk, false);
@@ -26,4 +22,10 @@ public abstract class BaseViewEnemy : MonoBehaviour
     public void StopAttack() => _animator.SetBool(IsAttack, false);
 
     public void PlayDie() => _animator.Play(Die);
+
+    private void ExtractComponents()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+    }
 }

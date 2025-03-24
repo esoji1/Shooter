@@ -13,7 +13,6 @@ public class Platypus : MonoBehaviour
     private void Update()
     {
         HitWallChangedRotation();
-
         Move();
     }
 

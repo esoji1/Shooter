@@ -33,7 +33,6 @@ public class HealthInfo : MonoBehaviour
     public void SetPositon(Transform transform)
     {
         Vector3 targetPosition = transform.position;
-
         _instantiatedHealthBar.transform.position = targetPosition;
     }
 }

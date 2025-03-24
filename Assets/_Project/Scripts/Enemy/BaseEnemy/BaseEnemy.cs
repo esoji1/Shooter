@@ -17,18 +17,17 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private Vector2 _direction;
     private List<AudioSource> _audioSources = new();
     private Hilka _hilka;
+    private int _spawnProbability = 20;
+    private bool _isMove;
+
 
     private BoxCollider2D _boxCollider2D;
-
     private ChangeEnemyPosition _changeEnemyPosition;
     private Flip _flip;
     private HealthInfo _healthInfo;
     private PlayMusic _playMusic;
     private SpawnWithProbability _spawnWithProbability;
     private PointAttack _pointAttack;
-
-    private int _spawnProbability = 20;
-    private bool _isMove;
 
     protected abstract PointHealth Point { get; }
     
@@ -48,9 +47,6 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     public event Action<BaseEnemy> OnEnemyDie;
     public event Action<int> OnDamage;
 
-    private void Awake()
-        => _boxCollider2D = GetComponent<BoxCollider2D>();
-
     protected virtual void Update()
     {
         if (Target == null || _isDie)
@@ -63,6 +59,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi,
         AudioSource takingDamage, Hilka hilka)
     {
+        ExtractComponents();
+
         Target = target;
         Config = config;
         _healthUi = healthUi;
@@ -71,7 +69,6 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         _isMove = true;
 
         _playMusic = new PlayMusic();
-        _pointAttack = GetComponentInChildren<PointAttack>();
 
         _healthInfo = Instantiate(healthInfo);
         _healthInfo.Initialize(_healthUi);
@@ -80,7 +77,6 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         _changeEnemyPosition = new ChangeEnemyPosition();
         _flip = new Flip();
 
-        BaseView = transform.GetComponentInChildren<BaseViewEnemy>();
         BaseView.Initialize();
 
         StartCoroutine(_changeEnemyPosition.SetRandomPosition(Config.AttackRadius));
@@ -102,6 +98,13 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     }
 
     public void SetMove(bool value) => _isMove = value;
+
+    private void ExtractComponents()
+    {
+        _boxCollider2D = GetComponent<BoxCollider2D>();
+        _pointAttack = GetComponentInChildren<PointAttack>();
+        BaseView = transform.GetComponentInChildren<BaseViewEnemy>();
+    }
 
     private void Die()
     {

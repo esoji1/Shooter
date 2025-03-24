@@ -9,17 +9,15 @@ public class PlayerView : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
-    
+
     public SpriteRenderer SpriteRenderer => _spriteRenderer;
     public Animator Animator => _animator;
 
-    private void Start()
-    {
+    private void Start() =>
         _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
-    public void Initialize() => _animator = GetComponent<Animator>();   
-    
+    public void Initialize() => _animator = GetComponent<Animator>();
+
     public void StartRuning() => _animator.SetBool(IsRun, true);
     public void StopRuning() => _animator.SetBool(IsRun, false);
 

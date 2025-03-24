@@ -16,7 +16,7 @@ public class BootstrapLevel : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
-        
+
         _player.Initialize();
         _gameplayMediator.Initialize(_player);
 
@@ -34,9 +34,9 @@ public class BootstrapLevel : MonoBehaviour
         _difficultyConfig = levelLoadingData.DifficultyConfig;
     }
 
-    public void RestartLevel() 
-        => _sceneLoader.GoToGameplayLevel(new LevelLoadingData(_levelLoadingData.Level));
+    public void RestartLevel() =>
+        _sceneLoader.GoToGameplayLevel(new LevelLoadingData(_levelLoadingData.Level));
 
-    public void StopGame()
-        => Time.timeScale = 0;
+    public void StopGame() =>
+        Time.timeScale = 0;
 }

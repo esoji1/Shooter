@@ -9,6 +9,6 @@ public class JoysickForMovement : JoystickHandler
     public PlayerMovement PlayerMovement => _playerMovement;
 
     [Inject]
-    private void Construct(PlayerMovement playerMovement) 
-        => _playerMovement = playerMovement;
+    private void Construct(PlayerMovement playerMovement) =>
+        _playerMovement = playerMovement;
 }

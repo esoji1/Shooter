@@ -26,8 +26,8 @@ public class PausePanel : MonoBehaviour
         _exitHome.onClick.RemoveListener(OnExitHomeClick);
     }
 
-    public void Initialize(PauseMediator pauseMediator) 
-        =>_pauseMediator = pauseMediator;  
+    public void Initialize(PauseMediator pauseMediator) =>
+        _pauseMediator = pauseMediator;
 
     public void Show() => _pauseMenu.SetActive(true);
     public void Hide() => _pauseMenu.SetActive(false);
@@ -56,9 +56,9 @@ public class PausePanel : MonoBehaviour
         Hide();
     }
 
-    private void OnRestartClick()
-       => _pauseMediator.RestartLevel();
+    private void OnRestartClick() =>
+        _pauseMediator.RestartLevel();
 
-    private void OnExitHomeClick()
-        => SceneManager.LoadScene(0);
+    private void OnExitHomeClick() =>
+        SceneManager.LoadScene(0);
 }

@@ -15,7 +15,6 @@ public class Flip
     private void RotateDirections(Vector2 direction, SpriteRenderer spriteRenderer)
     {
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
         spriteRenderer.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

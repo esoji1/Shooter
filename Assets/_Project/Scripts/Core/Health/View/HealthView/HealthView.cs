@@ -20,8 +20,8 @@ public class HealthView
         _onDamage.OnDamage += Damage;
     }
 
-    public void FollowTargetHealth()
-        => _healthInfo.SetPositon(_onDamage.PointHealth.transform);
+    public void FollowTargetHealth() =>
+        _healthInfo.SetPositon(_onDamage.PointHealth.transform);
 
     public void AddHealth(int value)
     {
@@ -48,6 +48,6 @@ public class HealthView
     }
 
 
-    private void UpdateHealthBar()
-        => _healthInfo.BarForeground.fillAmount = (float)_currentHp / _maxHp;
+    private void UpdateHealthBar() =>
+        _healthInfo.BarForeground.fillAmount = (float)_currentHp / _maxHp;
 }

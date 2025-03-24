@@ -13,21 +13,4 @@ public class Robot : BaseEnemy, HealingAttack
 
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
     }
-
-    //protected override void TryDealDamageToTarget()
-    //{
-    //    int healthForHealing = 0;
-    //    int healingFromAttack = 30;
-
-    //    if (Target.TryGetComponent(out IDamage damage))
-    //        damage.Damage(Config.Damage);
-
-    //    healthForHealing = Config.Health - healingFromAttack;
-
-    //    if (Health.HealthValue <= healthForHealing)
-    //    {
-    //        Health.AddHealth(healingFromAttack);
-    //        HealthView.AddHealth(healingFromAttack);
-    //    }
-    //}
 }

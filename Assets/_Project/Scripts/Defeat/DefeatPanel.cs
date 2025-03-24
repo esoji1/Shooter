@@ -20,16 +20,16 @@ public class DefeatPanel : MonoBehaviour
         _restart.onClick.RemoveListener(OnRestartClick);
         _exitHome.onClick.RemoveListener(OnExitHomeClick);
     }
-        
-    public void Initialize(GameplayMediator gameplayMediator)
-        => _gameplayMediator = gameplayMediator;
+
+    public void Initialize(GameplayMediator gameplayMediator) =>
+        _gameplayMediator = gameplayMediator;
 
     public void Show() => gameObject.SetActive(true);
     public void Hide() => gameObject.SetActive(false);
 
-    private void OnRestartClick() 
-        => _gameplayMediator.RestartLevel();
+    private void OnRestartClick() =>
+        _gameplayMediator.RestartLevel();
 
-    private void OnExitHomeClick() 
-        => SceneManager.LoadScene(0);
+    private void OnExitHomeClick() =>
+        SceneManager.LoadScene(0);
 }

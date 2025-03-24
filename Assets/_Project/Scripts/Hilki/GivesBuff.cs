@@ -7,7 +7,6 @@ public abstract class GivesBuff : MonoBehaviour
         if (collision.TryGetComponent(out IBuffPicker buffPicker))
         {
             Affect(buffPicker);
-
             Destroy(gameObject);
         }
     }
