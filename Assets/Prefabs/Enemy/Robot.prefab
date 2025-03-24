@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1404256226933131060}
   - component: {fileID: 1090992050093470193}
   - component: {fileID: 5389882521581394066}
+  - component: {fileID: 507390273300154577}
   m_Layer: 0
   m_Name: RobotView
   m_TagString: Untagged
@@ -123,6 +124,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86ea0185df7a11459344597721c68c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &507390273300154577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024031247476199618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7087935159f08564cb8c2cdc3cb99733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3279092928846258875
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +147,8 @@ GameObject:
   - component: {fileID: 8962586396046905252}
   - component: {fileID: 5031552295324380572}
   - component: {fileID: 1120056554787352890}
+  - component: {fileID: 4775061607663684634}
+  - component: {fileID: 8806470468137918313}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -216,6 +231,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0d157515742404b857e4e886ea931c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4775061607663684634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279092928846258875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8806470468137918313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279092928846258875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5487832966321457045
 GameObject:
   m_ObjectHideFlags: 0

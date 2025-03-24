@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-public interface BaseAttack
+﻿public interface BaseAttack
 {
-    IEnumerator DelayBeforeAttack(BaseEnemy enemy);
+    void Update();
 }

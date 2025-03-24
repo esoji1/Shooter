@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MoveWhileAttacking), typeof(AttackControl))]
+[RequireComponent(typeof(MoveWhileAttacking), typeof(AttackFactory))]
 public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 {
     protected EnemyConfig Config;
@@ -19,7 +18,6 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private List<AudioSource> _audioSources = new();
     private Hilka _hilka;
 
-    private Coroutine _coroutine;
     private BoxCollider2D _boxCollider2D;
 
     private ChangeEnemyPosition _changeEnemyPosition;
@@ -27,14 +25,14 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     private HealthInfo _healthInfo;
     private PlayMusic _playMusic;
     private SpawnWithProbability _spawnWithProbability;
-    private MoveWhileAttacking _moveWhileAttacking;
-    private AttackControl _attackControl;
+    private PointAttack _pointAttack;
 
     private int _spawnProbability = 20;
+    private bool _isMove;
 
     protected abstract PointHealth Point { get; }
-
-    protected Vector2 Direction => _direction;
+    
+    public Vector2 Direction => _direction;
     public PointHealth PointHealth => Point;
     public BaseViewEnemy GetBaseView => BaseView;
     public EnemyConfig GetConfig => Config;
@@ -44,6 +42,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
     public Flip Flip => _flip;
     public Health GetHealth => Health;
     public HealthView GetHealthView => HealthView;
+    public PointAttack PointAttack => _pointAttack;
+    public bool IsMove => _isMove;
 
     public event Action<BaseEnemy> OnEnemyDie;
     public event Action<int> OnDamage;
@@ -56,9 +56,8 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         if (Target == null || _isDie)
             return;
 
-        //HandleMovementAndAttack();
-
         HealthView.FollowTargetHealth();
+        _direction = (Target.transform.position - transform.position).normalized;
     }
 
     public virtual void Initialize(EnemyConfig config, Player target, HealthInfo healthInfo, Canvas healthUi,
@@ -69,8 +68,10 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         _healthUi = healthUi;
         _takingDamage = takingDamage;
         _hilka = hilka;
+        _isMove = true;
 
         _playMusic = new PlayMusic();
+        _pointAttack = GetComponentInChildren<PointAttack>();
 
         _healthInfo = Instantiate(healthInfo);
         _healthInfo.Initialize(_healthUi);
@@ -85,13 +86,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         StartCoroutine(_changeEnemyPosition.SetRandomPosition(Config.AttackRadius));
 
         Health = new Health(Config.Health);
-        _spawnWithProbability = new SpawnWithProbability(hilka);
-
-        _moveWhileAttacking = GetComponent<MoveWhileAttacking>();
-        _moveWhileAttacking.Initialize(this);
-
-        _attackControl = GetComponent<AttackControl>();
-        _attackControl.Initialize(this);
+        _spawnWithProbability = new SpawnWithProbability(_hilka);
 
         Health.OnDie += Die;
     }
@@ -106,11 +101,11 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Health.TakeDamage(damage);
     }
 
+    public void SetMove(bool value) => _isMove = value;
+
     private void Die()
     {
         OnEnemyDie?.Invoke(this);
-
-        //StopAttackIfNeeded();
 
         float removingEnemy = 5f;
 
@@ -127,51 +122,4 @@ public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
         Destroy(_healthInfo.GetHealthInfo.gameObject, removingEnemy);
         Destroy(gameObject, removingEnemy);
     }
-
-    //protected abstract void TryDealDamageToTarget();
-
-    //private void HandleMovementAndAttack()
-    //{
-    //    float distance = Vector2.Distance(transform.position, Target.transform.position);
-    //    if (distance > Config.AttackRadius)
-    //    {
-    //        StopAttackIfNeeded();
-    //    }
-    //    else
-    //    {
-    //        StartAttackIfNeeded();
-    //    }
-    //}
-
-    //private void StopAttackIfNeeded()
-    //{
-    //    if (_coroutine != null)
-    //    {
-    //        BaseView.StopAttack();
-    //        StopCoroutine(_coroutine);
-    //        _coroutine = null;
-    //    }
-    //}
-
-    //private void StartAttackIfNeeded()
-    //{
-    //    if (_coroutine == null)
-    //    {
-    //        BaseView.StopWalk();
-    //        _coroutine = StartCoroutine(DelayBeforeAttack());
-    //    }
-    //}
-
-    //protected virtual IEnumerator DelayBeforeAttack()
-    //{
-    //    while (true)
-    //    {
-    //        BaseView.StartAttack();
-
-    //        float attackAnimationTime = BaseView.Animator.GetCurrentAnimatorStateInfo(0).length;
-    //        yield return new WaitForSeconds(attackAnimationTime);
-
-    //        TryDealDamageToTarget();
-    //    }
-    //}
 }

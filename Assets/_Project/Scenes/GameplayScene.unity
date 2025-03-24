@@ -1483,7 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 265358712}
   - component: {fileID: 265358713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3830,7 +3830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 541225915}
   - component: {fileID: 541225916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4120,7 +4120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633121401}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4903,7 +4903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745552678}
   - component: {fileID: 745552679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5035,6 +5035,11 @@ MonoBehaviour:
   _healthInfoPrefab: {fileID: 4444821813202015223, guid: bb15151b52b4cfa4c90b4dfab9252f96, type: 3}
   _takingDamage: {fileID: 5447732590887955354, guid: fc3da34954a7e3c45a54f3949e312346, type: 3}
   _hilka: {fileID: 4714150346715478794, guid: 6eaa4404b6755bf4587ac2cdcf21f859, type: 3}
+  IsSpawn: 0
+  IsSpawn2: 0
+  IsSpawn3: 0
+  IsSpawn4: 0
+  IsSpawn5: 0
 --- !u!4 &758998197
 Transform:
   m_ObjectHideFlags: 0
@@ -5374,7 +5379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806105426}
   - component: {fileID: 806105427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5742,7 +5747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860462836}
   - component: {fileID: 860462837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7242,7 +7247,7 @@ GameObject:
   - component: {fileID: 1235892790}
   - component: {fileID: 1235892792}
   - component: {fileID: 1235892793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8546,7 +8551,7 @@ GameObject:
   - component: {fileID: 1389370118}
   - component: {fileID: 1389370120}
   - component: {fileID: 1389370119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9154,7 +9159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551226720}
   - component: {fileID: 1551226721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9484,7 +9489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1605971034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10377,7 +10382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785411491}
   - component: {fileID: 1785411492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PointHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}

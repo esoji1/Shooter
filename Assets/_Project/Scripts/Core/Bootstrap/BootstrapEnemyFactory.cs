@@ -23,6 +23,7 @@ public class BootstrapEnemyFactory : MonoBehaviour
     public bool IsSpawn3;
     public bool IsSpawn4;
     public bool IsSpawn5;
+    public bool IsSpawn6;
 
     public void Initialize(DifficultyConfig difficultyConfig)
         => _enemyFactory = new EnemyFactory(difficultyConfig, _fireballConfig, _player, _bloodEffect, _collisionEffect,
@@ -54,6 +55,10 @@ public class BootstrapEnemyFactory : MonoBehaviour
         {
             _enemyFactory.Get(EnemyTypes.Robot, transform.position);
             IsSpawn5 = false;
+        }  if (IsSpawn6)
+        {
+            _enemyFactory.Get(EnemyTypes.Magician, transform.position);
+            IsSpawn6 = false;
         }
     }
 }

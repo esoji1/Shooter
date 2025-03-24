@@ -85,8 +85,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2412199134312065222}
-  - component: {fileID: 8238665337049643906}
   - component: {fileID: 3021398993410432323}
+  - component: {fileID: 8238665337049643906}
+  - component: {fileID: 3763561281760320434}
+  - component: {fileID: 6506033065465521191}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -111,18 +113,6 @@ Transform:
   - {fileID: 6179506904613187456}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8238665337049643906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5487011439888541841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ca761b2b9ac4f44cb18f930d0aa8b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3021398993410432323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -169,6 +159,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.2224445, y: 0.6843043}
   m_EdgeRadius: 0
+--- !u!114 &8238665337049643906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487011439888541841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca761b2b9ac4f44cb18f930d0aa8b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3763561281760320434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487011439888541841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6506033065465521191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487011439888541841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5780126528951497091
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,6 +210,7 @@ GameObject:
   - component: {fileID: 6147494802854253043}
   - component: {fileID: 39412186816611427}
   - component: {fileID: 346302325272340162}
+  - component: {fileID: 7805254417533044242}
   m_Layer: 0
   m_Name: SkeletonView
   m_TagString: Untagged
@@ -292,3 +322,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7805254417533044242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780126528951497091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7087935159f08564cb8c2cdc3cb99733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

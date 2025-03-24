@@ -179,6 +179,8 @@ GameObject:
   - component: {fileID: 5083063473208930556}
   - component: {fileID: 8003136158493661718}
   - component: {fileID: 1970958785514235221}
+  - component: {fileID: 2203542588990515622}
+  - component: {fileID: 5435817644576525613}
   m_Layer: 0
   m_Name: Magician
   m_TagString: Untagged
@@ -261,6 +263,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c35a6140d2f20f42a0cf80e49b5ad20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2203542588990515622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142372937026582779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5435817644576525613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142372937026582779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &5170724130069785386
 GameObject:
   m_ObjectHideFlags: 0

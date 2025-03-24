@@ -1,16 +1,74 @@
+using System.Collections;
 using UnityEngine;
 
-public class RangedAttack : MonoBehaviour
+public class RangedAttack : BaseAttack
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private BaseEnemy _enemy;
+    private RangeAttack _rangeAttack;
+    private Coroutine _coroutine;
+
+    public RangedAttack(BaseEnemy enemy)
     {
-        
+        _enemy = enemy;
+        _rangeAttack = _enemy as RangeAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        float distance = Vector2.Distance(_enemy.transform.position, _enemy.GetTarget.position);
+
+        if (distance < _enemy.GetConfig.AttackRadius)
+            StartAttackIfNeeded();
+        else
+            StopAttackIfNeeded();
+
+        FlipPointAttack(_enemy.Direction);
+    }
+
+    private void StopAttackIfNeeded()
+    {
+        if (_coroutine != null)
+        {
+            _enemy.GetBaseView.StopAttack();
+            _enemy.StopCoroutine(_coroutine);
+            _coroutine = null;
+        }
+    }
+
+    private void StartAttackIfNeeded()
+    {
+        if (_coroutine == null)
+        {
+            _enemy.GetBaseView.StopWalk();
+            _coroutine = _enemy.StartCoroutine(DelayBeforeAttack());
+        }
+    }
+
+    private IEnumerator DelayBeforeAttack()
+    {
+        while (_enemy.IsDie == false)
+        {
+            _enemy.GetBaseView.StartAttack();
+
+            float attackAnimationTime = _enemy.GetBaseView.Animator.GetCurrentAnimatorStateInfo(0).length;
+            yield return new WaitForSeconds(attackAnimationTime);
+
+            TryDealDamageToTarget();
+        }
+    }
+
+    protected void TryDealDamageToTarget()
+    {
+        GameObject magicianGameObject = _rangeAttack.SpawnProjectile.ProjectileSpawnPoint(_rangeAttack.FireballConfig.Projectile, _rangeAttack.GetPointAttack.transform);
+        Projectile fireball = magicianGameObject.GetComponent<Projectile>();
+        fireball.Initialize(_enemy.Direction.normalized, fireball, _rangeAttack.CollisionEffect, _rangeAttack.BloodEffect, _rangeAttack.FireballConfig, _rangeAttack.GameObject);
+    }
+
+    private void FlipPointAttack(Vector2 inputVector)
+    {
+        if (inputVector.x < 0f)
+            _rangeAttack.GetPointAttack.transform.localPosition = new Vector2(_rangeAttack.GetPointAttack.transform.localPosition.x, 0.078f);
+        else if (inputVector.x > 0f)
+            _rangeAttack.GetPointAttack.transform.localPosition = new Vector2(_rangeAttack.GetPointAttack.transform.localPosition.x, -0.066f);
     }
 }

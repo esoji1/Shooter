@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Magician : BaseEnemy
+public class Magician : BaseEnemy, RangeAttack
 {
     private ProjectileConfig _fireballConfig;
     private ParticleSystem _bloodEffect;
@@ -12,11 +12,16 @@ public class Magician : BaseEnemy
 
     protected override PointHealth Point => _pointHealth;
 
+    public ProjectileConfig FireballConfig => _fireballConfig;
+    public ParticleSystem BloodEffect => _bloodEffect;
+    public ParticleSystem CollisionEffect => _collisionEffect;
+    public PointAttack GetPointAttack => _pointAttack;
+    public SpawnProjectile SpawnProjectile => _spawnProjectile;
+    public GameObject GameObject => gameObject;
+
     protected override void Update()
     {
         base.Update();
-
-        FlipPointAttack(Direction);
     }
 
     public void Initialize(EnemyConfig config, Player target, ParticleSystem bloodEffect,
@@ -32,20 +37,5 @@ public class Magician : BaseEnemy
 
         _pointAttack = transform.GetComponentInChildren<PointAttack>();
         _pointHealth = gameObject.GetComponentInChildren<PointHealth>();
-    }
-
-    //protected override void TryDealDamageToTarget()
-    //{
-    //    //GameObject magicianGameObject = _spawnProjectile.ProjectileSpawnPoint(_fireballConfig.Projectile, _pointAttack.transform);
-    //    //Projectile fireball = magicianGameObject.GetComponent<Projectile>();
-    //    //fireball.Initialize(Direction.normalized, fireball, _collisionEffect, _bloodEffect, _fireballConfig, gameObject);
-    //}
-
-    protected void FlipPointAttack(Vector2 inputVector)
-    {
-        if (inputVector.x < 0f)
-            _pointAttack.transform.localPosition = new Vector2(_pointAttack.transform.localPosition.x, 0.078f);
-        else if (inputVector.x > 0f)
-            _pointAttack.transform.localPosition = new Vector2(_pointAttack.transform.localPosition.x, -0.066f);
     }
 }

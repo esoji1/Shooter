@@ -4,9 +4,16 @@ public class MoveWhileAttacking : MonoBehaviour
 {
     private BaseEnemy _enemy;
 
+    private void Start()
+    {
+        _enemy = GetComponent<BaseEnemy>();
+
+        StartCoroutine(_enemy.ChangeEnemyPosition.SetRandomPosition(_enemy.GetConfig.AttackRadius));
+    }
+
     private void Update()
     {
-        if (_enemy.IsDie)
+        if (_enemy.IsDie || _enemy.IsMove == false)
             return;
 
         Vector2 _direction = (_enemy.GetTarget.position - transform.position).normalized;
@@ -14,14 +21,7 @@ public class MoveWhileAttacking : MonoBehaviour
 
         Move(_direction, distance);
     }
-
-    public void Initialize(BaseEnemy enemy)
-    {
-        _enemy = enemy;
-            
-        StartCoroutine(_enemy.ChangeEnemyPosition.SetRandomPosition(_enemy.GetConfig.AttackRadius));
-    }
-
+   
     private void Move(Vector2 _direction, float distance)
     {
         _enemy.Flip.FlipSpriteY(_direction, _enemy.GetBaseView.SpriteRenderer);

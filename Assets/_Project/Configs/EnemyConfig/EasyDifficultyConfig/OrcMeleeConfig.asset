@@ -17,3 +17,4 @@ MonoBehaviour:
   <AttackRadius>k__BackingField: 1
   <Damage>k__BackingField: 15
   <Health>k__BackingField: 50
+  RaycastAttack: 1.5

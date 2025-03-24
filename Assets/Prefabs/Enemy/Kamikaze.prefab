@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5263519712441131609}
   - component: {fileID: 8362742368182243792}
   - component: {fileID: 6634688010583215956}
+  - component: {fileID: 3846898600110533383}
+  - component: {fileID: 720941498092156517}
   m_Layer: 0
   m_Name: Kamikaze
   m_TagString: Untagged
@@ -93,6 +95,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262778a4987aa354e9b30f06951c939e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3846898600110533383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490696159620378606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &720941498092156517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490696159620378606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6681721709587750042
 GameObject:
   m_ObjectHideFlags: 0
