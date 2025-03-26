@@ -1,12 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Assets.Scripts.Weapon.Bullet
 {
     public class DealDamage
     {
-        public void Damage(Collider2D collision, int damage, GameObject bullet, ParticleSystem bloodEffect, GameObject owner)
+        public void Damage(Collider2D collision, int damage, GameObject bullet, ParticleSystem bloodEffect, GameObject owner,
+            Func<Collider2D, bool> damageCondition)
         {
-            if (collision.gameObject == owner || collision.TryGetComponent(out Magician _))
+            if (collision.gameObject == owner || damageCondition.Invoke(collision))
                 return;
 
             if (collision.TryGetComponent(out IDamage component))

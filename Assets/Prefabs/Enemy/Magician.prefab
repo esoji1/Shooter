@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 8003136158493661718}
   - component: {fileID: 1970958785514235221}
   - component: {fileID: 2203542588990515622}
-  - component: {fileID: 5435817644576525613}
+  - component: {fileID: 8977986170831989762}
   m_Layer: 0
   m_Name: Magician
   m_TagString: Untagged
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5435817644576525613
+--- !u!114 &8977986170831989762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4142372937026582779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2663fb113e7d6ca4f9f1321c67ba32aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _layer:

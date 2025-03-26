@@ -1,3 +1,4 @@
+using Assets.Scripts.Weapon;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ public class SpawnBox : MonoBehaviour
     private GameObject _box;
     private List<BaseWeapon> _weapon = new();
 
-    private void OnDestroy() => 
+    private void OnDestroy() =>
         _enemyWaveSpawner.TimerBetweenWavesView.OnStartTimer -= SpawnBoxOnStartTimer;
 
     public void Initialize(GameObject boxPrefab, EnemyWaveSpawner enemyWaveSpawner, WeaponFactory weaponFactory, BootstraTakeAwayWeapon takeAwayWeapon,
@@ -78,7 +79,7 @@ public class SpawnBox : MonoBehaviour
     {
         foreach (BaseWeapon item in _weapon)
         {
-            if (item.Equals(_takeAwayWeapon.TakeAwayWeapon.CurrentWeapon))
+            if (item.Equals(_takeAwayWeapon.TakeAwayWeapon.CurrentWeapon.BaseWeapon))
                 continue;
 
             if (item != null)

@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
+[RequireComponent(typeof(AttackWeaponFactory))]
+public abstract class BaseWeapon : MonoBehaviour
 {
     private RotateWeapon _rotateWeapon;
     private BaseWeaponView _weaponView;
@@ -16,7 +16,6 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     private Aim _aim;
 
     private List<AudioSource> _audioSources = new();
-    private Coroutine _shootCoroutine;
 
     private SpawnProjectile _spawnProjectile;
     private PlayMusic _playMusic;
@@ -24,6 +23,16 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
     public Transform Point => _point;
     public BaseWeaponView WeaponView => _weaponView;
     public Aim Aim => _aim;
+    public RotateWeapon RotateWeapon => _rotateWeapon;
+    public WeaponConfig WeaponConfig => _weaponConfig;
+    public Player Player => _player;
+    public PlayMusic PlayMusic => _playMusic;
+    public ParticleSystem CollisionEffect => _collisionEffect;
+    public ParticleSystem BloodEffect => _bloodEffect;
+    public SpawnProjectile SpawnProjectile => _spawnProjectile;
+    public List<AudioSource> AudioSources => _audioSources;
+    public AudioSource AudioSourcePrefab => _audioSourcePrefab;
+
 
     public virtual void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect,
         ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource, Player player, Aim aim)
@@ -44,47 +53,5 @@ public abstract class BaseWeapon : MonoBehaviour, IAttackWeapon
 
         _audioSourcePrefab = audioSource;
         _playMusic = new PlayMusic();
-    }
-
-    public void Attack()
-    {
-        if (_rotateWeapon.IsAttackJoystickActive && _shootCoroutine == null)
-            StartShooting();
-        else if (_rotateWeapon.IsAttackJoystickActive == false && _shootCoroutine != null)
-            StopShooting();
-    }
-
-    private IEnumerator Shoot()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(_weaponConfig.Bullet.Delay);
-
-            GameObject bulletGameObject = _spawnProjectile.ProjectileSpawnPoint(_weaponConfig.Bullet.Projectile, _point);
-            Projectile bullet = bulletGameObject.GetComponent<Projectile>();
-
-            AudioSource audioSource = _playMusic.GetAvailableAudioSource(_audioSources, _audioSourcePrefab, transform);
-            audioSource.Play();
-
-            bullet.GetComponent<Projectile>().Initialize(_point.right, bullet, _collisionEffect, _bloodEffect,
-                _weaponConfig.Bullet, _player.gameObject);
-        }
-    }
-
-    private void StartShooting()
-    {
-        _weaponView.StartRecoil();
-        _weaponView.StopIdle();
-
-        _shootCoroutine = StartCoroutine(Shoot());
-    }
-
-    private void StopShooting()
-    {
-        _weaponView.StartIdle();
-        _weaponView.StopRecoil();
-
-        StopCoroutine(_shootCoroutine);
-        _shootCoroutine = null;
     }
 }

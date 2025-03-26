@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MoveWhileAttacking), typeof(AttackFactory))]
+[RequireComponent(typeof(MoveWhileAttacking), typeof(AttackEnemyFactory))]
 public abstract class BaseEnemy : MonoBehaviour, IDamage, IOnDamage
 {
     protected EnemyConfig Config;

@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class MeleeOneShotAttack : BaseAttack
+public class MeleeOneShotAttack : IBaseAttack
 {
     private BaseEnemy _enemy;
 

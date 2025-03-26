@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 3488218384645381460}
   - component: {fileID: 2287414447043569554}
   - component: {fileID: 4809734599880463509}
-  - component: {fileID: 7932050864077854245}
+  - component: {fileID: 2258341052430862435}
   m_Layer: 0
   m_Name: MediumSkeleton
   m_TagString: Untagged
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7932050864077854245
+--- !u!114 &2258341052430862435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8097775037802961111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2663fb113e7d6ca4f9f1321c67ba32aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _layer:

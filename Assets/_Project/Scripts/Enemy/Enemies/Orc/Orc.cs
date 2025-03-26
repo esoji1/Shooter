@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class Orc : BaseEnemy, NormalAttack
+public class Orc : BaseEnemy, INormalAttack
 {
     private PointHealth _pointHealth;
 

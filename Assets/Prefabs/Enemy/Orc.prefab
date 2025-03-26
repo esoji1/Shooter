@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 2810513559087487184}
   - component: {fileID: 5672110577725478972}
   - component: {fileID: 1939687142482045798}
-  - component: {fileID: 4711686534470757848}
+  - component: {fileID: 1204365132168040259}
   m_Layer: 0
   m_Name: Orc
   m_TagString: Untagged
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1673dc995ca81dd4695927a3e3ef78ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4711686534470757848
+--- !u!114 &1204365132168040259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7634453505575160388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f3a4fac44383049b2556ea2aa70cd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2663fb113e7d6ca4f9f1321c67ba32aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _layer:

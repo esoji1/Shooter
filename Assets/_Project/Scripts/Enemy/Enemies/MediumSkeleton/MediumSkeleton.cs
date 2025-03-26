@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class MediumSkeleton : BaseEnemy, NormalAttack
+public class MediumSkeleton : BaseEnemy, INormalAttack
 {
     private PointHealth _pointHealth;
 

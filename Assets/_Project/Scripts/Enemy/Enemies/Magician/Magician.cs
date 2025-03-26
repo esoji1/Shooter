@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class Magician : BaseEnemy, RangeAttack
+public class Magician : BaseEnemy, IRangeAttack
 {
     private ProjectileConfig _fireballConfig;
     private ParticleSystem _bloodEffect;

@@ -1,6 +1,7 @@
+using Assets.Scripts.Weapon;
 using UnityEngine;
 
-public class WeaponGun : BaseWeapon
+public class WeaponGun : BaseWeapon, INormalAttack
 {
     public override void Initialize(RotateWeapon rotateWeapon, ParticleSystem collisionEffect,
         ParticleSystem bloodEffect, WeaponConfig weaponConfig, AudioSource audioSource, Player player, Aim aim)

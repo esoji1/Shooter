@@ -1,16 +1,17 @@
+using Assets.Scripts.Enemy;
 using System.Collections;
 using UnityEngine;
 
-public class RangedAttack : BaseAttack
+public class RangedAttack : IBaseAttack
 {
     private BaseEnemy _enemy;
-    private RangeAttack _rangeAttack;
+    private IRangeAttack _rangeAttack;
     private Coroutine _coroutine;
 
     public RangedAttack(BaseEnemy enemy)
     {
         _enemy = enemy;
-        _rangeAttack = _enemy as RangeAttack;
+        _rangeAttack = _enemy as IRangeAttack;
     }
 
     public void Update()
@@ -61,7 +62,8 @@ public class RangedAttack : BaseAttack
     {
         GameObject magicianGameObject = _rangeAttack.SpawnProjectile.ProjectileSpawnPoint(_rangeAttack.FireballConfig.Projectile, _rangeAttack.GetPointAttack.transform);
         Projectile fireball = magicianGameObject.GetComponent<Projectile>();
-        fireball.Initialize(_enemy.Direction.normalized, fireball, _rangeAttack.CollisionEffect, _rangeAttack.BloodEffect, _rangeAttack.FireballConfig, _rangeAttack.GameObject);
+        fireball.Initialize(_enemy.Direction.normalized, fireball, _rangeAttack.CollisionEffect, _rangeAttack.BloodEffect, _rangeAttack.FireballConfig, _rangeAttack.GameObject, 
+            (Collider2D collison) => collison.TryGetComponent(out Magician _));
     }
 
     private void FlipPointAttack(Vector2 inputVector)

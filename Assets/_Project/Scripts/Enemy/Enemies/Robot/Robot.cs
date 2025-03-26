@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class Robot : BaseEnemy, HealingAttack
+public class Robot : BaseEnemy, IHealingAttack
 {
     private PointHealth _pointHealth;
 

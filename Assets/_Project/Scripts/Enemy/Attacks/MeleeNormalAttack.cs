@@ -1,7 +1,8 @@
+using Assets.Scripts.Enemy;
 using System.Collections;
 using UnityEngine;
 
-public class MeleeNormalAttack : BaseAttack
+public class MeleeNormalAttack : IBaseAttack
 {
     private const float AttackCooldown = 0.2f;
 

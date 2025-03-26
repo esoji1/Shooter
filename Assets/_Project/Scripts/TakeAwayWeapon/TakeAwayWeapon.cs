@@ -1,3 +1,4 @@
+using Assets.Scripts.Weapon;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,11 @@ public class TakeAwayWeapon : MonoBehaviour
     private JoystickAttack _joystickAttack;
 
     private BaseWeapon _weapon;
+    private IBaseAttack _currentWeapon;
     private bool _isTake = false;
     private bool _isWeaponOccupied = false;
 
-    public IAttackWeapon CurrentWeapon => _weapon;
+    public IBaseAttack CurrentWeapon => _currentWeapon;
 
     private void OnDestroy()
     {
@@ -42,6 +44,7 @@ public class TakeAwayWeapon : MonoBehaviour
         if (_isTake == false && _isWeaponOccupied == false)
         {
             _weapon = _player.WeaponCollider.GetComponentInChildren<BaseWeapon>();
+            _currentWeapon = _weapon.GetComponent<AttackWeaponFactory>().BaseAttack;
 
             AssignWeaponPosition();
             ChangeSpriteRotation();
@@ -63,6 +66,7 @@ public class TakeAwayWeapon : MonoBehaviour
         _isWeaponOccupied = false;
         _isTake = false;
         _weapon = null;
+        _currentWeapon = null;
         _joystickAttack.RotateWeapon.ChangeWeapom(null);
     }
 

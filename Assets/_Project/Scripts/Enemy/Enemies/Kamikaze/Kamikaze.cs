@@ -1,6 +1,7 @@
+using Assets.Scripts.Enemy;
 using UnityEngine;
 
-public class Kamikaze : BaseEnemy, OneShotAttack
+public class Kamikaze : BaseEnemy, IOneShotAttack
 {
     private PointHealth _pointHealth;
 
