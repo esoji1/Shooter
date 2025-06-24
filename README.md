@@ -7,6 +7,7 @@
 - **Unity**
 - **C#**
 - **Zenject**
+- **DOTween**
 ---
 
 ### Версия Unity: 6000.0.28f1
